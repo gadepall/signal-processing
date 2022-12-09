@@ -1,0 +1,34 @@
+\vskip -8pt
+\contentsline {schapter}{Introduction}{iii}{chapter*.2}%
+\contentsline {chapter}{\numberline {1}Two Dice}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Sum of Independent Random Variables}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Pingala Series}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}JEE 2019}{7}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Pingala Series}{8}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Power of the Z transform}{9}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Circuits and Transforms}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Definitions}{11}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Laplace Transform}{11}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Initial Conditions}{13}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Bilinear Transform}{14}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Filter}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Software Installation}{15}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Digital Filter}{15}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Difference Equation}{16}{section.4.3}%
+\contentsline {section}{\numberline {4.4}$Z$-transform}{17}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Impulse Response}{21}{section.4.5}%
+\contentsline {section}{\numberline {4.6}DFT }{25}{section.4.6}%
+\contentsline {section}{\numberline {4.7}FFT}{26}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Exercises}{31}{section.4.8}%
+\contentsline {chapter}{\numberline {A} Filter Design}{33}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Introduction}{33}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Filter Specifications}{33}{section.A.2}%
+\contentsline {subsection}{\numberline {A.2.1}The Digital Filter}{33}{subsection.A.2.1}%
+\contentsline {subsection}{\numberline {A.2.2}The Analog filter}{34}{subsection.A.2.2}%
+\contentsline {section}{\numberline {A.3}The IIR Filter Design}{34}{section.A.3}%
+\contentsline {subsection}{\numberline {A.3.1}The Analog Filter}{35}{subsection.A.3.1}%
+\contentsline {subsection}{\numberline {A.3.2}The Digital Filter}{37}{subsection.A.3.2}%
+\contentsline {section}{\numberline {A.4}The FIR Filter}{41}{section.A.4}%
+\contentsline {subsection}{\numberline {A.4.1}The Equivalent Lowpass Filter}{41}{subsection.A.4.1}%
+\contentsline {subsection}{\numberline {A.4.2}The Kaiser Window}{43}{subsection.A.4.2}%
+\contentsline {subsection}{\numberline {A.4.3}The FIR Bandpass Filter}{44}{subsection.A.4.3}%

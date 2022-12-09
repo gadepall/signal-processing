@@ -1,0 +1,8 @@
+function y = polypoly(v1,v2)
+
+N = length(v1);
+
+
+for i = N:-1:1,
+    
+end

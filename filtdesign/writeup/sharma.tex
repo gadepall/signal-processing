@@ -1,0 +1,127 @@
+
+\documentclass{article}
+\usepackage{graphicx}
+
+\begin{document}
+\title{ Application Assignment: Filter \#114}
+
+\author{G V V Sharma \\06407010\\ e-mail: gadepall@gmail.com	}
+
+\maketitle
+%---------------------------------------------------------------
+
+\begin{enumerate}
+\item {\em Un-normalized Discrete-Time Filter Specifications:} 
+\begin{itemize}
+ \item We are supposed to design the equivalent FIR and IIR filter realizations for filter number 114.  
+This is a {\em bandpass} filter.
+ 
+ \item The {\em passband} ($\delta_1$) and {\em stopband} ($\delta_2$) {\em tolerances} are given to be equal, so $\delta_1 = \delta_2 = \delta = 0.15$.
+ \item The {\em passband} of filter number $j$, $j$ going from 109 to 135 is from \{3 + 0.6(j-109)\}kHz
+to \{3 + 0.6(j-107)\}kHz.  Since our filter number is 114, substituting $j = 114$ gives the {\em passband}
+range for our bandpass filter as $6$ kHz - $7.2$ kHz.  Hence, the un-normalized discrete time filter
+{\em passband} (natural) frequencies are $F_{p1} = 7.2$ kHz
+and $F_{p2} = 6.0$ kHz.
+\item The {\em transition band} for bandpass filters is $\Delta F = 0.3$ kHz on either side of the passband.
+Hence, the un-normalized {\em stopband} frequencies are $F_{s1} = 7.2 + 0.3 = 7.5$ kHz and $F	_{s2} = 6.0 - 0.3 = 5.7$ kHz.
+\item We are supposed to design filters whose {\em stopband} is {\em monotonic} and {\em passband equiripple}.  
+Hence, we use the {\em Chebyschev approximation} to design our bandpass IIR filter.
+ \end{itemize}
+ 
+ \item {\em Normalized Digital Filter Specifications:}
+ 
+ \begin{itemize}
+ 
+ \item The corresponding {\em normalized} digital filter {\em passband} frequencies are
+$\omega_{p1} = 2\pi\frac{F_{p1}}{F_s}  = 0.3\pi$  and $\omega_{p2} = 2\pi\frac{F_{p2}}{F_s}  = 0.25 \pi$ kHz.  The centre frequency is then given by  $\omega_c = \frac{\omega_{p1} + \omega_{p2}}{2} = 0.275\pi$.  
+
+\item The {\em normalized stopband} frequencies are $\omega_{s1} = 0.3125 \pi$  and $\omega_{s2} =  0.2375 \pi$.
+
+\end{itemize}
+
+\item {\em The Analog Filter Specifications Using The Bilinear Transformation:}
+
+\begin{itemize}
+\item The {\em analog  passband} frequencies are $\Omega_{p1} = 0.5095$, $\Omega_{p2} = 0.4142$
+\item The {\em analog  stopband} frequencies are $\Omega_{s1} = 0.5345$, $\Omega_{s2} = 0.3914$
+\end{itemize}
+
+\item {\em The Bandpass-Lowpass Frequency Transformation:}
+
+\begin{itemize}
+
+\item If $\Omega$ be the {\em analog bandpass} frequency and $\Omega_L$ be the corresponding {\em analog lowpass} frequency,
+\begin{equation}
+\Omega_L = \frac{\Omega^2 - \Omega_0^2}{B\Omega}.
+\end{equation}
+
+\item $\Omega_0 = \sqrt{\Omega_{p1}\Omega_{p2}} = 0.4594$ and $B = \Omega_{p1} - \Omega_{p2} = 0.0953$
+\end{itemize}
+
+\item {\em The Frequency Transformed Lowpass Analog Filter Specifications:}
+The low pass filter has
+the {\em passband edge} at $\Omega_{Lp} = 1$ and {\em stopband edges} at $\Omega_{Ls_1} = 1.4653$ and $\Omega_{Ls_2} = -1.5511$.  We choose the {\em stopband edge} of the analog low pass filter as $\Omega_{Ls} = \mbox{min}(\vert \Omega_{Ls_1}\vert,\vert \Omega_{Ls_2}\vert) = 1.4653$.
+
+\item {\em The Analog Lowpass Filter Transfer Function $H_{analog,LPF}(s_L)$:}  
+
+\begin{equation}
+\label{lpfinal}
+H_{a,LP}(s_L) = \frac{0.3125}{s_L^4 + 1.1068s_L^3 + 1.6125s_L^2+0.9140s_L + 0.3366}
+\end{equation}
+
+\item {\em The Analog Bandpass Filter Transfer Function:}  
+
+{\tiny
+\begin{equation}
+\label{bpfinal}
+H_{a,BP}(s) = \frac{2.7776\times 10^{-5}s^4}{s^8+0.1055s^7+0.8589s^6+0.0676s^5+0.2735s^4+0.0143s^3+0.0383s^2+0.001s+0.002}
+\end{equation}
+}
+
+\item {\em The Discrete-Time Filter Transfer Function:}
+
+\begin{eqnarray}
+H_{d,BP}(z) = G \frac{N(z)}{D(z)}
+\end{eqnarray}
+where $G = 2.7776 \times 10^{-5}$,
+
+\begin{eqnarray}
+N(z)=  1 - 4 z^{-2} + 6 z^{-4} - 4z^{-6} + z^{-8} 
+\end{eqnarray}
+and
+\begin{eqnarray}
+D(z) = 2.3609  -12.0002z^{-1} + 31.8772z^{-2}  -53.7495z^{-3}\nonumber \\+  62.8086z^{-4}
+  -51.4634z^{-5}+   29.2231z^{-6}  -10.5329z^{-7} +   1.9842z^{-8}
+\end{eqnarray}
+
+\item {\em Filter Realization Using Direct Form II:} See attached page.
+
+\item {\em Filter Realization Using Lattice Structure:} See attached page.
+
+\item {\em FIR Filter Transfer Function Realization Using Kaiser Window:}
+
+\begin{itemize}
+\item The equivalent {\em lowpass} filter has {\em passband frequency $\omega_l = \frac{\omega_{p1} - \omega_{p2}}{2} = 0.025\pi$}.
+
+\item The centre of the passband of the desired bandpass filter is $\omega_c = \frac{\omega_{p1} + \omega_{p2}}{2} = 0.275\pi$
+\item For the given specifications, the {\em Kaiser} window reduces to the {\em rectangular} window of {\em length
+$\geq 97$}.
+\item The desired {\em lowpass filter impulse response}
+\begin{eqnarray}
+\label{firlpfinal}
+h_{lp}(n) &=& \frac{\sin(\frac{n\pi}{40})}{n\pi} \hspace{2cm} -100 \leq n \leq 100 \nonumber \\
+&=& 0, \hspace{4cm} \mbox{otherwise}
+\end{eqnarray}
+
+\item The desired {\em bandpass filter impulse response}
+\begin{eqnarray}
+\label{firbpfinal}
+h_{bp}(n) &=& \frac{2\sin(\frac{n\pi}{40}) \cos(\frac{11n\pi}{40})}{n\pi} \hspace{1cm} -100 \leq n \leq 100 \nonumber \\
+&=& 0, \hspace{4cm} \mbox{otherwise}
+\end{eqnarray}
+
+\item The {\em FIR filter transfer function coefficients} can be found in one of the attached pages.	
+\end{itemize}
+
+\end{enumerate}
+\end{document}

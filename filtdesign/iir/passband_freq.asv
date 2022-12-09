@@ -1,0 +1,9 @@
+function [F_p1, F_p2] = passband_freq(M)
+
+%This function evaluates the passband natural freqencies for the bandpass filter given the
+%filter number
+%[F_p1, F_p2] = passband_freq(M), where M is the filter number,
+%the passband range is F_p2 < Omega < F_p1
+
+Omega_p2 = 3 + 0.6*(M-109);
+Omega_p1 = 3 + 0.6*(M-107);

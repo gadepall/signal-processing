@@ -1,0 +1,38 @@
+function [num,den] = lpbp(p,Omega0,B,G)
+
+%This function transforms the lowpass stable filter obtained
+%from the Chebyschev approximation to the bandpass
+%equivalent
+%[num,den] = lpbp(p,Omega0,B,G)
+%Omega0 and B are the lowpass-bandpass transformation parameters
+%G is the gain of the low pass filter
+%p is the polynomial that is the stabapproximates the low pass Cheyb
+
+N = length(p);
+const = [1 0 Omega0^2];
+v = const;
+if N > 2,
+    
+for i = 1:N-1,
+M = length(v);
+v(M-i) = v(M-i) + p(i+1)*B^i;
+
+if i < N-1
+v = conv(const,v);
+end
+end
+
+den = v;
+
+elseif N==2,
+
+    M = length(v);
+    v(M-1) = v(M-1) + p(N)*B;
+    den = v;
+    
+else
+    den = p;
+
+end
+
+num = [G*B^N zeros(1,N- 1)];
