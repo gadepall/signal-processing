@@ -507,10 +507,10 @@ Fig. \ref{fig:cktsig/bilinear/sckt} in the $s$ domain.
 Using the voltage division formula, the voltage across 
 the capacitor is given by
 \begin{align}
-    V_C(s) &= V(s)\frac{\frac{1}{sC}}{\frac{1}{sC} + R} 
-           = V(s)\frac{1}{1 + sCR}
+	V_{C_0}(s) &= V(s)\frac{\frac{1}{sC_0}}{\frac{1}{sC_0} + R_2} 
+           = V(s)\frac{1}{1 + sC_0R_2}
            \label{eq:cktsig/bilinear/vcs} \\
-	\implies H(s) &= \frac{V_C(s)}{V(s)} = \frac{1}{1 + sCR}
+	\implies H(s) &= \frac{V_{C_0}(s)}{V(s)} = \frac{1}{1 + sC_0R_2}
     \label{eq:cktsig/bilinear/hs}
 \end{align}
 \item Plot $\abs{H(\j\omega}$. What kind of filter is it?
@@ -573,197 +573,54 @@ Since
 the ROC of $H(z)$ is $\abs{z} > 1$, which implies that \eqref{eq:cktsig/bilinear/difference-eqn} represents a stable system.
 \item How can you obtain $H(z)$ from $H(s)$?
 \\
-\solution We use the bilinear transformation. Setting
+\solution Substituting
 \begin{align}
-    s \triangleq \frac{2}{T}\frac{1 - z^{-1}}{1 + z^{-1}}
+	s =2\brak{\frac{1 - z^{-1}}{1 + z^{-1}}}
 \end{align}
-we get
+in
+    \eqref{eq:cktsig/bilinear/hs},
+    we obtain 
+    \eqref{eq:cktsig/bilinear/Hz}. This is a special case of the 
+the {\em bilinear transformation} for $T=1$ where
 \begin{align}
-    H(z) = \frac{1}{1 + \frac{2\tau}{T}\frac{1-z^{-1}}{1+z^{-1}}}
+    s = \frac{2}{T}\frac{1 - z^{-1}}{1 + z^{-1}}
 \end{align}
-Setting $T = 1$ gives \eqref{eq:cktsig/bilinear/Hz}.
-
-\item Find $v_C(n)$. Verify using ngspice and the differential equation.
-
-\solution Note that $v(n) = Vu(n)$. Thus,
+%
+\item Find $V_C(n)$. Verify using ngspice. 
+\\
+\solution Since $V(n) = Vu(n)$, 
 \begin{align}
     V(z) = \frac{V}{1-z^{-1}}
 \end{align}
 Therefore,
 \begin{align}
-    V_C(z) &= H(z)V(z) \\
-         &= \frac{TV\brak{1+z^{-1}}}{\brak{1-z^{-1}}\brak{\brak{2\tau+T}-\brak{2\tau-T}z^{-1}}} \\
-         &= \frac{V\brak{1+z^{-1}}}{2}\sum_{k=-\infty}^{\infty}\brak{1-p^k}u(k)z^{-k}
+    V_C(z) &= H(z)V(z) 
+         &= \frac{V\brak{1+z^{-1}}}{\brak{1-z^{-1}}\brak{\brak{2\tau+1}-\brak{2\tau-1}z^{-1}}} \\
+         %&= \frac{V\brak{1+z^{-1}}}{2}\sum_{k=-\infty}^{\infty}\brak{1-p^k}u(k)z^{-k}
 \end{align}
-where $p \triangleq \frac{2\tau-T}{2\tau+T}$. Thus,
+Taking the inverse,
 \begin{align}
-    &v_C(n) = \nonumber \\
-    &\begin{cases}
+    V_C(n) = 
+    \begin{cases}
         \frac{V}{2}\sbrak{u(n)\brak{1-p^n}+u(n-1)\brak{1-p^{n-1}}} & n > 0 \\
         0 & n \le 0
     \end{cases}
     \label{eq:cktsig/bilinear/vn}
 \end{align}
-We take $T = 10^{-7}$ as the
-sampling interval. The python code \texttt{codes/1\_7.py} verifies
-these equalities.
+where
+\begin{align}
+p = \frac{2\tau-1}{2\tau+1}
+\end{align}
+The following python code 
+		\begin{lstlisting}
+			cktsig/codes/1_7.py
+		\end{lstlisting}
+		plots $V_C$ for  the sampling interval
+$T = 10^{-7}$  in Fig. 
+    \ref{fig:cktsig/bilinear/vc}.
 \begin{figure}
     \includegraphics[width=\columnwidth]{cktsig/figs/1_7.png}
     \caption{Representation of output across $C$.}
     \label{fig:cktsig/bilinear/vc}
 \end{figure}
 \end{enumerate}
-\iffalse
-\section{Bilinear Transform}
-\begin{enumerate}[label=\arabic*.,ref=\thesection.\theenumi]
-\numberwithin{equation}{section}
-\item In Fig. \ref{fig:cktsig/bilinear/cktsig/ckt}, consider the case when $S$ is switched to 
-	$Q$ right in the beginning. Formulate the differential equation for $v_{C_0}(t)$.
-\\
-\solution The equivalent time domain circuit is available in Fig. 
-\ref{fig:cktsig/bilinear/cktsig/tckt-q4}.
-%	
-\begin{figure}[!htb]
-	\centering
-\input{cktsig/figs/ckt-q4.tex}
-    \centering
-\caption{}
-\label{fig:cktsig/bilinear/cktsig/tckt-q4}
-\end{figure}
-%
-Applying KCL and KVL,
-\begin{align}
-    &i_1 = i_2 + i_3 \\
-    &i_1R_1 + \frac{1}{C_0}\int_0^ti_2\, dt = 0 \\
-    &i_3R_2 + 2 - \frac{1}{C_0}\int_0^ti_2\, dt = 0
-\end{align}
-Differentiating the above equations,
-\begin{align}
-    &\diff{i_1}{t} = \diff{i_2}{t} + \diff{i_3}{t} \label{eq:cktsig/bilinear/cktsig/diff1}\\
-    &R_1\diff{i_1}{t} + \frac{i_2}{C_0} = 0 \label{eq:cktsig/bilinear/cktsig/diff2}\\
-    &R_2\diff{i_3}{t} - \frac{i_2}{C_0} = 0 \label{eq:cktsig/bilinear/cktsig/diff3}
-\end{align}
-Using \eqref{eq:cktsig/bilinear/cktsig/diff1} and \eqref{eq:cktsig/bilinear/cktsig/diff3} in \eqref{eq:cktsig/bilinear/cktsig/diff2},
-\begin{align}
-    &R_1\brak{\diff{i_2}{t} + \diff{i_3}{t}} + \frac{i_2}{C_0} = 0 \\
-    &R_1\diff{i_2}{t} + \brak{1 + \frac{R_1}{R_2}}\frac{i_2}{C_0} = 0 \\
-    &\diff{i_2}{t} + \brak{\frac{1}{R_1} + \frac{1}{R_2}}\frac{i_2}{C_0} = 0 \\
-    &\diff{i_2}{t} + \frac{i_2}{\tau} = 0
-    \label{eq:cktsig/bilinear/cktsig/diff-eqn-init}
-\end{align}
-where $\tau = \frac{C_0R_1R_2}{R_1 + R_2}$ is the RC time 
-constant of the circuit. Note that $i_2(0) = \frac{V_2}{R_2}$ A and 
-$i_2 = C_0\diff{V}{t}$, where $V$ is the voltage of the capacitor. 
-Hence, integrating \eqref{eq:cktsig/bilinear/cktsig/diff-eqn-init},
-\begin{align}
-    C_0\diff{V}{t} - \frac{V_2}{R_2} + \frac{C_0V}{\tau} &= 0 \\
-    \implies \diff{V}{t} + \frac{V}{\tau} = \frac{V_2}{C_0R_2}
-    \label{eq:cktsig/bilinear/cktsig/diff-eqn}
-\end{align}
-\item Find $H(s)$ considering the output voltage at the capacitor.
-
-\solution Transforming Fig. \ref{fig:cktsig/bilinear/cktsig/tckt-q4} to the $s$-domain,
-
-\begin{figure}[!htb]
-    \begin{center}
-    \begin{circuitikz} 
-    \ctikzset{resistor = european}
-    \draw
-    (0,0) -- (0,3)
-    node[label={above:Q}] {}
-    to[R, l^=$R_1$, *-*] (3,3) 
-    node[label={above:X}] {}
-    to[R, l^=$R_2$] (5.5,3)
-    to[battery1, l= $V_2(s)$] (5.5,0)
-    -- (0,0)
-    (3,3) to[R, l=$\frac{1}{sC_0}$] (3,0) 
-    -- (3,-0.5) node[ground, label={right:G}] {};
-    \end{circuitikz}
-    \end{center}
-\caption{}
-\label{fig:cktsig/bilinear/cktsig/sckt-q4}
-\end{figure}
-
-Applying nodal analysis at X, and noting that 
-$H(s) = \frac{V(s)}{V_2(s)}$,
-\begin{align}
-    &\frac{V}{R_1} + \frac{V}{\frac{1}{sC_0}} + \frac{V - V_2}{R_2} = 0 \\
-    &H(s)\brak{\frac{1}{R_1} + \frac{1}{R_2} + sC_0} = \frac{1}{R_2} \\
-    &H(s) = \frac{\frac{1}{R_2}}{\frac{1}{R_1} + \frac{1}{R_2} + sC_0}
-    \label{eq:cktsig/bilinear/cktsig/Hs}
-\end{align}
-\item Plot $H(s)$. What kind of filter is it?
-
-\solution The Python code \texttt{codes/4\_3.py} plots $H(s)$.
-\begin{figure}[!ht]
-    \includegraphics[width=\columnwidth]{cktsig/figs/4_3.png}
-    \caption{Plot of $H(s)$.}
-    \label{fig:cktsig/bilinear/cktsig/Hs}
-\end{figure}
-Clearly, $H(s)$ is a low-pass filter.
-\item Using trapezoidal rule for integration, formulate the difference
-equation by considering 
-\begin{align}
-	y(n) = y(t)\vert_{t=n}
-\end{align}
-
-\solution Integrating \eqref{eq:cktsig/bilinear/cktsig/diff-eqn} between limits $n$ to $n+1$ 
-and applying the trapezoidal formula,
-\begin{align}
-    v(n+1) - v(n) + \frac{v(n) + v(n+1)}{2\tau} = \nonumber\\
-    \frac{V_2\brak{u(n)+u(n+1)}}{C_0R_2} \\
-    v(n)\brak{2\tau+1} + v(n-1)\brak{2\tau-1} = \nonumber\\ 
-    \frac{V_2\tau\brak{u(n)+u(n-1)}}{C_0R_2}
-    \label{eq:cktsig/bilinear/cktsig/difference-eqn}
-\end{align}
-for $n > 0$, where $v(0) = 0$.
-\item Find $H(z)$.
-
-\solution Note that for the input voltage, $v_i(n) = 2u(n)$ and
-so, $V_i(z) = \frac{2}{1-z^{-1}}$. Applying the Z-transform
-on both sides of \eqref{eq:cktsig/bilinear/cktsig/difference-eqn},
-\begin{align}
-    V(z)\sbrak{(2\tau + 1) - z^{-1}(2\tau - 1)} \nonumber \\
-    = \frac{\tau\brak{1 + z^{-1}}V_i(z)}{C_0R_2}
-\end{align}
-Hence,
-\begin{align}
-    H(z) = \frac{\tau\brak{1+z^{-1}}}{C_0R_2\brak{\brak{2\tau+1}-\brak{2\tau-1}z^{-1}}}
-    \label{eq:cktsig/bilinear/cktsig/Hz}
-\end{align}
-since $\abs{\frac{2\tau-1}{2\tau+1}} < 1$, the ROC is $\abs{z} > 1$.
-\item How can you obtain $H(z)$ from $H(s)$?
-
-\solution We use the bilinear transformation. Setting
-\begin{align}
-    s := \frac{2}{T}\frac{1 - z^{-1}}{1 + z^{-1}}
-\end{align}
-we get
-\begin{align}
-    H(z) &= \frac{\frac{1}{R_2}}{\frac{1}{R_1} + \frac{1}{R_2} + \frac{2C_0}{T}\frac{1 - z^{-1}}{1 + z^{-1}}} \\
-         &= \frac{T\tau\brak{1+z^{-1}}}{C_0R_2\brak{\brak{2\tau+T}-\brak{2\tau-T}z^{-1}}}
-\end{align}
-Setting $T = 1$ gives \eqref{eq:cktsig/bilinear/cktsig/Hz}.
-
-\item Find $v(n)$. Verify using ngspice and the differential equation.
-
-\solution We have,
-\begin{align}
-    V(z) &= H(z)V_i(z) \\
-         &= \frac{TV_2\tau\brak{1+z^{-1}}}{C_0R_2\brak{1-z^{-1}}\brak{\brak{2\tau+T}-\brak{2\tau-T}z^{-1}}} \\
-         &= \frac{V_2\tau\brak{z+1}}{2C_0R_2}\sum_{k=-\infty}^{\infty}\brak{1-p^k}u(k)z^{-k}
-\end{align}
-where $p := \frac{2\tau-T}{2\tau+T}$. Thus,
-\begin{align}
-    v(n) = \frac{V_2\tau}{C_0R_2}\sbrak{u(n)\brak{1-p^n}+u(n+1)\brak{1-p^{n+1}}}
-\end{align}
-where $p := \frac{2\tau-1}{2\tau+1}$. We take $T = 10^{-7}$ as the
-sampling interval. The python code \texttt{codes/4\_7.py} verifies
-these equalities.
-\begin{figure}
-    \includegraphics[width=\columnwidth]{cktsig/figs/4_7.png}
-    \caption{Representation of output across $C_0$.}
-    \label{fig:cktsig/bilinear/cktsig/vc0}
-\end{figure}
-\end{enumerate}
-\fi
