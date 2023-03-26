@@ -1,0 +1,12 @@
+Circuit
+C X 0 1u ic=0
+R X 1 2
+V 1 0 dc 2V
+.tran 100n 10u uic
+
+.control
+run
+wrdata v3.txt v(X)
+.endc
+
+.end

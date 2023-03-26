@@ -28,6 +28,9 @@
   %optionally (for landscape tables embedded in another document): %%
     \usepackage{lscape}     
     \usepackage{gensymb}     
+\usepackage{siunitx}
+\usepackage{circuitikz}
+\usepackage{xparse}
 
 
 \newif\ifbibunnumbered\global\bibunnumberedtrue%
@@ -2012,11 +2015,6 @@ No query.\par%
 %\providecommand{\norm}[1]{\lVert#1\rVert}
 \providecommand{\mtx}[1]{\mathbf{#1}}
 \providecommand{\mean}[1]{E\left[ #1 \right]}
-\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
-%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
-\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
-\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
-\providecommand{\ztrans}{\overset{\mathcal{Z}}{ \rightleftharpoons}}
 	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
 %\newcommand{\solution}{\noindent \textbf{Solution: }}
 \newcommand{\cosec}{\,\text{cosec}\,}
@@ -2028,6 +2026,7 @@ No query.\par%
 \newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
 \providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
 \providecommand{\gauss}[2]{\mathcal{N}\ensuremath{\left(#1,#2\right)}}
+\providecommand{\diff}[2]{\ensuremath{\frac{d{#1}}{d{#2}}}}
 %%
 %	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
 %\newcommand{\solution}{\noindent \textbf{Solution: }}
@@ -2045,3 +2044,25 @@ No query.\par%
 %\let\StandardTheFigure\thefigure
 \let\vec\mathbf
 \def\inputGnumericTable{}                                 %%
+\lstset{
+%language=Python,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+\NewDocumentCommand{\system}{gg}{%
+  \IfNoValueTF{#1}
+    {%
+ \longleftrightarrow
+    }
+    {%
+      \IfNoValueTF{#2}
+      {%
+\overset{\mathcal{#1}}{ \longleftrightarrow}
+      }
+      {%
+\overset{\mathcal{#1}^{#2}}{ \longleftrightarrow}
+      }
+    }%
+}

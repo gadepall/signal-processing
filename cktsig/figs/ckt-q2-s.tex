@@ -1,0 +1,13 @@
+    \begin{circuitikz} 
+    \ctikzset{resistor = european}
+    \draw
+    (0,0) -- (0,3)
+    node[label={above:Q}] {}
+    to[R, l^=$R_1$, *-*] (3,3) 
+    node[label={above:X}] {}
+    to[R, l^=$R_2$] (5.5,3)
+    to[battery1, l= $\frac{2}{s} V$] (5.5,0)
+    -- (0,0)
+    (3,3) to[battery1, l=$\frac{4}{3s} V$] (3,2) to[R, l=$\frac{1}{sC_0}$] (3,0) 
+    -- (3,-0.5) node[ground, label={right:G}] {};
+    \end{circuitikz}

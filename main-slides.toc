@@ -1,0 +1,2 @@
+\beamer@sectionintoc {2}{Two Dice}{3}{0}{1}
+\beamer@sectionintoc {3}{Pingala Series}{11}{0}{2}

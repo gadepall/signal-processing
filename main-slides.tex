@@ -1,0 +1,663 @@
+\documentclass{beamer}
+\mode<presentation>
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{advdate}
+\usepackage{adjustbox}
+\usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{mathtools}
+\usepackage{listings}
+\usepackage{url}
+\def\UrlBreaks{\do\/\do-}
+\usetheme{Boadilla}
+\usecolortheme{lily}
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1ex,right]{author in head/foot}%
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\setbeamertemplate{navigation symbols}{}
+
+\providecommand{\nCr}[2]{\,^{#1}C_{#2}} % nCr
+\providecommand{\nPr}[2]{\,^{#1}P_{#2}} % nPr
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}[1]{\overset{\mathcal{#1}}{ \longleftrightarrow}}
+%\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+%\newcommand{\solution}{\noindent \textbf{Solution: }}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\let\vec\mathbf
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+\numberwithin{equation}{section}
+
+\title{Signal Processing in High School}
+\author{G. V. V. Sharma \\ Dept. of Electrical Engg.,\\IIT Hyderabad.}
+
+\date{\today} 
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\section*{Outline}
+\begin{frame}
+\tableofcontents
+\end{frame}
+\section{Two Dice}
+\begin{frame}
+\frametitle{NCERT}
+Two dice, one blue and one grey, are thrown at the same time.   The event defined by the sum of the two numbers appearing on the top of the dice can have 11 possible outcomes 2, 3, 4, 5, 6, 6, 8, 9, 10, 11 and 12.  A student argues that each of these outcomes has a probability $\frac{1}{11}$.  Do you agree with this argument?  Justify your answer.
+\end{frame}
+
+\begin{frame}
+\frametitle
+	{Uniform Distribution: Rectangular Function}
+		Let $X_i \in \cbrak{1,2,3,4,5,6}, i = 1,2,$ be the random variables representing the outcome for each die.  Assuming the dice to be fair, the probability mass function (pmf) is expressed as 
+\begin{align}
+\label{eq:dice_pmf_xi}
+p_{X_i}(n) = \pr{X_i = n} = 
+\begin{cases}
+\frac{1}{6} & 1 \le n \le 6
+\\
+0 & otherwise
+\end{cases}
+\end{align}
+\end{frame}
+\begin{frame}
+\frametitle{Sum of Random Variables: Convolution}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+	\item The desired outcome is
+\begin{align}
+\label{eq:dice_xdef}
+X &= X_1 + X_2,
+\\
+\implies X &\in \cbrak{1,2,\dots,12}
+\end{align}
+%
+The objective is to show that
+\begin{align}
+p_X(n) \ne \frac{1}{11}
+\label{eq:dice_wrong}
+\end{align}
+\item {\em Convolution: }
+From \eqref{eq:dice_xdef},
+\begin{align}
+p_X(n) &= \pr{X_1 + X_2 = n} = \pr{X_1  = n -X_2}
+\\
+&= \sum_{k}^{}\pr{X_1  = n -k | X_2 = k}p_{X_2}(k)
+\label{eq:dice_x_sum}
+\end{align}
+after unconditioning.  $\because X_1$ and $X_2$ are independent,
+\begin{align}
+&\pr{X_1  = n -k | X_2 = k} 
+	= \pr{X_1  = n -k} = p_{X_1}(n-k)
+%\label{eq:dice_x1_indep}
+\nonumber \\
+\implies
+%\end{align}
+%From \eqref{eq:dice_x_sum} and \eqref{eq:dice_x1_indep},
+%\begin{align}
+	&p_X(n) = \sum_{k}^{}p_{X_1}(n-k)p_{X_2}(k) \triangleq p_{X_1}(n)*p_{X_2}(n)
+\label{eq:dice_x_conv}
+\end{align}
+where $*$ denotes the convolution operation. 
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Convolution Cont.}
+\begin{align}
+p_X(n) = \frac{1}{6}\sum_{k=1}^{6}p_{X_1}(n-k)= \frac{1}{6}\sum_{k=n-6}^{n-1}p_{X_1}(k)
+\label{eq:dice_x_conv_x1}
+\end{align}
+\begin{align}
+\because p_{X_1}(k) &= 0, \quad k \le 1, k \ge 6.
+\end{align}
+From \eqref{eq:dice_x_conv_x1},
+%
+\begin{align}
+p_X(n) &= 
+\begin{cases}
+0 & n < 1
+\\
+\frac{1}{6}\sum_{k=1}^{n-1}p_{X_1}(k) &  1 \le n-1 \le  6
+\\
+\frac{1}{6}\sum_{k=n-6}^{6}p_{X_1}(k) & 1 < n-6 \le 6
+\\
+0 & n > 12
+\end{cases}
+\label{eq:dice_x_conv_cond}
+\end{align}
+\end{frame}
+\begin{frame}
+\frametitle{Triangular Distribution: Student is wrong}
+\begin{align}
+p_X(n) &= 
+\begin{cases}
+0 & n < 1
+\\
+\frac{n-1}{36} &  2 \le n \le  7
+\\
+\frac{13-n}{36} & 7 < n \le 12
+\\
+0 & n > 12
+\end{cases}
+\label{eq:dice_x_conv_final}
+\end{align}
+\end{frame}
+\begin{frame}
+\frametitle{Z Transform}
+The $Z$-transform of $p_X(n)$ is defined as 
+%\cite{proakis_dsp}
+\begin{align}
+P_X(z) = \sum_{n = -\infty}^{\infty}p_X(n)z^{-n}, \quad z \in \mathbb{C}
+\label{eq:dice_xz}
+\end{align}
+%
+From \eqref{eq:dice_pmf_xi} and \eqref{eq:dice_xz}, 
+\begin{align}
+P_{X_1}(z) =P_{X_2}(z) &= \frac{1}{6}\sum_{n = 1}^{6}z^{-n}
+\\
+&=\frac{z^{-1}\brak{1-z^{-6}}}{6\brak{1-z^{-1}}}, \quad \abs{z} > 1
+\label{eq:dice_xiz}
+\end{align}
+upon summing up the geometric progression.  
+\end{frame}
+\begin{frame}
+\frametitle{Convolution vs Multiplication}
+\begin{align}
+p_X(n) &= p_{X_1}(n)*p_{X_2}(n)
+\implies
+P_X(z) = P_{X_1}(z)P_{X_2}(z)
+\label{eq:dice_xzprod_def}
+\end{align}
+Thus,
+\begin{align}
+P_X(z) = \cbrak{\frac{z^{-1}\brak{1-z^{-6}}}{6\brak{1-z^{-1}}}}^2
+= \frac{1}{36}\frac{z^{-2}\brak{1-2z^{-6}+z^{-12}}}{\brak{1-z^{-1}}^2}
+\label{eq:dice_xzprod}
+\end{align}
+\end{frame}
+\begin{frame}
+\frametitle{Inverse Z transform}
+		The $Z$ transform of $u(n)$ is 
+\begin{align}
+u(n)&\system{Z} 
+ \frac{1}{1-z^{-1}},\,\abs{z} > 1
+\end{align}
+and
+\begin{align}
+\label{eq:dice-ramp}
+nu(n)&\system{Z} \frac{z^{-1}}{\brak{1-z^{-1}}^2},\,
+\abs{z} > 1
+\end{align}
+\begin{multline}
+\frac{1}{36}\sbrak{\brak{n-1}u(n-1) - 2 \brak{n-7}u(n-7)
+	+\brak{n-13}u(n-13)}
+	\\
+\system{Z}
+\frac{1}{36}\frac{z^{-2}\brak{1-2z^{-6}+z^{-12}}}{\brak{1-z^{-1}}^2}
+\label{eq:dice_xz_closed}
+\end{multline}
+\end{frame}
+\section{Pingala Series}
+\begin{frame}
+\frametitle{Problem Statement}
+Let
+\begin{align}
+	\label{eq:pingala/10-orig-diff-a}
+	a_n &= \frac{\alpha^{n}-\beta^{n}}{\alpha - \beta}, \quad n \ge 1
+	\\
+	b_n &= a_{n-1} + a_{n+1}, \quad n \ge 2, \quad b_1 =1
+	\label{eq:pingala/10-orig-diff}
+\end{align}
+where $\alpha$ and $\beta$ ($\alpha > \beta$) are the roots of the
+\begin{align}
+z^2 - z - 1 = 0
+\end{align}
+%
+\end{frame}
+\begin{frame}
+\frametitle{JEE 2019}
+Which of the following options is correct?
+\begin{enumerate}[label=\thesection.\arabic*,ref=\thesection.\theenumi]
+\item 
+	\label{itm:ping-1}
+\begin{align}
+	\label{eq:ping-1}
+	\sum_{k=1}^{n}a_k = a_{n+2}-1, \quad n \ge 1
+\end{align}
+ \item 
+	\label{itm:ping-2}
+\begin{align}
+	\label{eq:ping-2}
+	\sum_{k=1}^{\infty}\frac{a_k}{10^k} =\frac{10}{89}
+\end{align}
+ \item 
+	\label{itm:ping-3}
+\begin{align}
+	\label{eq:ping-3}
+	b_n =\alpha^n + \beta^n, \quad n \ge 1
+\end{align}
+ \item 
+	\label{itm:ping-4}
+\begin{align}
+	\label{eq:ping-4}
+	\sum_{k=1}^{\infty}\frac{b_k}{10^k} =\frac{8}{89}
+\end{align}
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Difference Equation}
+The {\em Pingala} series is generated using the difference equation 
+\begin{align}
+	x(n+2) = x\brak{n+1} + x\brak{n},  \quad x(0) = x(1) = 1, n \ge 0
+	\label{eq:pingala/10-pingala}
+\end{align}
+\end{frame}
+\begin{frame}
+\frametitle{One Sided Z transform}
+The {\em one sided} $Z$-transform of $x(n)$ is defined as 
+\begin{align}
+	X^{+}(z) = \sum_{n = 0}^{\infty}x(n)z^{-n}, \quad z \in \mathbb{C}
+\label{eq:pingala/one-Z}
+\end{align}
+Taking the one-sided $Z$-transform on both sides of \eqref{eq:pingala/10-pingala},
+\begin{align}
+	\mathcal{Z}^+\sbrak{x(n + 2)} &= \mathcal{Z}^+\sbrak{x(n + 1)} + \mathcal{Z}^+\sbrak{x(n)} \\
+\implies     z^2X^+(z) - z^2x(0) - zx(1) &= zX^+(z) - zx(0) + zX^+(z) \\
+ \implies   \brak{z^2 - z - 1}X^+(z) &= z^2 \\
+  \implies    X^+(z) = \frac{1}{1 - z^{-1} - z^{-2}} 
+    &= \frac{1}{\brak{1 - \alpha z^{-1}}\brak{1 - \beta z^{-1}}}, \quad |z| > \alpha
+    \label{eq:pingala/X-z}
+\end{align}
+\end{frame}
+\begin{frame}
+	\frametitle{Inverse}
+Expanding $X^+(z)$ in \eqref{eq:pingala/X-z} using partial fractions, we get
+\begin{align}
+    X^+(z) &= \frac{1}{\brak{\alpha - \beta}}\sbrak{\frac{z}{1 - \alpha z^{-1}} - \frac{z}{1 - \beta z^{-1}}} \\
+	\implies    x(n) &= \frac{\alpha^{n + 1} - \beta^{n + 1}}{\alpha - \beta}u(n) 
+	\\
+	&= a_{n + 1}
+    \label{eq:pingala/x-n-def}
+\end{align}
+upon comparing with
+	\eqref{eq:pingala/10-orig-diff-a}.
+\end{frame}
+\begin{frame}
+	\frametitle{Linear Time Invariant System}
+	Let 
+\begin{align}
+	y(n) = x\brak{n-1} + x\brak{n+1},  \quad n \ge 0
+	\label{eq:pingala/10-orig-diff-rev}
+\end{align}
+	Taking the one-sided $Z$-transform on both sides of \eqref{eq:pingala/10-orig-diff-rev},
+\begin{align}
+	\mathcal{Z}^+\sbrak{y(n)} &= \mathcal{Z}^+\sbrak{x(n + 1)} + \mathcal{Z}^+\sbrak{x(n - 1)} \\
+	Y^+(z) &= zX^+(z) - zx(0) + z^{-1}X^+(z) + zx(-1) \\
+&= \frac{z + z^{-1}}{1 - z^{-1} - z^{-2}} - z 
+= \frac{1 + 2z^{-1}}{1 - z^{-1} - z^{-2}}, \quad |z| > \alpha
+\end{align}
+\end{frame}
+\begin{frame}
+	\frametitle{Power of the Z transform}
+\begin{align}
+	\alpha^n + \beta^n, \quad n \ge 1
+    \label{eq:pingala/yn-exp}
+\end{align}
+can be expressed as 
+\begin{align}
+	w(n) = \brak{\alpha^{n+1} + \beta^{n+1}}u(n)
+\end{align}
+Therefore,
+\begin{align}
+    W(z) = Y(z) = \frac{1 + 2z^{-1}}{1 - z^{-1} - z^{-2}}
+\end{align}
+\end{frame}
+\begin{frame}
+\frametitle{Power of the Z transform Cont.}
+\begin{align}
+    \sum_{k=1}^{\infty}\frac{a_k}{10^k} &= \frac{1}{10}\sum_{k = 0}^{\infty}\frac{a_{k+1}}{10^k} 
+                                        = \frac{1}{10}\sum_{k = 0}^{\infty}\frac{x(k)}{10^k} \\
+                                        &= \frac{1}{10}X^+(10) 
+                                        = \frac{1}{10}\times\frac{100}{89} = \frac{10}{89}
+\end{align}
+Thus,
+\eqref{eq:ping-2} is correct.
+\begin{align}
+    \sum_{k=1}^{\infty}\frac{b_k}{10^k} &= \frac{1}{10}\sum_{k = 0}^{\infty}\frac{b_{k+1}}{10^k} 
+                                        = \frac{1}{10}\sum_{k = 0}^{\infty}\frac{y(k)}{10^k} \\
+                                        &= \frac{1}{10}Y^+(z) 
+                                        = \frac{1}{10}\times\frac{120}{89} = \frac{12}{89}
+\end{align}
+Thus,
+\eqref{eq:ping-4} is incorrect.
+\end{frame}
+\begin{frame}
+\frametitle{Convolution}
+\begin{align}
+    \sum_{k=1}^{n}a_k &= \sum_{k=0}^{n-1}x(k) 
+                      = \sum_{k = -\infty}^{n - 1}x(k) \\
+                      &= \sum_{k = -\infty}^{\infty}x(k)u(n - 1 - k) 
+                      = x(n)*u(n - 1)
+\end{align}
+\begin{align}
+a_{n+2}-1, \quad n \ge 1
+\end{align}
+can be expressed as 
+\begin{align}
+	\sbrak{x\brak{n+1}-1}u\brak{n-1}
+\end{align}
+\end{frame}
+\begin{frame}
+\frametitle{Convolution Cont.}
+The Z transform of the above signal can be expressed as
+\begin{align}
+	\sum_{n = 1}^{\infty}x(n + 1) z^{-n} -\frac{z^{-1}}{1-z^{-1}}
+	&=\sum_{n = 2}^{\infty}x(n) z^{-n+1} -\frac{z^{-1}}{1-z^{-1}}
+	\\
+	&=z\sbrak{X^{+}(z) - x(0) -x(1)z^{-1}} -\frac{z^{-1}}{1-z^{-1}}
+	\\
+	&= \frac{z}{1 - z^{-1} - z^{-2}} - z - 1 - \frac{z^{-1}}{1 - z^{-1}} \\
+	&= \frac{z}{1 - z^{-1} - z^{-2}} -  \frac{z}{1 - z^{-1}} \\
+	&=\frac{z^{-1}}{\brak{1 - z^{-1} - z^{-2}}\brak{1 - z^{-1}}} 
+\end{align}
+From \eqref{eq:pingala/x-n-def}, we get
+\begin{align}
+    \sum_{k = 1}^{n}a_k = a_{n+2} - 1
+\end{align}
+\end{frame}
+%\input{conv-trans/main.tex}
+%\chapter{Pingala Series}
+%\input{pingala/main.tex}
+\iffalse
+\section{Problem}
+\begin{frame}
+\frametitle{Problem Statement}
+%
+Balance the following chemical equation
+\begin{align}
+\label{eq:chem_balance}
+Fe+H_2O &\rightarrow Fe_3O_4 + H_2
+\end{align}
+%
+using a matrix equation.
+%A circle $C$ passes through 
+%\begin{equation} 
+%\vec{P}=\myvec{-2\\ 4} 
+%\label{eq:circle_7_p}
+%\end{equation} 
+%and touches the $y$-axis at 
+%\begin{equation} 
+%\vec{Q}=\myvec{0\\ 2}. 
+%\label{eq:circle_7_q}
+%\end{equation}
+%Which one of the  following equations can represent a diameter of this circle?
+%\begin{enumerate}[label=(\roman*)]
+%\begin{multicols}{2}
+%\setlength\itemsep{1em}
+%\item $\myvec{4 & 5}\vec{x} = 6 $
+%\item $\myvec{2 & -3}\vec{x} +10 = 0 $
+%\item $\myvec{3 & 4}\vec{x} = 3 $
+%\item $\myvec{5 & 2}\vec{x} +4= 0 $
+%\end{multicols}
+%\end{enumerate}
+\end{frame}
+
+%\subsection{Literature}
+\section{Solution}
+\subsection{Linear Equation}
+\begin{frame}
+\frametitle{Linear Equation}
+%\framesubtitle{Literature}
+Let the balanced version of \eqref{eq:chem_balance} be 
+%
+\begin{align}
+\label{eq:chem_balance_unsol}
+x_1Fe+x_2H_2 O &\rightarrow x_3Fe_3 O_4 + x_4H_2
+\end{align}
+%
+which results in the following equations
+%
+\begin{align}
+\begin{split}
+\brak{x_1 -3x_3}Fe &= 0
+\\
+\brak{2x_2 -2x_4}H &= 0
+\\
+\brak{x_2 -4x_3}H &= 0
+\end{split}
+\end{align}
+%Let $\vec{O}$ be the centre of $C$. Then the equation of the normal, OQ is
+%\begin{align}
+%%\vec{x}^T\vec{x}-2\vec{O}^T\vec{x} +F = 0
+%\myvec{0 & 1}\brak{\vec{O}-\vec{Q}} &= 0
+%\nonumber \\ 
+%\implies \myvec{0 & 1}\vec{O} = 2
+%\label{eq:circle_7_o1}
+%\end{align}
+%%
+%Also, 
+%%Substituting \eqref{eq:circle_7_p} in \eqref{eq:circle_7_c}, 
+%\begin{align}
+%\norm{\vec{O}-\vec{P}}^2&=\norm{\vec{O}-\vec{Q}}^2 
+%\nonumber \\
+%\implies 2\brak{\vec{P}-\vec{Q}}^T\vec{O} &= \norm{\vec{P}}^2-\norm{\vec{Q}}^2 
+%\nonumber \\
+%\text{or, } \myvec{1 & -1}\vec{O} &= -4
+%\label{eq:circle_7_o2}
+%\end{align}
+%%
+%\eqref{eq:circle_7_o1} and \eqref{eq:circle_7_o2} result in the matrix equation
+%\begin{align}
+%\myvec{1 & -1 \\ 0 & 1}\vec{O} = \myvec{-4\\2}
+%\label{eq:circle_7_matrix}
+%\end{align}
+%yielding the augmented matrix
+%\begin{align}
+%\myvec{1 & -1 & -4\\ 0 & 1 & 2} \leftrightarrow \myvec{1 & 0 & -2\\ 0 & 1 & 2}\implies \vec{O} = \myvec{-2 \\2}
+%\label{eq:circle_7_o}
+%\end{align}
+%%
+\end{frame}
+\subsection{Matrix Equation}
+\begin{frame}
+\frametitle{Matrix Equation}
+The linear equations can be expxressed as
+%\begin{enumerate}[label=(\roman*)]
+\begin{align}
+\begin{split}
+x_1 + 0.x_2 -3x_3 +0.x_4&= 0
+\\
+0.x_1+2x_2 +0.x_3-2x_4 &= 0
+\\
+0.x_1+x_2 -4x_3+ 0.x_4 &= 0
+\end{split}
+\end{align}
+%
+resulting in the matrix equation
+\begin{align}
+\label{eq:chem_balance_mat_eq}
+\begin{split}
+\myvec{
+1 & 0 & -3 & 0
+\\
+0 & 2 & 0 & -2
+\\
+0 & 1 & -4 & 0
+}
+\vec{x} &= \vec{0}
+\end{split}
+\end{align}
+where
+\begin{align}
+\vec{x} = \myvec{x_1 \\ x_2 \\ x_3 \\ x_4} 
+\end{align}
+%\item $\myvec{4 & 5}\vec{O} = 2 \ne 6 $. Incorrect.
+%\vfill
+%\item $\myvec{2 & -3}\vec{O} +10 = 0 $. Correct.
+%\vfill
+%\item $\myvec{3 & 4}\vec{O} = 2 \ne 3 $.  Incorrect.
+%\vfill
+%\item $\myvec{5 & 2}\vec{O} +4= -2 \ne 0 $. Incorrect
+%\end{enumerate}
+\end{frame}
+\subsection{Row Reduction}
+\begin{frame}
+\frametitle{Row Reduction}
+\eqref{eq:chem_balance_mat_eq} can be row reduced as follows
+%
+\begin{align}
+\label{eq:chem_balance_mat_row}
+\myvec{
+1 & 0 & -3 & 0
+\\
+0 & 2 & 0 & -2
+\\
+0 & 1 & -4 & 0
+}
+ \xleftrightarrow[]{R_2 \leftarrow \frac{R_2}{2}}
+\myvec{
+1 & 0 & -3 & 0
+\\
+0 & 1 & 0 & -1
+\\
+0 & 1 & -4 & 0
+}
+\\
+ \xleftrightarrow[]{R_3\leftarrow R_3-R_2}
+\myvec{
+1 & 0 & -3 & 0
+\\
+0 & 1 & 0 & -1
+\\
+0 & 0 & -4 & 1
+}
+\\
+ \xleftrightarrow[]{R_1\leftarrow 4R_1-3R_3}
+\myvec{
+4 & 0 & 0 & -3
+\\
+0 & 1 & 0 & -1
+\\
+0 & 0 & -4 & 1
+}
+\\
+ \xleftrightarrow[R_3 \leftarrow -\frac{1}{4}R_3]{R_1\leftarrow \frac{1}{4}}
+\myvec{
+1 & 0 & 0 & -\frac{3}{4}
+\\
+0 & 1 & 0 & -1
+\\
+0 & 0 & 1 & -\frac{1}{4}
+}
+\end{align}
+%
+%The radius  of $C$ is obtained as
+%\begin{align}
+%r = \norm{O-P} = 2
+%\end{align}
+\end{frame}
+%\section{Plot}
+\subsection{Balanced Equation}
+\begin{frame}[fragile]
+\frametitle{Balanced Equation}
+
+Thus, 
+\begin{align}
+\label{eq:chem_balance_mat_sol}
+x_1 &= \frac{3}{4}x_4, x_2 = x_4, x_3 = \frac{1}{4}x_4
+\\
+\implies \vec{x} &= x_4\myvec{\frac{3}{4} \\ 1 \\ \frac{1}{4} \\ 1}= \myvec{3 \\ 4 \\ 1 \\ 4}
+\end{align}
+%
+upon substituting $x_4 = 4$.
+%
+\eqref{eq:chem_balance_unsol} then becomes
+%
+\begin{align}
+\label{eq:chem_balance_final}
+3Fe+4H_2 O &\rightarrow Fe_3 O_4 + 4H_2
+\end{align}
+The code in 
+{\footnotesize
+\begin{lstlisting}
+https://github.com/gadepall/school/blob/master/training/chemistry/codes/chembal.py
+\end{lstlisting}
+}
+verifies \eqref{eq:chem_balance_mat_sol}.
+%plots Fig. \ref{fig:circle_diameter}.
+%
+%\begin{figure}
+%\centering
+%\includegraphics[width=0.6\columnwidth]{./figs/circle_diameter.eps}
+%\caption{Circle $C$ and all lines (i)-(iv). (ii) is a diameter.}
+%\label{fig:circle_diameter}
+%\end{figure}
+\end{frame}
+\fi
+%\begin{frame}
+%\frametitle{Introduction}
+%\framesubtitle{Literature}
+%%\begin{figure}[t!]
+%%    \centering
+%%    \begin{subfigure}[t]{0.4\columnwidth}
+%%        \centering
+%%        \includegraphics[width=\columnwidth]{point_source}
+%%        \caption{Single point source}
+%%\label{fig3:subfig1}        
+%%    \end{subfigure}%
+%%    ~ 
+%%    \begin{subfigure}[t]{0.4\columnwidth}
+%%        \centering
+%%        \includegraphics[width=\columnwidth]{pointNoPowerDist_new}
+%%        \caption{SNR profile}
+%%\label{fig3:subfig2}
+%%    \end{subfigure}
+%%  %  \caption{Average SNR for a BPP. $N=16$}
+%%    \label{fig3}
+%%  \end{figure}
+%
+%\end{frame}
+%  
+%
+%
+%%
+
+\end{document}

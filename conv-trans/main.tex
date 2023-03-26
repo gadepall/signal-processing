@@ -295,8 +295,10 @@ Probability and Random Variables
 %\input{./chapters/axioms.tex}
 \fi
 
-\section{Sum of Independent Random Variables}
+\section{Problem}
 Two dice, one blue and one grey, are thrown at the same time.   The event defined by the sum of the two numbers appearing on the top of the dice can have 11 possible outcomes 2, 3, 4, 5, 6, 6, 8, 9, 10, 11 and 12.  A student argues that each of these outcomes has a probability $\frac{1}{11}$.  Do you agree with this argument?  Justify your answer.
+
+\section{Uniform Distribution: Rectangular Function}
 
 \renewcommand{\theequation}{\theenumi}
 \renewcommand{\thefigure}{\theenumi}
@@ -306,7 +308,7 @@ Two dice, one blue and one grey, are thrown at the same time.   The event define
 
 %
 
-\item  {\em The Uniform Distribution: }Let $X_i \in \cbrak{1,2,3,4,5,6}, i = 1,2,$ be the random variables representing the outcome for each die.  Assuming the dice to be fair, the probability mass function (pmf) is expressed as 
+\item  Let $X_i \in \cbrak{1,2,3,4,5,6}, i = 1,2,$ be the random variables representing the outcome for each die.  Assuming the dice to be fair, the probability mass function (pmf) is expressed as 
 \begin{align}
 \label{eq:dice_pmf_xi}
 p_{X_i}(n) = \pr{X_i = n} = 
@@ -316,7 +318,10 @@ p_{X_i}(n) = \pr{X_i = n} =
 0 & otherwise
 \end{cases}
 \end{align}
-The desired outcome is
+\end{enumerate}
+\section{Sum of Random Variables: Convolution}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+	\item The desired outcome is
 \begin{align}
 \label{eq:dice_xdef}
 X &= X_1 + X_2,
@@ -338,19 +343,19 @@ p_X(n) &= \pr{X_1 + X_2 = n} = \pr{X_1  = n -X_2}
 \label{eq:dice_x_sum}
 \end{align}
 after unconditioning.  $\because X_1$ and $X_2$ are independent,
-\begin{multline}
+\begin{align}
 \pr{X_1  = n -k | X_2 = k} 
-\\
 = \pr{X_1  = n -k} = p_{X_1}(n-k)
 \label{eq:dice_x1_indep}
-\end{multline}
+\end{align}
 From \eqref{eq:dice_x_sum} and \eqref{eq:dice_x1_indep},
 \begin{align}
-p_X(n) = \sum_{k}^{}p_{X_1}(n-k)p_{X_2}(k) = p_{X_1}(n)*p_{X_2}(n)
+p_X(n) = \sum_{k}^{}p_{X_1}(n-k)p_{X_2}(k) \triangleq p_{X_1}(n)*p_{X_2}(n)
 \label{eq:dice_x_conv}
 \end{align}
 where $*$ denotes the convolution operation. 
 %\cite{proakis_dsp}.  
+\item
 Substituting from \eqref{eq:dice_pmf_xi}
 in \eqref{eq:dice_x_conv},
 \begin{align}
@@ -375,7 +380,10 @@ p_X(n) &=
 \end{cases}
 \label{eq:dice_x_conv_cond}
 \end{align}
-Substituting from \eqref{eq:dice_pmf_xi} in \eqref{eq:dice_x_conv_cond},
+\end{enumerate}
+\section{The Triangular function}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+	\item Substituting from \eqref{eq:dice_pmf_xi} in \eqref{eq:dice_x_conv_cond},
 \begin{align}
 p_X(n) &= 
 \begin{cases}
@@ -390,7 +398,10 @@ p_X(n) &=
 \label{eq:dice_x_conv_final}
 \end{align}
 satisfying \eqref{eq:dice_wrong}.
-\item {\em The $Z$-transform: }
+\end{enumerate}
+\section{The $Z$-transform }
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\item 
 The $Z$-transform of $p_X(n)$ is defined as 
 %\cite{proakis_dsp}
 \begin{align}
@@ -406,42 +417,15 @@ P_{X_1}(z) =P_{X_2}(z) &= \frac{1}{6}\sum_{n = 1}^{6}z^{-n}
 \label{eq:dice_xiz}
 \end{align}
 upon summing up the geometric progression.  
+\item Show that 
 \begin{align}
-\because p_X(n) &= p_{X_1}(n)*p_{X_2}(n),
-\\
-P_X(z) &= P_{X_1}(z)P_{X_2}(z)
+p_X(n) &= p_{X_1}(n)*p_{X_2}(n)
+\implies
+P_X(z) = P_{X_1}(z)P_{X_2}(z)
 \label{eq:dice_xzprod_def}
 \end{align}
 The above property follows from Fourier analysis and is fundamental to signal processing. 
-%\cite{proakis_dsp}. 
-From \eqref{eq:dice_xiz} and \eqref{eq:dice_xzprod_def},
-\begin{align}
-P_X(z) &= \cbrak{\frac{z^{-1}\brak{1-z^{-6}}}{6\brak{1-z^{-1}}}}^2
-\\
-&= \frac{1}{36}\frac{z^{-2}\brak{1-2z^{-6}+z^{-12}}}{\brak{1-z^{-1}}^2}
-\label{eq:dice_xzprod}
-\end{align}
-Using the fact that 
-%\cite{proakis_dsp}
-\begin{align}
-p_X(n-k) &\system{Z}P_X(z)z^{-k},
-\\
-nu(n)&\system{Z} \frac{z^{-1}}{\brak{1-z^{-1}}^2}
-\end{align}
-after some algebra, it can be shown that
-%{\tiny
-\begin{multline}
-\frac{1}{36}\lsbrak{\brak{n-1}u(n-1) - 2 \brak{n-7}u(n-7)}
-\\
-\rsbrak{ +\brak{n-13}u(n-13)}
-\\
-\system{Z}
-\frac{1}{36}\frac{z^{-2}\brak{1-2z^{-6}+z^{-12}}}{\brak{1-z^{-1}}^2}
-\label{eq:dice_xz_closed}
-\end{multline}
-%}
-
-where 
+\item The unit step function is defined as
 \begin{align}
 u(n) =
 \begin{cases}
@@ -450,17 +434,51 @@ u(n) =
 0 & n < 0
 \end{cases}
 \end{align}
-
-From \eqref{eq:dice_xz}, \eqref{eq:dice_xzprod} and \eqref{eq:dice_xz_closed}
+		Show that the $Z$ transform of $u(n)$ is 
+\begin{align}
+	U(z) = \frac{1}{1-z^{-1}},\,\abs{z} > 1
+\end{align}
+\item Show that
+\begin{align}
+\label{eq:dice-ramp}
+	nu(n)&\system{Z} \frac{z^{-1}}{\brak{1-z^{-1}}^2},\,
+\abs{z} > 1
+\end{align}
+\item Show that 
+\begin{align}
+\label{eq:dice-delay}
+	p_X(n-k) &\system{Z}P_X(z)z^{-k}
+\end{align}
+%\cite{proakis_dsp}. 
+\item From \eqref{eq:dice_xiz} and \eqref{eq:dice_xzprod_def},
+\begin{align}
+P_X(z) = \cbrak{\frac{z^{-1}\brak{1-z^{-6}}}{6\brak{1-z^{-1}}}}^2
+= \frac{1}{36}\frac{z^{-2}\brak{1-2z^{-6}+z^{-12}}}{\brak{1-z^{-1}}^2}
+\label{eq:dice_xzprod}
+\end{align}
+From
+\eqref{eq:dice-delay}
+and 
+\eqref{eq:dice-ramp},
+%\cite{proakis_dsp}
+it can be shown that
+%{\tiny
 \begin{multline}
-p_{X}(n) = \frac{1}{36}\lsbrak{\brak{n-1}u(n-1) 
-}
-\\
-\rsbrak{- 2 \brak{n-7}u(n-7)+\brak{n-13}u(n-13)}
+\frac{1}{36}\sbrak{\brak{n-1}u(n-1) - 2 \brak{n-7}u(n-7)
+	+\brak{n-13}u(n-13)}
+	\\
+	\system{Z}
+\frac{1}{36}\frac{z^{-2}\brak{1-2z^{-6}+z^{-12}}}{\brak{1-z^{-1}}^2}
+\label{eq:dice_xz_closed}
+\end{multline}
+%}
+	\item From \eqref{eq:dice_xz}, \eqref{eq:dice_xzprod} and \eqref{eq:dice_xz_closed}
+\begin{multline}
+p_{X}(n) = \frac{1}{36}\sbrak{\brak{n-1}u(n-1) 
+- 2 \brak{n-7}u(n-7)+\brak{n-13}u(n-13)}
 \end{multline}
 which is the same as \eqref{eq:dice_x_conv_final}.  Note that  \eqref{eq:dice_x_conv_final} can be obtained from \eqref{eq:dice_xz_closed} using contour integration as well.
 % \cite{proakis_dsp}.  
-
 \item 
 The experiment of rolling the dice was simulated using Python for 10000 samples.  These were generated using Python libraries for uniform distribution. The frequencies for each outcome were then used to compute the resulting pmf, which  is plotted in Figure \ref{fig:dice}.  The theoretical pmf obtained in \eqref{eq:dice_x_conv_final} is plotted for comparison.  
 %
@@ -483,44 +501,5 @@ The experiment of rolling the dice was simulated using Python for 10000 samples.
 %
 %\end{document}
 \end{enumerate}
-%\subsection{The Uniform Distribution}
-%\input{./chapters/sum.tex}
-%\section{Cumulative Distribution Function}
-%\subsection{The Bernoulli Distribution}
-%\input{./chapters/bernoulli.tex}
-%\subsection{The Binomial Distribution}
-%\input{./chapters/binomial.tex}
-%\section{Central Limit Theorem: Gaussian Distribution}
-%\input{./chapters/clt.tex}
-%\section{Cumulative Distribution Function}
-%\input{./chapters/cdf.tex}
-
-%\section{Bernoulli Distribution}
-%\subsection{Distance from a plane to a point}
-%\input{./chapters/bernoulli.tex}
-%\section{Stochastic Geometry}
-%\input{./chapters/stochastic.tex}
-%\section{Transformation of Variables}
-%\input{./chapters/trans.tex}
-%%
-%\section{Conditional Probability}
-%\input{./chapters/cond.tex}
-%%%
-%\section{Two Dimensions}
-%\input{./chapters/twoD.tex}
-%%%
-%\section{Transform Domain: Moment Generating Function}
-%\input{./chapters/laplace.tex}
-%%%
-%\section{Uniform to Other: Quantile function}
-%\input{./chapters/uni2other.tex}
-%\section{Miscellaneous Distributions}
-%\input{./chapters/misc.tex} 
-
-%\section{Sum of i.i.d random variables}
-%\input{./chapters/conv.tex}
-
-
-%\end{document}
 
 

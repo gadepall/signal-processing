@@ -128,14 +128,12 @@ columns=fullflexible
 %\numberwithin{equation}{subsection}
 %\numberwithin{problem}{subsection}
 %\numberwithin{definition}{subsection}
-\makeatletter
-\@addtoreset{figure}{problem}
-\makeatother
 
-\let\StandardTheFigure\thefigure
 %\renewcommand{\thefigure}{\theproblem.\arabic{figure}}
-\renewcommand{\thefigure}{\theproblem}
-
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+\makeatletter
+\@addtoreset{figure}{section}
+\makeatother
 
 %\numberwithin{figure}{subsection}
 
@@ -172,14 +170,7 @@ Pingala Series
 % was not built to handle multiple paragraphs
 %
 
-\author{ G V V Sharma$^{*}$ %<-this  stops a space
-\thanks{*The author is with the Department
-of Electrical Engineering, Indian Institute of Technology, Hyderabad
-502285 India e-mail:  gadepall@iith.ac.in.  All content in the manuscript is 
-released under GNU GPL.  Free to use for anything. }% <-this % stops a space
-%\thanks{J. Doe and J. Doe are with Anonymous University.}% <-this % stops a space
-%\thanks{Manuscript received April 19, 2005; revised January 11, 2007.}}
-}
+\author{Gautam Singh}
 % note the % following the last \IEEEmembership and also \thanks - 
 % these prevent an unwanted space from occurring between the last author name
 % and the end of the author line. i.e., if you had this:
@@ -229,15 +220,6 @@ released under GNU GPL.  Free to use for anything. }% <-this % stops a space
 
 \tableofcontents
 
-%\renewcommand{\thefigure}{\thesection.\theenumi}
-%\renewcommand{\thetable}{\thesection.\theenumi}
-
-\renewcommand{\thefigure}{\theenumi}
-\renewcommand{\thetable}{\theenumi}
-
-%\renewcommand{\theequation}{\thesection}
-
-
 \bigskip
 
 \begin{abstract}
@@ -245,70 +227,264 @@ This manual provides a simple introduction to Transforms
 \end{abstract}
 \fi
 \section{JEE 2019}
-Let 
 \begin{align}
+	\label{eq:pingala/10-orig-diff-a}
 	a_n &= \frac{\alpha^{n}-\beta^{n}}{\alpha - \beta}, \quad n \ge 1
 	\\
 	b_n &= a_{n-1} + a_{n+1}, \quad n \ge 2, \quad b_1 =1
-	\label{eq:10-orig-diff}
+	\label{eq:pingala/10-orig-diff}
 \end{align}
-where $\alpha, \beta$ are roots of the equation
+where $\alpha$ and $\beta$ ($\alpha > \beta$) are the roots of the
 \begin{align}
-z^2-z-1 = 0.
+z^2 - z - 1 = 0
 \end{align}
+%
 Verify the following using a python code.
-\begin{enumerate}[label=\thesection.\arabic*
-,ref=\thesection.\theenumi]
+\begin{enumerate}[label=\thesection.\arabic*,ref=\thesection.\theenumi]
 \item 
+	\label{itm:ping-1}
 \begin{align}
+	\label{eq:ping-1}
 	\sum_{k=1}^{n}a_k = a_{n+2}-1, \quad n \ge 1
 \end{align}
  \item 
+	\label{itm:ping-2}
 \begin{align}
+	\label{eq:ping-2}
 	\sum_{k=1}^{\infty}\frac{a_k}{10^k} =\frac{10}{89}
 \end{align}
  \item 
+	\label{itm:ping-3}
 \begin{align}
+	\label{eq:ping-3}
 	b_n =\alpha^n + \beta^n, \quad n \ge 1
 \end{align}
  \item 
+	\label{itm:ping-4}
 \begin{align}
+	\label{eq:ping-4}
 	\sum_{k=1}^{\infty}\frac{b_k}{10^k} =\frac{8}{89}
 \end{align}
-
+\solution
+\begin{lstlisting}
+$ python3 pingala/codes/1.py
+\end{lstlisting}
 \end{enumerate}
 \section{Pingala Series}
 \begin{enumerate}[label=\thesection.\arabic*,ref=\thesection.\theenumi]
-\item The {\em one sided} $Z$-transform of $x(n)$ is defined as 
-%\cite{proakis_dsp}
-\begin{align}
-	X^{+}(z) = \sum_{n = 0}^{\infty}x(n)z^{-n}, \quad z \in \mathbb{C}
-\label{eq:one-Z}
-\end{align}
 	\item The {\em Pingala} series is generated using the difference equation 
 \begin{align}
 	x(n+2) = x\brak{n+1} + x\brak{n},  \quad x(0) = x(1) = 1, n \ge 0
-	\label{eq:10-pingala}
+	\label{eq:pingala/10-pingala}
 \end{align}
 Generate a stem plot for $x(n)$.
-\item 		Find $X^{+}(z)$.
-	\item Find $x(n)$.
-
+\\
+\solution
+The following code generates
+    Fig. \ref{fig:pingala/xn}.
+\begin{lstlisting}
+$ python3 pingala/codes/2_1.py
+\end{lstlisting}
+\begin{figure}[!htp]
+    \includegraphics[width=\columnwidth]{pingala/figs/2_1.png}
+    \caption{Plot of $x(n)$}
+    \label{fig:pingala/xn}
+\end{figure}
+\item The {\em one sided} $Z$-transform of $x(n)$ is defined as 
+\begin{align}
+	X^{+}(z) = \sum_{n = 0}^{\infty}x(n)z^{-n}, \quad z \in \mathbb{C}
+\label{eq:pingala/one-Z}
+\end{align}
+Find $X^{+}(z)$.
+\\
+\solution Taking the one-sided $Z$-transform on both sides of \eqref{eq:pingala/10-pingala},
+\begin{align}
+	\mathcal{Z}^+\sbrak{x(n + 2)} &= \mathcal{Z}^+\sbrak{x(n + 1)} + \mathcal{Z}^+\sbrak{x(n)} \\
+\implies     z^2X^+(z) - z^2x(0) - zx(1) &= zX^+(z) - zx(0) + zX^+(z) \\
+ \implies   \brak{z^2 - z - 1}X^+(z) &= z^2 \\
+  \implies    X^+(z) = \frac{1}{1 - z^{-1} - z^{-2}} 
+    &= \frac{1}{\brak{1 - \alpha z^{-1}}\brak{1 - \beta z^{-1}}}, \quad |z| > \alpha
+    \label{eq:pingala/X-z}
+\end{align}
+\item Find $x(n)$.
+\\
+\solution Expanding $X^+(z)$ in \eqref{eq:pingala/X-z} using partial fractions, we get
+\begin{align}
+    X^+(z) &= \frac{1}{\brak{\alpha - \beta}}\sbrak{\frac{z}{1 - \alpha z^{-1}} - \frac{z}{1 - \beta z^{-1}}} \\
+	\implies    x(n) &= \frac{\alpha^{n + 1} - \beta^{n + 1}}{\alpha - \beta}u(n) 
+	\\
+	&= a_{n + 1}
+    \label{eq:pingala/x-n-def}
+\end{align}
+upon comparing with
+	\eqref{eq:pingala/10-orig-diff-a}.
+\end{enumerate}
+\section{Linear Time Invariant System}
+\begin{enumerate}[label=\thesection.\arabic*,ref=\thesection.\theenumi]
 	\item Sketch 
 \begin{align}
-	y(n)	 = x\brak{n-1} + x\brak{n+1},  \quad n \ge 0
-	\label{eq:10-orig-diff-rev}
+	y(n) = x\brak{n-1} + x\brak{n+1},  \quad n \ge 0
+	\label{eq:pingala/10-orig-diff-rev}
 \end{align}
-
-	\item Find $Y^{+}(z)$. 
+\solution
+Execute
+\begin{lstlisting}
+$ python3 pingala/codes/2_2.py
+\end{lstlisting}
+to obtain Fig. 
+    \ref{fig:pingala/yn}
+\begin{figure}[!htbp]
+    \includegraphics[width=\columnwidth]{pingala/figs/2_2.png}
+    \caption{Plot of $y(n)$}
+    \label{fig:pingala/yn}
+\end{figure}
+\item Show that 
+\begin{align}
+	x(n + 1)&\system{Z}  zX^+(z) - zx(0)
+	\\
+	x(n - 1)&\system{Z}   z^{-1}X^+(z) + zx(-1) 
+\end{align}
+\item Find $Y^{+}(z)$. 
+	\\
+\solution Taking the one-sided $Z$-transform on both sides of \eqref{eq:pingala/10-orig-diff-rev},
+\begin{align}
+	\mathcal{Z}^+\sbrak{y(n)} &= \mathcal{Z}^+\sbrak{x(n + 1)} + \mathcal{Z}^+\sbrak{x(n - 1)} \\
+	Y^+(z) &= zX^+(z) - zx(0) + z^{-1}X^+(z) + zx(-1) \\
+&= \frac{z + z^{-1}}{1 - z^{-1} - z^{-2}} - z 
+= \frac{1 + 2z^{-1}}{1 - z^{-1} - z^{-2}}, \quad |z| > \alpha
+\end{align}
+\item Show that
+\begin{align}
+	\label{eq:itm-3}
+	y(n) = b_{n + 1}.
+\end{align}
+\item Find the impulse response of 
+	\eqref{eq:pingala/10-orig-diff-rev}
+\iffalse
 \item Find $y(n)$.
+    \label{pr:1-3}
+    \\
+\solution 
+Using \eqref{eq:pingala/X-z},
+\begin{align}
+	Y^+(z) &= \brak{1 + 2z^{-1}}\sum_{n = 0}^{\infty}x(n)z^{-n} \\
+           &= \sum_{n = 0}^{\infty}x(n)z^{-n} + \sum_{n = 1}^{\infty}2x(n - 1)z^{-n} \\
+           &= x(0) + \sum_{n = 1}^{\infty}\brak{x(n) + 2x(n - 1)}z^{-n}
+	   \\
+           &= y(0) + \sum_{n = 1}^{\infty}y(n)z^{-n}
+\end{align}
+using the definition of $Y^{+}(z)$.
+Thus, 
+\begin{align}
+	y(n) =
+	\begin{cases}
+		x(n) & n \le 0
+		\\
+		x(n) + 2x(n - 1) & n \ge 1
+	\end{cases}
+\end{align}
+Substituting from 
+    \eqref{eq:pingala/x-n-def},
+\begin{align}
+    y(n) &= \frac{\brak{\alpha^{n + 1} - \beta^{n + 1}} + \brak{2\alpha^n + 2\beta^n}}{\alpha - \beta} \\
+         &= \frac{\brak{\alpha^{n + 2} - \beta^{n + 2}} + \brak{\alpha^{n} + \beta^{n}}}{\alpha - \beta}  \\
+         &= \frac{\brak{\alpha^{n + 2} - \beta^{n + 2}} - \alpha\beta\brak{\alpha^{n} + \beta^{n}}}{\alpha - \beta} \\
+         &= \frac{\brak{\alpha - \beta}\brak{\alpha^{n + 1} + \beta^{n + 1}}}{\alpha - \beta} \\
+         &= \alpha^{n + 1} + \beta^{n + 1}, \quad  n \ge 0
+\label{eq:pingala/y-b}
+\end{align}
+ $\because \alpha + \beta = 1$.
+ From 
+	\eqref{eq:pingala/10-orig-diff},
+    \eqref{eq:pingala/x-n-def}
+    and
+	\eqref{eq:pingala/10-orig-diff-rev},
+%Comparing \eqref{eq:pingala/y-b} with the definition of $b_n$, we see that 
+Hence,
+\begin{align}
+	y(n) &= b_{n + 1}.
+	\\
+	\implies  b_n &= \alpha^n + \beta^n, \quad n \ge 1
+\end{align}
+and option 
+	\ref{eq:ping-3}
+	is correct.
+\fi
 \end{enumerate}
 \section{Power of the Z transform}
 \begin{enumerate}[label=\thesection.\arabic*,ref=\thesection.\theenumi]
 \item Show that 
 \begin{align}
+	\sum_{k=1}^{\infty}\frac{a_k}{10^k}= 
+	\frac{1}{10}\sum_{k=0}^{\infty}\frac{x\brak{k}}{10^k} =\frac{1}{10}X^{+}\brak{{10}}
+\end{align}
+\label{pr:1-2}
+\solution 
+\begin{align}
+    \sum_{k=1}^{\infty}\frac{a_k}{10^k} &= \frac{1}{10}\sum_{k = 0}^{\infty}\frac{a_{k+1}}{10^k} 
+                                        = \frac{1}{10}\sum_{k = 0}^{\infty}\frac{x(k)}{10^k} \\
+                                        &= \frac{1}{10}X^+(10) 
+                                        = \frac{1}{10}\times\frac{100}{89} = \frac{10}{89}
+\end{align}
+Thus,
+\eqref{eq:ping-2} is correct.
+ \item Show that 
+\begin{align}
+	\sum_{k=1}^{\infty}\frac{b_k}{10^k} =
+	\frac{1}{10}\sum_{k=0}^{\infty}\frac{y\brak{k}}{10^k} =\frac{1}{10}Y^{+}\brak{{10}}
+\end{align}
+\label{pr:1-4}
+\solution
+\begin{align}
+    \sum_{k=1}^{\infty}\frac{b_k}{10^k} &= \frac{1}{10}\sum_{k = 0}^{\infty}\frac{b_{k+1}}{10^k} 
+                                        = \frac{1}{10}\sum_{k = 0}^{\infty}\frac{y(k)}{10^k} \\
+                                        &= \frac{1}{10}Y^+(z) 
+                                        = \frac{1}{10}\times\frac{120}{89} = \frac{12}{89}
+\end{align}
+Thus,
+\eqref{eq:ping-4} is incorrect.
+\item Show that 
+\begin{align}
+	\alpha^n + \beta^n, \quad n \ge 1
+    \label{eq:pingala/yn-exp}
+\end{align}
+can be expressed as 
+\begin{align}
+	w(n) = \brak{\alpha^{n+1} + \beta^{n+1}}u(n)
+\end{align}
+and find $W(z)$.
+\\
+\solution Putting $n = k + 1$ in \eqref{eq:pingala/yn-exp} and using the definition of $u(n)$, 
+\begin{align}
+\alpha^n + \beta^n = \brak{\alpha^{k + 1} + \beta^{k + 1}}u(k)
+\end{align}
+Hence, \eqref{eq:pingala/yn-exp} can be expressed as
+\begin{align}
+w(n) = \brak{\alpha^{n+1} + \beta^{n+1}}u(n) 
+\end{align}
+Therefore,
+\begin{align}
+    W(z) = Y(z) = \frac{1 + 2z^{-1}}{1 - z^{-1} - z^{-2}}
+\end{align}
+Thus, by invoking 
+	\eqref{eq:itm-3},
+we find that 
+\eqref{eq:ping-3}
+is correct 
+\end{enumerate}
+\section{Convolution}
+\begin{enumerate}[label=\thesection.\arabic*,ref=\thesection.\theenumi]
+\item Show that 
+\begin{align}
 	\sum_{k=1}^{n}a_k = 
-	\sum_{k=0}^{n-1}x(n) = x(n)*u(n-1)
+	\sum_{k=0}^{n-1}x(k) = x(n)*u(n-1)
+\end{align}
+\solution From \eqref{eq:pingala/x-n-def}, and noting that $x(n) = 0\ \forall\ n < 0$,
+\begin{align}
+    \sum_{k=1}^{n}a_k &= \sum_{k=0}^{n-1}x(k) 
+                      = \sum_{k = -\infty}^{n - 1}x(k) \\
+                      &= \sum_{k = -\infty}^{\infty}x(k)u(n - 1 - k) 
+                      = x(n)*u(n - 1)
 \end{align}
 \item Show that 
 \begin{align}
@@ -316,31 +492,34 @@ a_{n+2}-1, \quad n \ge 1
 \end{align}
 can be expressed as 
 \begin{align}
-	\sbrak{x\brak{n+1}-1}u\brak{n}
+	\sbrak{x\brak{n+1}-1}u\brak{n-1}
 \end{align}
- \item Show that 
+\solution From \eqref{eq:pingala/x-n-def},
 \begin{align}
-	\sum_{k=1}^{\infty}\frac{a_k}{10^k}= 
-	\frac{1}{10}\sum_{k=0}^{\infty}\frac{x\brak{k}}{10^k} =\frac{1}{10}X^{+}\brak{{10}}
+    a_{n+2} - 1 = \sbrak{x(n + 1) - 1}, \quad n \ge 1
 \end{align}
- \item Show that 
+and so, using the definition of $u(n)$,
 \begin{align}
-	\alpha^n + \beta^n, \quad n \ge 1
+    a_{n+2} - 1 = \sbrak{x(n + 1) - 1}u(n-1)
 \end{align}
-can be expressed as 
+\item Show that
 \begin{align}
-	w(n) =\brak{\alpha^{n+1} + \beta^{n+1}}u(n)
+	\sbrak{x(n + 1) - 1}u(n-1)&\system{Z} 
+     \frac{z^{-1}}{\brak{1 - z^{-1} - z^{-2}}\brak{1 - z^{-1}}} 
 \end{align}
-		and find $W(z)$.
-
- \item Show that 
+\solution The Z transform of the above signal can be expressed as
 \begin{align}
-	\sum_{k=1}^{\infty}\frac{b_k}{10^k} =
-	\frac{1}{10}\sum_{k=0}^{\infty}\frac{y\brak{k}}{10^k} =\frac{1}{10}Y^{+}\brak{{10}}
+	\sum_{n = 1}^{\infty}x(n + 1) z^{-n} -\frac{z^{-1}}{1-z^{-1}}
+	&=\sum_{n = 2}^{\infty}x(n) z^{-n+1} -\frac{z^{-1}}{1-z^{-1}}
+	\\
+	&=z\sbrak{X^{+}(z) - x(0) -x(1)z^{-1}} -\frac{z^{-1}}{1-z^{-1}}
+	\\
+	&= \frac{z}{1 - z^{-1} - z^{-2}} - z - 1 - \frac{z^{-1}}{1 - z^{-1}} \\
+	&= \frac{z}{1 - z^{-1} - z^{-2}} -  \frac{z}{1 - z^{-1}} \\
+	&=\frac{z^{-1}}{\brak{1 - z^{-1} - z^{-2}}\brak{1 - z^{-1}}} 
 \end{align}
-\item Solve the JEE 2019 problem.
-
+From \eqref{eq:pingala/x-n-def}, we get
+\begin{align}
+    \sum_{k = 1}^{n}a_k = a_{n+2} - 1
+\end{align}
 \end{enumerate}
-
-
-%\end{document}

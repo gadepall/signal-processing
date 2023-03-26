@@ -1,0 +1,11 @@
+    \begin{circuitikz} \draw
+        (0,0) to[battery1, l=1 $V$, invert] (0,2)
+        -- (0.5,2) node[label={above:P}] {}
+        to[R, l^=$1 \Omega$, *-*] (3,2) 
+        node[label={above:X}] {}
+        to[R, l^=$2 \Omega$] (5.5,2)
+        to[battery1, l=2 $V$] (5.5,0)
+        -- (0,0)
+        (3,2) to[C, l=1 ${\mu}F$] (3,0) 
+        -- (3,-0.5) node[ground, label={right:G}] {};
+    \end{circuitikz}
