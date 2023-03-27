@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2023.1.3)  26 MAR 2023 21:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2023.1.3)  27 MAR 2023 10:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1266,7 +1266,7 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 25
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-<figs/logo.jpg, id=127, 642.4pt x 642.4pt>
+<figs/logo.jpg, id=139, 642.4pt x 642.4pt>
 File: figs/logo.jpg Graphic file (type jpg)
 <use figs/logo.jpg>
 Package pdftex.def Info: figs/logo.jpg  used on input line 51.
@@ -1408,7 +1408,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4]
-<./conv-trans/figs/sum/pmf.png, id=268, 462.528pt x 346.896pt>
+<./conv-trans/figs/sum/pmf.png, id=283, 462.528pt x 346.896pt>
 File: ./conv-trans/figs/sum/pmf.png Graphic file (type png)
 <use ./conv-trans/figs/sum/pmf.png>
 Package pdftex.def Info: ./conv-trans/figs/sum/pmf.png  used on input line 487.
@@ -1437,7 +1437,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [7
 
 ]
-<pingala/figs/2_1.png, id=307, 462.528pt x 346.896pt>
+<pingala/figs/2_1.png, id=322, 462.528pt x 346.896pt>
 File: pingala/figs/2_1.png Graphic file (type png)
 <use pingala/figs/2_1.png>
 Package pdftex.def Info: pingala/figs/2_1.png  used on input line 289.
@@ -1461,7 +1461,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [10]
-<pingala/figs/2_2.png, id=351, 462.528pt x 346.896pt>
+<pingala/figs/2_2.png, id=366, 462.528pt x 346.896pt>
 File: pingala/figs/2_2.png Graphic file (type png)
 <use pingala/figs/2_2.png>
 Package pdftex.def Info: pingala/figs/2_2.png  used on input line 337.
@@ -1516,7 +1516,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 Chapter 3.
 (./cktsig/main.tex
-<cktsig/figs/ckt.jpg, id=433, 1748.5325pt x 642.4pt>
+<cktsig/figs/ckt.jpg, id=448, 1748.5325pt x 642.4pt>
 File: cktsig/figs/ckt.jpg Graphic file (type jpg)
 <use cktsig/figs/ckt.jpg>
 Package pdftex.def Info: cktsig/figs/ckt.jpg  used on input line 214.
@@ -1560,7 +1560,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [21]
-<cktsig/figs/2_6-sim.png, id=503, 462.528pt x 346.896pt>
+<cktsig/figs/2_6-sim.png, id=518, 462.528pt x 346.896pt>
 File: cktsig/figs/2_6-sim.png Graphic file (type png)
 <use cktsig/figs/2_6-sim.png>
 Package pdftex.def Info: cktsig/figs/2_6-sim.png  used on input line 353.
@@ -1588,7 +1588,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [24]
-<cktsig/figs/3_4.png, id=543, 462.528pt x 346.896pt>
+<cktsig/figs/3_4.png, id=558, 462.528pt x 346.896pt>
 File: cktsig/figs/3_4.png Graphic file (type png)
 <use cktsig/figs/3_4.png>
 Package pdftex.def Info: cktsig/figs/3_4.png  used on input line 443.
@@ -1635,7 +1635,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [29]
-<cktsig/figs/1_7.png, id=617, 462.528pt x 346.896pt>
+<cktsig/figs/1_7.png, id=633, 462.528pt x 346.896pt>
 File: cktsig/figs/1_7.png Graphic file (type png)
 <use cktsig/figs/1_7.png>
 Package pdftex.def Info: cktsig/figs/1_7.png  used on input line 622.
@@ -1661,6 +1661,20 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [32
 
 ]
+Chapter 4.
+(./fm/msg/main.tex) (./fm/tx/main.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [33])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [34]
 Appendix A.
 (./filtdesign/writeup/filter_design.tex
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 3
@@ -1677,7 +1691,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [33]
+ [35
+
+]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1686,7 +1702,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [34]
+ [36]
 Overfull \hbox (1.52493pt too wide) in paragraph at lines 70--71
 []|   []   |   []   |   []   |   []   |   []   |   [] \OT1/cmr/m/n/10.95 The ma
 g-ni-tude squared of the Chebyschev
@@ -1698,7 +1714,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [35]
+ [37]
 
 Package hyperref Warning: Suppressing link with empty target on input line 112.
 
@@ -1712,7 +1728,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [36]
+ [38]
 Package epstopdf Info: Source file: <filtdesign/writeup/figs/fig1.eps>
 (epstopdf)                    date: 2023-03-08 13:35:05
 (epstopdf)                    size: 18294 bytes
@@ -1724,7 +1740,7 @@ Package epstopdf Info: Source file: <filtdesign/writeup/figs/fig1.eps>
 g1-eps-converted-to.pdf filtdesign/writeup/figs/fig1.eps>
 (epstopdf)             \includegraphics on input line 138.
 Package epstopdf Info: Output file is already uptodate.
-<filtdesign/writeup/figs/fig1-eps-converted-to.pdf, id=679, 495.8525pt x 391.46
+<filtdesign/writeup/figs/fig1-eps-converted-to.pdf, id=712, 495.8525pt x 391.46
 25pt>
 File: filtdesign/writeup/figs/fig1-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1743,7 +1759,7 @@ Package epstopdf Info: Source file: <filtdesign/writeup/figs/fig2.eps>
 g2-eps-converted-to.pdf filtdesign/writeup/figs/fig2.eps>
 (epstopdf)             \includegraphics on input line 145.
 Package epstopdf Info: Output file is already uptodate.
-<filtdesign/writeup/figs/fig2-eps-converted-to.pdf, id=680, 498.86375pt x 391.4
+<filtdesign/writeup/figs/fig2-eps-converted-to.pdf, id=713, 498.86375pt x 391.4
 625pt>
 File: filtdesign/writeup/figs/fig2-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1762,7 +1778,7 @@ Package epstopdf Info: Source file: <filtdesign/writeup/figs/fig3.eps>
 g3-eps-converted-to.pdf filtdesign/writeup/figs/fig3.eps>
 (epstopdf)             \includegraphics on input line 151.
 Package epstopdf Info: Output file is already uptodate.
-<filtdesign/writeup/figs/fig3-eps-converted-to.pdf, id=683, 499.8675pt x 391.46
+<filtdesign/writeup/figs/fig3-eps-converted-to.pdf, id=716, 499.8675pt x 391.46
 25pt>
 File: filtdesign/writeup/figs/fig3-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1781,25 +1797,25 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [37]
+ [39]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [38 <./filtdesign/writeup/figs/fig1-eps-converted-to.pdf>]
+ [40 <./filtdesign/writeup/figs/fig1-eps-converted-to.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [39 <./filtdesign/writeup/figs/fig2-eps-converted-to.pdf>]
+ [41 <./filtdesign/writeup/figs/fig2-eps-converted-to.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [40 <./filtdesign/writeup/figs/fig3-eps-converted-to.pdf>]
+ [42 <./filtdesign/writeup/figs/fig3-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <filtdesign/writeup/figs/fig4.eps>
 (epstopdf)                    date: 2023-03-08 13:35:05
 (epstopdf)                    size: 13594 bytes
@@ -1811,7 +1827,7 @@ Package epstopdf Info: Source file: <filtdesign/writeup/figs/fig4.eps>
 g4-eps-converted-to.pdf filtdesign/writeup/figs/fig4.eps>
 (epstopdf)             \includegraphics on input line 183.
 Package epstopdf Info: Output file is already uptodate.
-<filtdesign/writeup/figs/fig4-eps-converted-to.pdf, id=736, 499.8675pt x 392.46
+<filtdesign/writeup/figs/fig4-eps-converted-to.pdf, id=771, 499.8675pt x 392.46
 625pt>
 File: filtdesign/writeup/figs/fig4-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1825,13 +1841,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [41]
+ [43]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [42 <./filtdesign/writeup/figs/fig4-eps-converted-to.pdf>]
+ [44 <./filtdesign/writeup/figs/fig4-eps-converted-to.pdf>]
 
 Package hyperref Warning: Suppressing link with empty target on input line 236.
 
@@ -1842,7 +1858,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [43]
+ [45]
 
 Package hyperref Warning: Suppressing link with empty target on input line 238.
 
@@ -1870,7 +1886,7 @@ Package epstopdf Info: Source file: <filtdesign/writeup/figs/fig5.eps>
 g5-eps-converted-to.pdf filtdesign/writeup/figs/fig5.eps>
 (epstopdf)             \includegraphics on input line 256.
 Package epstopdf Info: Output file is already uptodate.
-<filtdesign/writeup/figs/fig5-eps-converted-to.pdf, id=766, 499.8675pt x 392.46
+<filtdesign/writeup/figs/fig5-eps-converted-to.pdf, id=799, 499.8675pt x 392.46
 625pt>
 File: filtdesign/writeup/figs/fig5-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1893,7 +1909,7 @@ Package epstopdf Info: Source file: <filtdesign/writeup/figs/fig6.eps>
 g6-eps-converted-to.pdf filtdesign/writeup/figs/fig6.eps>
 (epstopdf)             \includegraphics on input line 278.
 Package epstopdf Info: Output file is already uptodate.
-<filtdesign/writeup/figs/fig6-eps-converted-to.pdf, id=768, 499.8675pt x 392.46
+<filtdesign/writeup/figs/fig6-eps-converted-to.pdf, id=801, 499.8675pt x 392.46
 625pt>
 File: filtdesign/writeup/figs/fig6-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1907,29 +1923,29 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [44]
+ [46]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [45 <./filtdesign/writeup/figs/fig5-eps-converted-to.pdf>])
+ [47 <./filtdesign/writeup/figs/fig5-eps-converted-to.pdf>])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [46 <./filtdesign/writeup/figs/fig6-eps-converted-to.pdf>]
+ [48 <./filtdesign/writeup/figs/fig6-eps-converted-to.pdf>]
 No file main.ind.
 (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D11FE30841354883668F81ECF79ACA27;1952.
+(rerunfilecheck)             Checksum: 454CFEC02AE0C00966E3ACE7E76468F5;2120.
  ) 
 Here is how much of TeX's memory you used:
- 40922 strings out of 479304
- 932287 string characters out of 5869780
- 1535477 words of memory out of 5000000
- 57094 multiletter control sequences out of 15000+600000
+ 40948 strings out of 479304
+ 932572 string characters out of 5869780
+ 1535481 words of memory out of 5000000
+ 57099 multiletter control sequences out of 15000+600000
  428755 words of font info for 127 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,16n,116p,761b,1190s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1954,10 +1970,10 @@ lic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.
 pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on main.pdf (53 pages, 576044 bytes).
+Output written on main.pdf (55 pages, 581104 bytes).
 PDF statistics:
- 944 PDF objects out of 1000 (max. 8388607)
- 826 compressed objects within 9 object streams
- 321 named destinations out of 1000 (max. 500000)
- 323 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 981 PDF objects out of 1000 (max. 8388607)
+ 861 compressed objects within 9 object streams
+ 336 named destinations out of 1000 (max. 500000)
+ 347 words of extra memory for PDF output out of 10000 (max. 10000000)
 

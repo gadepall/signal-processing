@@ -17,15 +17,18 @@
 \contentsline {section}{\numberline {3.2}Laplace Transform}{17}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Initial Conditions}{22}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Bilinear Transform}{25}{section.3.4}%
-\contentsline {chapter}{\numberline {A} Filter Design}{33}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Introduction}{33}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Filter Specifications}{33}{section.A.2}%
-\contentsline {subsection}{\numberline {A.2.1}The Digital Filter}{33}{subsection.A.2.1}%
-\contentsline {subsection}{\numberline {A.2.2}The Analog filter}{34}{subsection.A.2.2}%
-\contentsline {section}{\numberline {A.3}The IIR Filter Design}{34}{section.A.3}%
-\contentsline {subsection}{\numberline {A.3.1}The Analog Filter}{35}{subsection.A.3.1}%
-\contentsline {subsection}{\numberline {A.3.2}The Digital Filter}{37}{subsection.A.3.2}%
-\contentsline {section}{\numberline {A.4}The FIR Filter}{41}{section.A.4}%
-\contentsline {subsection}{\numberline {A.4.1}The Equivalent Lowpass Filter}{41}{subsection.A.4.1}%
-\contentsline {subsection}{\numberline {A.4.2}The Kaiser Window}{43}{subsection.A.4.2}%
-\contentsline {subsection}{\numberline {A.4.3}The FIR Bandpass Filter}{44}{subsection.A.4.3}%
+\contentsline {chapter}{\numberline {4}Frequency Modulation}{33}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Message}{33}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Transmitter}{33}{section.4.2}%
+\contentsline {chapter}{\numberline {A} Filter Design}{35}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Introduction}{35}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Filter Specifications}{35}{section.A.2}%
+\contentsline {subsection}{\numberline {A.2.1}The Digital Filter}{35}{subsection.A.2.1}%
+\contentsline {subsection}{\numberline {A.2.2}The Analog filter}{36}{subsection.A.2.2}%
+\contentsline {section}{\numberline {A.3}The IIR Filter Design}{36}{section.A.3}%
+\contentsline {subsection}{\numberline {A.3.1}The Analog Filter}{37}{subsection.A.3.1}%
+\contentsline {subsection}{\numberline {A.3.2}The Digital Filter}{39}{subsection.A.3.2}%
+\contentsline {section}{\numberline {A.4}The FIR Filter}{43}{section.A.4}%
+\contentsline {subsection}{\numberline {A.4.1}The Equivalent Lowpass Filter}{43}{subsection.A.4.1}%
+\contentsline {subsection}{\numberline {A.4.2}The Kaiser Window}{45}{subsection.A.4.2}%
+\contentsline {subsection}{\numberline {A.4.3}The FIR Bandpass Filter}{46}{subsection.A.4.3}%
