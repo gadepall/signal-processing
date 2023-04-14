@@ -1,6 +1,6 @@
 The message signal is available in 
 \begin{lstlisting}
-fm/msg/codes/Sound_Noise.wav
+/fm/msg/codes/Sound_Noise.wav
 \end{lstlisting}
 \begin{enumerate}[label=\arabic*.,ref=\thesection.\theenumi]
 \numberwithin{equation}{enumi}
@@ -17,7 +17,7 @@ M_k = \sum_{n=0}^{N-1} m(n) e^{-j2\pi kn/N}, \quad k=0,1,\dots,N-1
 \\
 The code to plot the spectrum of the message signal is given below
 \begin{lstlisting}
-fm/msg/codes/FFTmsg.py
+/fm/msg/codes/FFTmsg.py
 \end{lstlisting}
 \item Find the bandwidth of the message signal.\\
 \solution The bandwidth can be calculated mathematically using the following formula:
@@ -26,9 +26,8 @@ B=mask_{maxi}-mask_{min}
 \end{align*}
 where $mask_{maxi}$ and $mask_{min} $ are themaximum amd minimum frequency bounds of the range  respectively.\\
 Analyzes the audio signal and plots its magnitude spectrum. The bandwidth of the audio signal is  calculated using power spectral density. Obtain the bandwidth of the audio as 2 khz using below code
-\begin{center}
-\fcolorbox{red}{white}{\parbox{7.5cm}
-{\href{https://github.com/KrishnaYadati/signal-processing/tree/main/fm/codes/input.py}
-{/codes/input.py}}}
+\begin{lstlisting}
+/codes/input.py
+\end{lstlisting}
 \end{center}
 \end{enumerate}

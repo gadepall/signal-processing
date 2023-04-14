@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.12.20)  14 APR 2023 22:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.12.20)  14 APR 2023 22:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1721,7 +1721,142 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [33 <./fm/msg/inputs-1.png>]) (./fm/tx/main.tex
+ [33 <./fm/msg/inputs-1.png>]
+
+! LaTeX Error: \begin{enumerate} on input line 5 ended by \end{center}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 \end{center}
+                 
+? 
+! Undefined control sequence.
+\enit@endenumerate ->\enit@after 
+                                 \endlist \ifx \enit@series \relax \else \if...
+l.33 \end{enumerate}
+                    
+? 
+! Undefined control sequence.
+\enit@endenumerate ...\else \ifnum \enit@resuming 
+                                                  =\@ne \enit@setresumekeys ...
+l.33 \end{enumerate}
+                    
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.33 \end{enumerate}
+                    
+? 
+! Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.33 \end{enumerate}
+                    
+? 
+! Undefined control sequence.
+\enit@setresumekeys ...it@toks }\ifnum \enit@type 
+                                                  =\z@ #3\def \enit@noexcs {...
+l.33 \end{enumerate}
+                    
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.33 \end{enumerate}
+                    
+? 
+! Undefined control sequence.
+<argument> enit@resume@series@\enit@series 
+                                           
+l.33 \end{enumerate}
+                    
+? 
+! Undefined control sequence.
+\enit@setresumekeys ...me@#1}{\csname c@\@listctr 
+                                                  \endcsname \the \csname c@...
+l.33 \end{enumerate}
+                    
+? 
+! Undefined control sequence.
+\enit@setresumekeys ...e \the \csname c@\@listctr 
+                                                  \endcsname }\fi }
+l.33 \end{enumerate}
+                    
+? 
+! You can't use `\relax' after \the.
+<recently read> \c@ 
+                    
+l.33 \end{enumerate}
+                    
+? 
+! Undefined control sequence.
+\enit@endenumerate ...t \fi \ifnum \enit@resuming 
+                                                  =\thr@@ \enit@setresumekey...
+l.33 \end{enumerate}
+                    
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.33 \end{enumerate}
+                    
+? 
+! Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.33 \end{enumerate}
+                    
+? 
+! Undefined control sequence.
+\enit@setresumekeys ...it@toks }\ifnum \enit@type 
+                                                  =\z@ #3\def \enit@noexcs {...
+l.33 \end{enumerate}
+                    
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.33 \end{enumerate}
+                    
+? 
+! Undefined control sequence.
+\enit@setresumekeys ...me@#1}{\csname c@\@listctr 
+                                                  \endcsname \the \csname c@...
+l.33 \end{enumerate}
+                    
+? 
+! Undefined control sequence.
+\enit@setresumekeys ...e \the \csname c@\@listctr 
+                                                  \endcsname }\fi }
+l.33 \end{enumerate}
+                    
+? 
+! You can't use `\relax' after \the.
+<recently read> \c@ 
+                    
+l.33 \end{enumerate}
+                    
+? 
+
+! LaTeX Error: \begin{document} ended by \end{enumerate}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.33 \end{enumerate}
+                    
+? 
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.33 \end{enumerate}
+                    
+? 
+) (./fm/tx/main.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1731,7 +1866,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [34]
-<fm/tx/fm.png, id=688, 462.528pt x 320.1561pt>
+<fm/tx/fm.png, id=689, 462.528pt x 320.1561pt>
 File: fm/tx/fm.png Graphic file (type png)
 <use fm/tx/fm.png>
 Package pdftex.def Info: fm/tx/fm.png  used on input line 18.
@@ -1871,7 +2006,7 @@ Package epstopdf Info: Source file: <filtdesign/writeup/figs/fig1.eps>
 g1-eps-converted-to.pdf filtdesign/writeup/figs/fig1.eps>
 (epstopdf)             \includegraphics on input line 138.
 Package epstopdf Info: Output file is already uptodate.
-<filtdesign/writeup/figs/fig1-eps-converted-to.pdf, id=814, 495.8525pt x 391.46
+<filtdesign/writeup/figs/fig1-eps-converted-to.pdf, id=815, 495.8525pt x 391.46
 25pt>
 File: filtdesign/writeup/figs/fig1-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1890,7 +2025,7 @@ Package epstopdf Info: Source file: <filtdesign/writeup/figs/fig2.eps>
 g2-eps-converted-to.pdf filtdesign/writeup/figs/fig2.eps>
 (epstopdf)             \includegraphics on input line 145.
 Package epstopdf Info: Output file is already uptodate.
-<filtdesign/writeup/figs/fig2-eps-converted-to.pdf, id=815, 498.86375pt x 391.4
+<filtdesign/writeup/figs/fig2-eps-converted-to.pdf, id=816, 498.86375pt x 391.4
 625pt>
 File: filtdesign/writeup/figs/fig2-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1909,7 +2044,7 @@ Package epstopdf Info: Source file: <filtdesign/writeup/figs/fig3.eps>
 g3-eps-converted-to.pdf filtdesign/writeup/figs/fig3.eps>
 (epstopdf)             \includegraphics on input line 151.
 Package epstopdf Info: Output file is already uptodate.
-<filtdesign/writeup/figs/fig3-eps-converted-to.pdf, id=818, 499.8675pt x 391.46
+<filtdesign/writeup/figs/fig3-eps-converted-to.pdf, id=819, 499.8675pt x 391.46
 25pt>
 File: filtdesign/writeup/figs/fig3-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1958,7 +2093,7 @@ Package epstopdf Info: Source file: <filtdesign/writeup/figs/fig4.eps>
 g4-eps-converted-to.pdf filtdesign/writeup/figs/fig4.eps>
 (epstopdf)             \includegraphics on input line 183.
 Package epstopdf Info: Output file is already uptodate.
-<filtdesign/writeup/figs/fig4-eps-converted-to.pdf, id=873, 499.8675pt x 392.46
+<filtdesign/writeup/figs/fig4-eps-converted-to.pdf, id=874, 499.8675pt x 392.46
 625pt>
 File: filtdesign/writeup/figs/fig4-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2017,7 +2152,7 @@ Package epstopdf Info: Source file: <filtdesign/writeup/figs/fig5.eps>
 g5-eps-converted-to.pdf filtdesign/writeup/figs/fig5.eps>
 (epstopdf)             \includegraphics on input line 256.
 Package epstopdf Info: Output file is already uptodate.
-<filtdesign/writeup/figs/fig5-eps-converted-to.pdf, id=901, 499.8675pt x 392.46
+<filtdesign/writeup/figs/fig5-eps-converted-to.pdf, id=902, 499.8675pt x 392.46
 625pt>
 File: filtdesign/writeup/figs/fig5-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2040,7 +2175,7 @@ Package epstopdf Info: Source file: <filtdesign/writeup/figs/fig6.eps>
 g6-eps-converted-to.pdf filtdesign/writeup/figs/fig6.eps>
 (epstopdf)             \includegraphics on input line 278.
 Package epstopdf Info: Output file is already uptodate.
-<filtdesign/writeup/figs/fig6-eps-converted-to.pdf, id=903, 499.8675pt x 392.46
+<filtdesign/writeup/figs/fig6-eps-converted-to.pdf, id=904, 499.8675pt x 392.46
 625pt>
 File: filtdesign/writeup/figs/fig6-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2078,10 +2213,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 222.
  ) 
 Here is how much of TeX's memory you used:
- 38948 strings out of 481239
- 865476 string characters out of 5920376
- 1347774 words of memory out of 5000000
- 53113 multiletter control sequences out of 15000+600000
+ 38954 strings out of 481239
+ 865572 string characters out of 5920376
+ 1347775 words of memory out of 5000000
+ 53117 multiletter control sequences out of 15000+600000
  557663 words of font info for 124 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  74i,16n,75p,761b,1180s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2107,10 +2242,10 @@ fonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/s
 ymbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></
 usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on main.pdf (63 pages, 633741 bytes).
+Output written on main.pdf (63 pages, 633736 bytes).
 PDF statistics:
- 1097 PDF objects out of 1200 (max. 8388607)
- 963 compressed objects within 10 object streams
- 391 named destinations out of 1000 (max. 500000)
+ 1098 PDF objects out of 1200 (max. 8388607)
+ 964 compressed objects within 10 object streams
+ 393 named destinations out of 1000 (max. 500000)
  381 words of extra memory for PDF output out of 10000 (max. 10000000)
 
