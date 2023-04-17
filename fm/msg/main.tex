@@ -4,21 +4,19 @@ The message signal is available in
 \end{lstlisting}
 \begin{enumerate}[label=\arabic*.,ref=\thesection.\theenumi]
 \numberwithin{equation}{enumi}
-\item Plot the spectrum of the message signal.\\
-\solution The spectrum of input audio signal is plotted below\\
-\begin{figure}[h]
-    \includegraphics[scale=0.55]{fm/msg/inputs-1.png}
-\end{figure}
-\\
-To plot the spectrum of the message signal, we need to compute the Fourier Transform of the message signal, which will give us the frequency domain representation of the signal.
-\begin{equation}
-M_k = \sum_{n=0}^{N-1} m(n) e^{-j2\pi kn/N}, \quad k=0,1,\dots,N-1
-\end{equation}
-\\
-The code to plot the spectrum of the message signal is given below
+\item Plot the spectrum of the message signal using the builtin FFT algorithm.\\
+	\solution
+\item Plot the spectrum of the message signal by writing your own FFT algorithm.
+	\\
+	\solution 
+		The folowing code plots the spectrum in \figref{} using the DFT defined in  
+	\eqref{eq:app-dft-def}.
 \begin{lstlisting}
 /fm/msg/codes/FFTmsg.py
 \end{lstlisting}
+\begin{figure}[h]
+    \includegraphics[scale=0.55]{fm/msg/inputs-1.png}
+\end{figure}
 \item Find the bandwidth of the message signal.\\
 \solution The bandwidth can be calculated mathematically using the following formula:
 \begin{align*}
@@ -29,5 +27,4 @@ Analyzes the audio signal and plots its magnitude spectrum. The bandwidth of the
 \begin{lstlisting}
 /codes/input.py
 \end{lstlisting}
-\end{center}
 \end{enumerate}
