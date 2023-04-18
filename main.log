@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.12.20)  18 APR 2023 00:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.12.20)  18 APR 2023 14:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1726,21 +1726,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [33]
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.20 \item
-           Plot the spectrum of the message signal by writing your own FFT a...
-
-? 
 <fm/msg/figs/FFTown/input2.png, id=679, 462.528pt x 346.896pt>
 File: fm/msg/figs/FFTown/input2.png Graphic file (type png)
 <use fm/msg/figs/FFTown/input2.png>
-Package pdftex.def Info: fm/msg/figs/FFTown/input2.png  used on input line 25.
+Package pdftex.def Info: fm/msg/figs/FFTown/input2.png  used on input line 24.
 (pdftex.def)             Requested size: 433.62001pt x 325.23007pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1752,7 +1741,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [34 <./fm/msg/figs/FFTbuiltin/inputs-1.png>]
-Overfull \hbox (1.39854pt too wide) in paragraph at lines 29--31
+Overfull \hbox (1.39854pt too wide) in paragraph at lines 28--29
 []\OT1/cmr/m/n/10.95 The folow-ing code plots the spec-trum in Fig. []4.1.2.1[]
  us-ing the DFT de-fined in []. 
  []
@@ -2130,7 +2119,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 222.
 Here is how much of TeX's memory you used:
  38973 strings out of 481239
  865959 string characters out of 5920376
- 1348052 words of memory out of 5000000
+ 1348051 words of memory out of 5000000
  53124 multiletter control sequences out of 15000+600000
  557663 words of font info for 124 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
