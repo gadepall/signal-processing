@@ -14,8 +14,11 @@ List the various parameters in a table.
 \item Obtain a difference equation for computing $\phi(t)$.  Suggest a sampling rate.
 \item Plot the spectrum of the transmitted signal.
 \\
-\begin{figure}[h]
-\includegraphics[scale=0.7]{fm/tx/fm.png} 
+\begin{figure}[H]
+\centering	
+\includegraphics[width=\columnwidth]{fm/tx/fm.png} 
+\caption{Plot of spectrum of transmitted signal.}
+\label{fig:Trans}
 \end{figure}
 
 \item Compute the bandwidth of the transmitted signal.
@@ -37,9 +40,9 @@ PSD(s)=\lvert S_k \rvert^2
 \label{eq:psd}
 \end{align}
 Identify the frequency range with significant power using a mask function.code is given below\\
-\begin{center}
-\fcolorbox{red}{white}{\parbox{7.5cm}
-{\href{https://github.com/KrishnaYadati/signal-processing/tree/main/fm/codes/mod.py}
-{/codes/mod.py}}}
-\end{center}
+
+\begin{lstlisting}
+/codes/mod.py
+\end{lstlisting}
+
 \end{enumerate}
