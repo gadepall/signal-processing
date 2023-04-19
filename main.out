@@ -22,15 +22,16 @@
 \BOOKMARK [0][-]{appendix.A}{ Discrete Fourier Transform}{}% 22
 \BOOKMARK [1][-]{section.A.1}{FFT}{appendix.A}% 23
 \BOOKMARK [1][-]{section.A.2}{FFT}{appendix.A}% 24
-\BOOKMARK [0][-]{appendix.B}{ Filter Design}{}% 25
-\BOOKMARK [1][-]{section.B.1}{Introduction}{appendix.B}% 26
-\BOOKMARK [1][-]{section.B.2}{Filter Specifications}{appendix.B}% 27
-\BOOKMARK [2][-]{subsection.B.2.1}{The Digital Filter}{section.B.2}% 28
-\BOOKMARK [2][-]{subsection.B.2.2}{The Analog filter}{section.B.2}% 29
-\BOOKMARK [1][-]{section.B.3}{The IIR Filter Design}{appendix.B}% 30
-\BOOKMARK [2][-]{subsection.B.3.1}{The Analog Filter}{section.B.3}% 31
-\BOOKMARK [2][-]{subsection.B.3.2}{The Digital Filter}{section.B.3}% 32
-\BOOKMARK [1][-]{section.B.4}{The FIR Filter}{appendix.B}% 33
-\BOOKMARK [2][-]{subsection.B.4.1}{The Equivalent Lowpass Filter}{section.B.4}% 34
-\BOOKMARK [2][-]{subsection.B.4.2}{The Kaiser Window}{section.B.4}% 35
-\BOOKMARK [2][-]{subsection.B.4.3}{The FIR Bandpass Filter}{section.B.4}% 36
+\BOOKMARK [1][-]{section.A.3}{Power Spectral Density\(PSD\)}{appendix.A}% 25
+\BOOKMARK [0][-]{appendix.B}{ Filter Design}{}% 26
+\BOOKMARK [1][-]{section.B.1}{Introduction}{appendix.B}% 27
+\BOOKMARK [1][-]{section.B.2}{Filter Specifications}{appendix.B}% 28
+\BOOKMARK [2][-]{subsection.B.2.1}{The Digital Filter}{section.B.2}% 29
+\BOOKMARK [2][-]{subsection.B.2.2}{The Analog filter}{section.B.2}% 30
+\BOOKMARK [1][-]{section.B.3}{The IIR Filter Design}{appendix.B}% 31
+\BOOKMARK [2][-]{subsection.B.3.1}{The Analog Filter}{section.B.3}% 32
+\BOOKMARK [2][-]{subsection.B.3.2}{The Digital Filter}{section.B.3}% 33
+\BOOKMARK [1][-]{section.B.4}{The FIR Filter}{appendix.B}% 34
+\BOOKMARK [2][-]{subsection.B.4.1}{The Equivalent Lowpass Filter}{section.B.4}% 35
+\BOOKMARK [2][-]{subsection.B.4.2}{The Kaiser Window}{section.B.4}% 36
+\BOOKMARK [2][-]{subsection.B.4.3}{The FIR Bandpass Filter}{section.B.4}% 37
