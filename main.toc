@@ -23,6 +23,7 @@
 \contentsline {chapter}{\numberline {A} Discrete Fourier Transform}{39}{appendix.A}%
 \contentsline {section}{\numberline {A.1}FFT}{39}{section.A.1}%
 \contentsline {section}{\numberline {A.2}FFT}{40}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Power Spectral Density(PSD)}{44}{section.A.3}%
 \contentsline {chapter}{\numberline {B} Filter Design}{45}{appendix.B}%
 \contentsline {section}{\numberline {B.1}Introduction}{45}{section.B.1}%
 \contentsline {section}{\numberline {B.2}Filter Specifications}{45}{section.B.2}%
