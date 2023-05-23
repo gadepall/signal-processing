@@ -1,7 +1,7 @@
 Play the message signal using
 \begin{lstlisting}
 sudo apt install ffmpeg
-ffplay /fm/msg/codes/Sound_Noise.wav
+ffplay /fm/codes/msg/Sound_Noise.wav
 \end{lstlisting}
 \begin{enumerate}[label=\arabic*.,ref=\thesection.\theenumi]
 \numberwithin{equation}{enumi}
@@ -15,7 +15,11 @@ ffplay /fm/msg/codes/Sound_Noise.wav
 \end{figure}
 The folowing code plots the spectrum in \figref{fig:FFTb} using the builtin FFT algorithm of the python library 'Numpy.'
 \begin{lstlisting}
-/fm/codes/input.py
+/fm/codes/msg/msg_spec_amp.py
+\end{lstlisting}
+\item What does the following command do?
+\begin{lstlisting}
+f_i = np.fft.fftfreq(len(audio_data), d=1/sample_rate)
 \end{lstlisting}
 
 \item Plot the spectrum of the message signal by writing your own FFT algorithm.\\
