@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2023.1.3)  18 APR 2023 20:21
-=======
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.2.7)  19 APR 2023 17:00
->>>>>>> b4b8479f904fd69ceaf44a64b5d0a0af54a209d7
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2023.5.22)  23 MAY 2023 12:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1671,7 +1667,7 @@ Chapter 4.
 File: fm/msg/figs/FFTbuiltin/inputs-1.png Graphic file (type png)
 <use fm/msg/figs/FFTbuiltin/inputs-1.png>
 Package pdftex.def Info: fm/msg/figs/FFTbuiltin/inputs-1.png  used on input lin
-e 11.
+e 12.
 (pdftex.def)             Requested size: 433.62001pt x 325.23007pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1683,10 +1679,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [33]
-<fm/msg/figs/FFTown/input2.png, id=684, 462.528pt x 346.896pt>
+<fm/msg/figs/FFTown/input2.png, id=685, 462.528pt x 346.896pt>
 File: fm/msg/figs/FFTown/input2.png Graphic file (type png)
 <use fm/msg/figs/FFTown/input2.png>
-Package pdftex.def Info: fm/msg/figs/FFTown/input2.png  used on input line 24.
+Package pdftex.def Info: fm/msg/figs/FFTown/input2.png  used on input line 25.
 (pdftex.def)             Requested size: 433.62001pt x 325.23007pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1698,13 +1694,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [34 <./fm/msg/figs/FFTbuiltin/inputs-1.png>]
-Overfull \hbox (1.39854pt too wide) in paragraph at lines 28--29
+Overfull \hbox (1.39854pt too wide) in paragraph at lines 29--30
 []\OT1/cmr/m/n/10.95 The folow-ing code plots the spec-trum in Fig. []4.1.2.1[]
  us-ing the DFT de-fined in []. 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--37
+Underfull \hbox (badness 10000) in paragraph at lines 34--38
 
  []
 
@@ -1715,12 +1711,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [35 <./fm/msg/figs/FFTown/input2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 43--45
+Underfull \hbox (badness 10000) in paragraph at lines 44--46
 
  []
 
 ) (./fm/tx/main.tex
-<fm/tx/fm.png, id=708, 462.528pt x 320.1561pt>
+<fm/tx/fm.png, id=709, 462.528pt x 320.1561pt>
 File: fm/tx/fm.png Graphic file (type png)
 <use fm/tx/fm.png>
 Package pdftex.def Info: fm/tx/fm.png  used on input line 19.
@@ -1872,25 +1868,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [48]
 Package epstopdf Info: Source file: <filtdesign/writeup/figs/fig1.eps>
-<<<<<<< HEAD
 (epstopdf)                    date: 2023-03-08 13:35:05
 (epstopdf)                    size: 18294 bytes
 (epstopdf)             Output file: <filtdesign/writeup/figs/fig1-eps-converted
 -to.pdf>
 (epstopdf)                    date: 2023-03-08 13:35:05
-=======
-(epstopdf)                    date: 2023-04-18 22:57:05
-(epstopdf)                    size: 18294 bytes
-(epstopdf)             Output file: <filtdesign/writeup/figs/fig1-eps-converted
--to.pdf>
-(epstopdf)                    date: 2023-04-18 22:57:05
->>>>>>> b4b8479f904fd69ceaf44a64b5d0a0af54a209d7
 (epstopdf)                    size: 12466 bytes
 (epstopdf)             Command: <repstopdf --outfile=filtdesign/writeup/figs/fi
 g1-eps-converted-to.pdf filtdesign/writeup/figs/fig1.eps>
 (epstopdf)             \includegraphics on input line 138.
 Package epstopdf Info: Output file is already uptodate.
-<filtdesign/writeup/figs/fig1-eps-converted-to.pdf, id=844, 495.8525pt x 391.46
+<filtdesign/writeup/figs/fig1-eps-converted-to.pdf, id=845, 495.8525pt x 391.46
 25pt>
 File: filtdesign/writeup/figs/fig1-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1899,25 +1887,17 @@ Package pdftex.def Info: filtdesign/writeup/figs/fig1-eps-converted-to.pdf  use
 d on input line 138.
 (pdftex.def)             Requested size: 433.62001pt x 342.33171pt.
 Package epstopdf Info: Source file: <filtdesign/writeup/figs/fig2.eps>
-<<<<<<< HEAD
 (epstopdf)                    date: 2023-03-08 13:35:05
 (epstopdf)                    size: 15801 bytes
 (epstopdf)             Output file: <filtdesign/writeup/figs/fig2-eps-converted
 -to.pdf>
 (epstopdf)                    date: 2023-03-08 13:35:05
-=======
-(epstopdf)                    date: 2023-04-18 22:57:05
-(epstopdf)                    size: 15801 bytes
-(epstopdf)             Output file: <filtdesign/writeup/figs/fig2-eps-converted
--to.pdf>
-(epstopdf)                    date: 2023-04-18 22:57:05
->>>>>>> b4b8479f904fd69ceaf44a64b5d0a0af54a209d7
 (epstopdf)                    size: 19789 bytes
 (epstopdf)             Command: <repstopdf --outfile=filtdesign/writeup/figs/fi
 g2-eps-converted-to.pdf filtdesign/writeup/figs/fig2.eps>
 (epstopdf)             \includegraphics on input line 145.
 Package epstopdf Info: Output file is already uptodate.
-<filtdesign/writeup/figs/fig2-eps-converted-to.pdf, id=845, 498.86375pt x 391.4
+<filtdesign/writeup/figs/fig2-eps-converted-to.pdf, id=846, 498.86375pt x 391.4
 625pt>
 File: filtdesign/writeup/figs/fig2-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1926,25 +1906,17 @@ Package pdftex.def Info: filtdesign/writeup/figs/fig2-eps-converted-to.pdf  use
 d on input line 145.
 (pdftex.def)             Requested size: 433.62001pt x 340.27693pt.
 Package epstopdf Info: Source file: <filtdesign/writeup/figs/fig3.eps>
-<<<<<<< HEAD
 (epstopdf)                    date: 2023-03-08 13:35:05
 (epstopdf)                    size: 10358 bytes
 (epstopdf)             Output file: <filtdesign/writeup/figs/fig3-eps-converted
 -to.pdf>
 (epstopdf)                    date: 2023-03-08 13:35:05
-=======
-(epstopdf)                    date: 2023-04-18 22:57:05
-(epstopdf)                    size: 10358 bytes
-(epstopdf)             Output file: <filtdesign/writeup/figs/fig3-eps-converted
--to.pdf>
-(epstopdf)                    date: 2023-04-18 22:57:05
->>>>>>> b4b8479f904fd69ceaf44a64b5d0a0af54a209d7
 (epstopdf)                    size: 6998 bytes
 (epstopdf)             Command: <repstopdf --outfile=filtdesign/writeup/figs/fi
 g3-eps-converted-to.pdf filtdesign/writeup/figs/fig3.eps>
 (epstopdf)             \includegraphics on input line 151.
 Package epstopdf Info: Output file is already uptodate.
-<filtdesign/writeup/figs/fig3-eps-converted-to.pdf, id=848, 499.8675pt x 391.46
+<filtdesign/writeup/figs/fig3-eps-converted-to.pdf, id=849, 499.8675pt x 391.46
 25pt>
 File: filtdesign/writeup/figs/fig3-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1983,25 +1955,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [52 <./filtdesign/writeup/figs/fig3-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <filtdesign/writeup/figs/fig4.eps>
-<<<<<<< HEAD
 (epstopdf)                    date: 2023-03-08 13:35:05
 (epstopdf)                    size: 13594 bytes
 (epstopdf)             Output file: <filtdesign/writeup/figs/fig4-eps-converted
 -to.pdf>
 (epstopdf)                    date: 2023-03-08 13:35:05
-=======
-(epstopdf)                    date: 2023-04-18 22:57:05
-(epstopdf)                    size: 13594 bytes
-(epstopdf)             Output file: <filtdesign/writeup/figs/fig4-eps-converted
--to.pdf>
-(epstopdf)                    date: 2023-04-18 22:57:05
->>>>>>> b4b8479f904fd69ceaf44a64b5d0a0af54a209d7
 (epstopdf)                    size: 9528 bytes
 (epstopdf)             Command: <repstopdf --outfile=filtdesign/writeup/figs/fi
 g4-eps-converted-to.pdf filtdesign/writeup/figs/fig4.eps>
 (epstopdf)             \includegraphics on input line 183.
 Package epstopdf Info: Output file is already uptodate.
-<filtdesign/writeup/figs/fig4-eps-converted-to.pdf, id=902, 499.8675pt x 392.46
+<filtdesign/writeup/figs/fig4-eps-converted-to.pdf, id=903, 499.8675pt x 392.46
 625pt>
 File: filtdesign/writeup/figs/fig4-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2050,25 +2014,17 @@ Package hyperref Warning: Suppressing link with empty target on input line 253.
 
 
 Package epstopdf Info: Source file: <filtdesign/writeup/figs/fig5.eps>
-<<<<<<< HEAD
 (epstopdf)                    date: 2023-03-08 13:35:05
 (epstopdf)                    size: 11198 bytes
 (epstopdf)             Output file: <filtdesign/writeup/figs/fig5-eps-converted
 -to.pdf>
 (epstopdf)                    date: 2023-03-08 13:35:05
-=======
-(epstopdf)                    date: 2023-04-18 22:57:05
-(epstopdf)                    size: 11198 bytes
-(epstopdf)             Output file: <filtdesign/writeup/figs/fig5-eps-converted
--to.pdf>
-(epstopdf)                    date: 2023-04-18 22:57:05
->>>>>>> b4b8479f904fd69ceaf44a64b5d0a0af54a209d7
 (epstopdf)                    size: 7435 bytes
 (epstopdf)             Command: <repstopdf --outfile=filtdesign/writeup/figs/fi
 g5-eps-converted-to.pdf filtdesign/writeup/figs/fig5.eps>
 (epstopdf)             \includegraphics on input line 256.
 Package epstopdf Info: Output file is already uptodate.
-<filtdesign/writeup/figs/fig5-eps-converted-to.pdf, id=931, 499.8675pt x 392.46
+<filtdesign/writeup/figs/fig5-eps-converted-to.pdf, id=932, 499.8675pt x 392.46
 625pt>
 File: filtdesign/writeup/figs/fig5-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2081,25 +2037,17 @@ Package hyperref Warning: Suppressing link with empty target on input line 268.
 
 
 Package epstopdf Info: Source file: <filtdesign/writeup/figs/fig6.eps>
-<<<<<<< HEAD
 (epstopdf)                    date: 2023-03-08 13:35:05
 (epstopdf)                    size: 11304 bytes
 (epstopdf)             Output file: <filtdesign/writeup/figs/fig6-eps-converted
 -to.pdf>
 (epstopdf)                    date: 2023-03-08 13:35:05
-=======
-(epstopdf)                    date: 2023-04-18 22:57:05
-(epstopdf)                    size: 11304 bytes
-(epstopdf)             Output file: <filtdesign/writeup/figs/fig6-eps-converted
--to.pdf>
-(epstopdf)                    date: 2023-04-18 22:57:05
->>>>>>> b4b8479f904fd69ceaf44a64b5d0a0af54a209d7
 (epstopdf)                    size: 7550 bytes
 (epstopdf)             Command: <repstopdf --outfile=filtdesign/writeup/figs/fi
 g6-eps-converted-to.pdf filtdesign/writeup/figs/fig6.eps>
 (epstopdf)             \includegraphics on input line 278.
 Package epstopdf Info: Output file is already uptodate.
-<filtdesign/writeup/figs/fig6-eps-converted-to.pdf, id=933, 499.8675pt x 392.46
+<filtdesign/writeup/figs/fig6-eps-converted-to.pdf, id=934, 499.8675pt x 392.46
 625pt>
 File: filtdesign/writeup/figs/fig6-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2129,26 +2077,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 No file main.ind.
 (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-<<<<<<< HEAD
-(rerunfilecheck)             Checksum: 25C618B049125BF2E0A137F8751B9317;2286.
- ) 
-Here is how much of TeX's memory you used:
- 41051 strings out of 479304
- 933991 string characters out of 5869780
- 1535932 words of memory out of 5000000
- 57128 multiletter control sequences out of 15000+600000
- 428755 words of font info for 127 fonts, out of 8000000 for 9000
-=======
 (rerunfilecheck)             Checksum: CC535B8AE9BD43F14EF3564FCEB6BF9E;2363.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 222.
  ) 
 Here is how much of TeX's memory you used:
- 38978 strings out of 481239
- 866019 string characters out of 5920378
- 1348114 words of memory out of 5000000
- 53126 multiletter control sequences out of 15000+600000
- 557663 words of font info for 124 fonts, out of 8000000 for 9000
->>>>>>> b4b8479f904fd69ceaf44a64b5d0a0af54a209d7
+ 41057 strings out of 479304
+ 934066 string characters out of 5869779
+ 1534984 words of memory out of 5000000
+ 57130 multiletter control sequences out of 15000+600000
+ 428755 words of font info for 127 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,16n,116p,761b,1190s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
@@ -2173,14 +2109,10 @@ fonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/s
 ymbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></
 usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb>
-<<<<<<< HEAD
-Output written on main.pdf (65 pages, 649701 bytes).
-=======
-Output written on main.pdf (65 pages, 650962 bytes).
->>>>>>> b4b8479f904fd69ceaf44a64b5d0a0af54a209d7
+Output written on main.pdf (65 pages, 650711 bytes).
 PDF statistics:
- 1129 PDF objects out of 1200 (max. 8388607)
- 991 compressed objects within 10 object streams
- 405 named destinations out of 1000 (max. 500000)
+ 1130 PDF objects out of 1200 (max. 8388607)
+ 992 compressed objects within 10 object streams
+ 406 named destinations out of 1000 (max. 500000)
  394 words of extra memory for PDF output out of 10000 (max. 10000000)
 
