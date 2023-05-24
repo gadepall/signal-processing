@@ -5,6 +5,7 @@ ffplay /fm/codes/msg/Sound_Noise.wav
 \end{lstlisting}
 \begin{enumerate}[label=\arabic*.,ref=\thesection.\theenumi]
 \numberwithin{equation}{enumi}
+\item Find the sampling rate of the message.
 \item Plot the spectrum of the message signal using the builtin FFT algorithm.\\
 	\solution		
 \begin{figure}[H]
@@ -13,6 +14,7 @@ ffplay /fm/codes/msg/Sound_Noise.wav
 \caption{Plot of spectrum of message signal using builtin FFT algorithm.}
 \label{fig:FFTb}
 \end{figure}
+\item Find the number of samples used to compute the FFT.
 The folowing code plots the spectrum in \figref{fig:FFTb} using the builtin FFT algorithm of the python library 'Numpy.'
 \begin{lstlisting}
 /fm/codes/msg/msg_spec_amp.py
@@ -32,7 +34,7 @@ f_i = np.fft.fftfreq(len(audio_data), d=1/sample_rate)
 \end{figure}
 The folowing code plots the spectrum in \figref{fig:FFTo} using the DFT defined in  \eqref{eq:app-dft-def}.
 \begin{lstlisting}
-/fm/msg/codes/FFTmsg.py
+python3 fm/codes/msg/FFTmsg.py
 \end{lstlisting}
 
 \item Find the bandwidth of the message signal.\\

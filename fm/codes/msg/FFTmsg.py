@@ -15,7 +15,7 @@ def fft(x):
                                X_even + factor[N//2:] * X_odd])
 
 # Load audio data
-sample_rate, audio_data = wavfile.read("Sound.wav")
+sample_rate, audio_data = wavfile.read("fm/codes/msg/Sound_Noise.wav")
 
 # Zero padding
 N = len(audio_data)
@@ -33,4 +33,3 @@ plt.plot(f_i, np.abs(i))
 plt.xlabel('Frequency (Hz)')
 plt.ylabel('Magnitude')
 plt.show()
-
