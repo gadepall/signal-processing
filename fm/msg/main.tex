@@ -36,18 +36,14 @@ The folowing code plots the spectrum in \figref{fig:FFTo} using the DFT defined 
 \begin{lstlisting}
 python3 fm/codes/msg/FFTmsg.py
 \end{lstlisting}
-
+\item Compute and plot the PSD of the message signal using 
+\eqref{eq:app-psd-def}.
 \item Find the bandwidth of the message signal.\\
-\solution First step is to calculate the bandwidth of message signal by computing Power Spectral density defined in \eqref{eq:app-psd-def} \\
-Then set the threshold upto which the signal has significant frequencies.
-After that eliminate insignificant frequencies using mask function defined in the code below\\
-\begin{lstlisting}
+\solution 
+\iffalse
+		\begin{lstlisting}
 /fm/codes/input.py
 \end{lstlisting}
-Now bandwidth can be calculated mathematically using the following formula:
-\begin{align*}
-B=mask_{maxi}-mask_{min}
-\end{align*}
-where $mask_{maxi}$ and $mask_{min} $ are the maximum amd minimum frequency bounds of the range  respectively.\\
+\fi
 
 \end{enumerate}
