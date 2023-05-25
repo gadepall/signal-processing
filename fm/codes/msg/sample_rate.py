@@ -1,3 +1,4 @@
+#Getting the sampling rate of an audio file
 import numpy as np
 from scipy.io import wavfile
 
