@@ -39,9 +39,9 @@ and gives number of samples as 1226536
 \begin{lstlisting}
 f_i = np.fft.fftfreq(len(audio_data), d=1/sample_rate)
 \end{lstlisting}
-The \textbf{np.fft.fftfreq} function divides the frequency range into equal intervals based on the sample rate and the number of samples. It returns an array of frequencies representing the DFT coefficients of the audio signal. These allow to analyze the spectrum of the audio signal in the frequency domain.
 \item Plot the spectrum of the message signal by writing your own FFT algorithm.\\
 	\solution
+	\iffalse
 \begin{figure}[H]
 \centering
 \includegraphics[width=\columnwidth]{fm/msg/figs/FFTmsg.pdf}
@@ -52,6 +52,7 @@ The folowing code plots the spectrum in \figref{fig:FFTo} using the DFT defined 
 \begin{lstlisting}
 python3 fm/codes/msg/FFTalgorithm.py
 \end{lstlisting}
+\fi
 \item Compute and plot the PSD of the message signal using 
 \eqref{eq:app-psd-def}.
 \\
@@ -68,7 +69,7 @@ python3 fm/codes/msg/msg_psd.py
 \label{fig:PSD}
 \end{figure}
 
-\item Find the bandwidth of the message signal.\\
+\item Find the bandwidth of the message signal. Through a plot, explain the principle used for computing the bandwidth.\\
 \solution 
 Executing
 \begin{lstlisting}
