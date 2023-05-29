@@ -24,7 +24,7 @@ python3 fm/codes/msg/msg_spec_amp.py
 \end{lstlisting}		
 \begin{figure}[H]
 \centering
-\includegraphics[width=\columnwidth]{fm/msg/figs/FFTbuiltin/inputs-1.png}
+\includegraphics[width=\columnwidth]{fm/msg/figs/msg_spec_amp.pdf}
 \caption{Plot of spectrum of message signal using builtin FFT algorithm.}
 \label{fig:FFTb}
 \end{figure}
@@ -44,13 +44,13 @@ The \textbf{np.fft.fftfreq} function divides the frequency range into equal inte
 	\solution
 \begin{figure}[H]
 \centering
-\includegraphics[width=\columnwidth]{fm/msg/figs/FFTown/input2.png}
+\includegraphics[width=\columnwidth]{fm/msg/figs/FFTmsg.pdf}
 \caption{Plot of spectrum of message signal using own FFT algorithm.}
 \label{fig:FFTo}
 \end{figure}
 The folowing code plots the spectrum in \figref{fig:FFTo} using the DFT defined in  \eqref{eq:app-dft-def}.
 \begin{lstlisting}
-python3 fm/codes/msg/FFTmsg.py
+python3 fm/codes/msg/FFTalgorithm.py
 \end{lstlisting}
 \item Compute and plot the PSD of the message signal using 
 \eqref{eq:app-psd-def}.
@@ -63,14 +63,13 @@ python3 fm/codes/msg/msg_psd.py
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\columnwidth]{fm/msg/figs/psd.pdf}
+\includegraphics[width=\columnwidth]{fm/msg/figs/msg_psd.pdf}
 \caption{Plot of PSD of the message signal.}
 \label{fig:PSD}
 \end{figure}
 
 \item Find the bandwidth of the message signal.\\
 \solution 
-\\
 Executing
 \begin{lstlisting}
 python3 fm/codes/msg/msg_bw.py
