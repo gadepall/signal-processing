@@ -1,0 +1,96 @@
+Play the message signal using
+\begin{lstlisting}
+sudo apt install ffmpeg
+ffplay fm/input-audio/Sound.wav
+\end{lstlisting}
+\begin{enumerate}[label=\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\item Find the sampling rate of the message.
+\\
+	\solution
+Executing	
+\begin{lstlisting}
+python3 fm/msg/codes/sample_rate.py
+\end{lstlisting}
+gives
+the sampling rate of the input signal as 44100Hz.
+\item Plot the spectrum of the message signal using the builtin FFT algorithm.\\
+	\solution
+The folowing code plots the spectrum in \figref{fig:FFTb} using the builtin FFT algorithm of the python library 'Numpy.'
+\\
+Executing
+\begin{lstlisting}
+python3 fm/msg/codes/msg_spec.py
+\end{lstlisting}		
+\begin{figure}[H]
+\centering
+\includegraphics[width=\columnwidth]{fm/msg/figs/msg_spec.pdf}
+\caption{Plot of spectrum of message signal using builtin FFT algorithm.}
+\label{fig:FFTb}
+\end{figure}
+\item Find the number of samples used to compute the FFT.\\
+	\solution
+The following code finds the number of samples used to compute the FFT
+\begin{lstlisting}
+python3 fm/msg/codes/no_of_samples.py
+\end{lstlisting}
+and gives number of samples as 1226536
+\item What does the following command do?
+\begin{lstlisting}
+f_i = np.fft.fftfreq(len(audio_data), d=1/sample_rate)
+\end{lstlisting}
+       \solution
+The np.fft.fftfreq function calculates the frequencies corresponding to the discrete Fourier transform (DFT) output by using the formula:\\
+\begin{align}
+\centering
+f = \frac{k}{nd} 
+\end{align}   
+where:\\
+f = the frequency\\
+k = the index of the DFT output component\\
+n = the length of the input signal\\
+d = the sample spacing\\
+The np.fft.fftfreq function generates an array of length n, where each element represents the frequency corresponding to the DFT output component at the respective index.The index k ranges from 0 to n-1, and each index corresponds to a specific frequency component.\\
+\item Plot the spectrum of the message signal by writing your own FFT algorithm.\\
+	\solution
+\begin{figure}[H]
+\centering
+\includegraphics[width=\columnwidth]{fm/msg/figs/FFTalgorithm.pdf}
+\caption{Plot of spectrum of message signal using own FFT algorithm.}
+\label{fig:FFTo}
+\end{figure}
+The folowing code plots the spectrum in \figref{fig:FFTo} using the DFT defined in  \eqref{eq:app-dft-def}.
+\begin{lstlisting}
+python3 fm/msg/codes/FFTalgorithm.py
+\end{lstlisting}
+\item Compute and plot the PSD of the message signal using 
+\eqref{eq:app-psd-def}.
+\\
+	\solution
+Executing	
+\begin{lstlisting}
+python3 fm/msg/codes/msg_psd.py
+\end{lstlisting}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\columnwidth]{fm/msg/figs/msg_psd.pdf}
+\caption{Plot of PSD of the message signal.}
+\label{fig:PSD}
+\end{figure}
+
+\item Find the bandwidth of the message signal. Through a plot, explain the principle used for computing the bandwidth.\\
+\solution 
+Executing
+\begin{lstlisting}
+python3 fm/msg/codes/msg_bw.py
+\end{lstlisting}
+gives the bandwidth of the message signal as 2366.625 Hz
+\\
+\iffalse
+\begin{lstlisting}
+/fm/FM/codes/input.py
+\end{lstlisting}
+\fi
+
+\end{enumerate}
