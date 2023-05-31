@@ -1,6 +1,15 @@
+
+'''==========================================================
+Code by G V V Sharma
+May 27, 2023,
+Released under GNU/GPL
+https://www.gnu.org/licenses/gpl-3.0.en.html
+=========================================================='''
+ 
+#Spectrum of message signal using own FFT algorithm.
+ 
 import numpy as np
 from scipy.io import wavfile
-import scipy.signal as signal
 import matplotlib.pyplot as plt
 
 def fft(x):
@@ -14,22 +23,20 @@ def fft(x):
         return np.concatenate([X_even + factor[:N//2] * X_odd,
                                X_even + factor[N//2:] * X_odd])
 
-# Load audio data
-sample_rate, audio_data = wavfile.read("fm/codes/msg/Sound_Noise.wav")
+sample_rate, audio_data = wavfile.read("fm/input-audio/Sound.wav")
 
 # Zero padding
 N = len(audio_data)
 nextpow2 = int(np.ceil(np.log2(N)))
 audio_data = np.pad(audio_data, (0, 2**nextpow2-N), mode='constant')
 
-# Perform FFT on audio signal
 i = fft(audio_data)
-
-# Calculate the frequency range
 f_i = np.fft.fftfreq(len(audio_data), d=1/sample_rate)
 
-# Plot the spectrum
 plt.plot(f_i, np.abs(i))
 plt.xlabel('Frequency (Hz)')
 plt.ylabel('Magnitude')
+plt.title('Message Signal')
+plt.savefig("fm/msg/figs/FFTalgorithm.pdf")
 plt.show()
+

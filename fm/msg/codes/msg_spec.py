@@ -12,7 +12,7 @@ import numpy as np
 from scipy.io import wavfile
 import matplotlib.pyplot as plt
 
-sample_rate, audio_data = wavfile.read("fm/codes/msg/Sound_Noise.wav")
+sample_rate, audio_data = wavfile.read("fm/input-audio/Sound.wav")
 X_i = np.fft.fft(audio_data)
 f_i = np.fft.fftfreq(len(audio_data), d=1/sample_rate)
 
@@ -20,6 +20,6 @@ plt.plot(f_i, np.abs(X_i))
 plt.xlabel('Frequency (Hz)')
 plt.ylabel('Magnitude')
 plt.title('Message Signal')
-plt.savefig("fm/msg/figs/msg_spec_amp.pdf")
+plt.savefig("fm/msg/figs/msg_spec.pdf")
 plt.show()
 
