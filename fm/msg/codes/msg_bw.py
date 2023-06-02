@@ -25,7 +25,6 @@ mask = psd > threshold
 freq_range = freqs[mask]
 fmax = max(freq_range)
 fmin = min(freq_range)
-
 bandwidth = fmax - fmin
 print('Bandwidth of msg signal:', bandwidth,'Hz')
 

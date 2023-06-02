@@ -42,14 +42,25 @@ f_i = np.fft.fftfreq(len(audio_data), d=1/sample_rate)
        \solution
 The np.fft.fftfreq function calculates the frequencies corresponding to the discrete Fourier transform (DFT) output by using the formula:\\
 \begin{align}
+f = \frac{k}{nd}
+\end{align} 
+for k=100,  
+\begin{align}
+f = \frac{100}{1226536(1/44100)}
+\end{align}
+\begin{align}
 \centering
-f = \frac{k}{nd} 
-\end{align}   
-where:\\
-f = the frequency\\
-k = the index of the DFT output component\\
-n = the length of the input signal\\
-d = the sample spacing\\
+f = 3.595 Hz
+\end{align}
+\begin{tabular}{|c|l|c|}
+    \hline 
+    \textbf{Parameter} & \textbf{Value} &\textbf{Description} \\ \hline
+    f  & varies with k  & Frequency \\
+    k  &  $0 \leq k \leq n-1$  &index of the DFT output component\\
+    n  & 1226536  &Length of the input signal\\  
+    d  & 1/44100 sec  & Sample space\\ \hline 
+\end{tabular}
+    \\ \\
 The np.fft.fftfreq function generates an array of length n, where each element represents the frequency corresponding to the DFT output component at the respective index.The index k ranges from 0 to n-1, and each index corresponds to a specific frequency component.\\
 \item Plot the spectrum of the message signal by writing your own FFT algorithm.\\
 	\solution
