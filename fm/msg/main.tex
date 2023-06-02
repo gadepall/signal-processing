@@ -54,17 +54,24 @@ f = \frac{100}{1226536(1/44100)}
 \centering
 f = 3.595 Hz
 \end{align}
-\begin{tabular}{|c|l|c|}
-    \hline 
-    \textbf{Parameter} & \textbf{Value} &\textbf{Description} \\ \hline
-    f  & varies with k  & Frequency \\
-    k  &  $0 \leq k \leq n-1$  &index of the DFT output component\\
-    n  & 1226536  &Length of the input signal\\  
-    d  & 1/44100 sec  & Sample space\\ \hline 
-\end{tabular}
-    \\ \\
+%\begin{tabular}{|c|l|c|}
+ %   \hline 
+  %  \textbf{Parameter} & \textbf{Value} &\textbf{Description} \\ \hline
+   % f  & varies with k  & Frequency \\
+    %k  &  $0 \leq k \leq n-1$  &index of the DFT output component\\
+    %n  & 1226536  &Length of the input signal\\  
+    %d  & 1/44100 sec  & Sample space\\ \hline 
+%\end{tabular}
+ %   \\ \\
+
 
 The np.fft.fftfreq function generates an array of length n, where each element represents the frequency corresponding to the DFT output component at the respective index.The index k ranges from 0 to n-1, and each index corresponds to a specific frequency component.\\
+\begin{table}
+  \centering
+  \input{fm/msg/table.tex}
+  \caption{Parameters}
+  \label{tab:mytable}
+\end{table}
 \item Plot the spectrum of the message signal by writing your own FFT algorithm.\\
 	\solution
 \begin{figure}[H]
