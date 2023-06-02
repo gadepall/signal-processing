@@ -42,26 +42,36 @@ f_i = np.fft.fftfreq(len(audio_data), d=1/sample_rate)
        \solution
 The np.fft.fftfreq function calculates the frequencies corresponding to the discrete Fourier transform (DFT) output by using the formula:\\
 \begin{align}
+\centering
 f = \frac{k}{nd}
 \end{align} 
 for k=100,  
 \begin{align}
+\centering
 f = \frac{100}{1226536(1/44100)}
 \end{align}
 \begin{align}
 \centering
 f = 3.595 Hz
 \end{align}
-\begin{tabular}{|c|l|c|}
-    \hline 
-    \textbf{Parameter} & \textbf{Value} &\textbf{Description} \\ \hline
-    f  & varies with k  & Frequency \\
-    k  &  $0 \leq k \leq n-1$  &index of the DFT output component\\
-    n  & 1226536  &Length of the input signal\\  
-    d  & 1/44100 sec  & Sample space\\ \hline 
-\end{tabular}
-    \\ \\
+%\begin{tabular}{|c|l|c|}
+ %   \hline 
+  %  \textbf{Parameter} & \textbf{Value} &\textbf{Description} \\ \hline
+   % f  & varies with k  & Frequency \\
+    %k  &  $0 \leq k \leq n-1$  &index of the DFT output component\\
+    %n  & 1226536  &Length of the input signal\\  
+    %d  & 1/44100 sec  & Sample space\\ \hline 
+%\end{tabular}
+ %   \\ \\
+
+
 The np.fft.fftfreq function generates an array of length n, where each element represents the frequency corresponding to the DFT output component at the respective index.The index k ranges from 0 to n-1, and each index corresponds to a specific frequency component.\\
+\begin{table}
+  \centering
+  \input{fm/msg/table.tex}
+  \caption{Parameters of Message signal}
+  \label{4.1}
+\end{table}
 \item Plot the spectrum of the message signal by writing your own FFT algorithm.\\
 	\solution
 \begin{figure}[H]
@@ -98,10 +108,26 @@ python3 fm/msg/codes/msg_bw.py
 \end{lstlisting}
 gives the bandwidth of the message signal as 2366.625 Hz
 \\
+The threshold of the message signal from the plot is 3.4965 $\times 10^{16}$
+\\
+The maximum and minimum frequencies are 1183.3123 Hz and -1183.3123 respectively.
+\\
+Therefore bandwidth is\\
+\begin{align}
+\centering
+f_{max}-f_{min}
+\end{align}   
+\begin{align}
+\centering
+1183.3123-(-1183.3123)
+\end{align}
+\begin{align}
+\centering
+2366.625  Hz
+\end{align}
 \iffalse
 \begin{lstlisting}
 /fm/FM/codes/input.py
 \end{lstlisting}
 \fi
-
 \end{enumerate}

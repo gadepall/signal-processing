@@ -12,16 +12,12 @@ List the various parameters in a table.
 \\
 \solution
 \\
-\begin{tabular}{|c|l|c|}
-    \hline 
-    \textbf{Parameter} & \textbf{Value} &\textbf{Description} \\ \hline
-    $f_c $&  & Frequency of the carrier signal\\
-    $\Delta{f}$ &  & Maximum Deviation \\  
-    $K_{f}$ &  & Frequency sensitivity \\ 
-    $\tau$ &  & Duplicate Variable\\ 
-    t     &  & Sampling time\\  \hline
-    \end{tabular}
-    \\
+\begin{table}
+  \centering
+  \input{fm/tx/table_tx.tex}
+  \caption{Parameters of transmitted signal}
+  \label{tab:4.1}
+\end{table}
 \item Obtain a difference equation for computing $\phi(t)$.  Suggest a sampling rate.
 \\
 \solution
@@ -34,7 +30,7 @@ Executing
 \begin{lstlisting}
 python3 fm/tx/codes/tx_spec.py
 \end{lstlisting}
-\begin{figure}[H]
+\begin{figure}{H}
 \centering	
 \includegraphics[width=\columnwidth]{fm/tx/figs/tx_spec.pdf} 
 \caption{Plot of spectrum of transmitted signal.}
