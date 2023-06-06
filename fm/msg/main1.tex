@@ -70,7 +70,8 @@ The np.fft.fftfreq function generates an array of length n, where each element r
   \centering
   \input{fm/msg/table.tex}
   \caption{Parameters of Message signal}
-  \label{4.1}
+  \label{tab:4.1}
+  \tabref{tab:4.1}
 \end{table}
 \item Plot the spectrum of the message signal by writing your own FFT algorithm.\\
 	\solution
@@ -106,17 +107,25 @@ Executing
 \begin{lstlisting}
 python3 fm/msg/codes/msg_bw.py
 \end{lstlisting}
-gives the bandwidth of the message signal as 2366.62454 Hz
+gives the bandwidth of the message signal as 2366.6246 Hz
 \\
 The threshold of the message signal from the plot is 3.4965 $\times 10^{16}$
 \\
-The maximum and minimum frequencies are 1183.31227 Hz and -1183.31227 respectively.
+The maximum and minimum frequencies are 1183.3123 Hz and -1183.3123 respectively.
 \\
 Therefore bandwidth is\\
 \begin{align}
 \centering
-f_{max}-f_{min} = 1183.312-(-1183.312) = 2366.624  Hz
-\end{align}
+f_{max}-f_{min}
+\end{align}   
+\begin{align*}
+\centering
+1183.3123-(-1183.3123)
+\end{align*}
+\begin{align*}
+\centering
+2366.6246  Hz
+\end{align*}
 \iffalse
 \begin{lstlisting}
 /fm/FM/codes/input.py

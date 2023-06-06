@@ -1,0 +1,144 @@
+\begin{enumerate}[label=\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\item List the various components used to implement receiver.
+\\
+\solution
+\\
+\begin{table}[!ht]
+  \centering
+  \input{fm/rx/table.tex}
+  \caption{Components Required}
+  \label{tab:components}
+\end{table}
+Components are listed in the table \tabref{tab:components}\\
+The picture of RTL-SDR and Antenna is given in \figref{fig:rtl-sdr}.This set is used to receive the Fm signals.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\columnwidth]{fm/rx/figs/rtl-sdr.png}
+\caption{RTL-SDR}
+\label{fig:rtl-sdr}
+\end{figure}
+\item Install and open GNU Radio using the following commands
+\\
+\begin{lstlisting}
+sudo apt update
+sudo apt install gnuradio
+gnuradio-companion
+\end{lstlisting}
+\item How to construct the block diagram in GNU radio? \\
+	\solution  \\
+\textbf{Step-1}:\\
+Search for Low pass filter block and add drag it to the work space.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\columnwidth]{fm/rx/figs/add.png}
+\caption{Adding blocks}
+\label{fig:add blocks}
+\end{figure}
+Similarly do for RTL-Source block,WBFM and Audio sink blocks.
+\textbf{Step-2}:
+Connect them according to the flowgraph shown in \figref{fig:Block_diagram}.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\columnwidth]{fm/rx/figs/block_diagram.png}
+\caption{Block diagram of GNU Radio}
+\label{fig:Block_diagram}
+\end{figure}
+\textbf{Note}:
+Refer the following website for any queries.
+\begin{lstlisting}
+https://wiki.gnuradio.org/index.php?title=Creating_Your_First_Block
+\end{lstlisting}
+\item Explain each block in block diagram \\
+	\solution \\
+\textbf{1. RTL-SDR Source}:\\
+The RTL-SDR Source block is used to stream samples from RTL-SDR device.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\columnwidth]{fm/rx/figs/source_block.png}
+\caption{RTL-SDR Source Block}
+\label{fig:source block}
+\end{figure}
+\textbf{2. Low Pass Filter}:\\
+Low Pass Filter removes frequencies that are higher than the cutoff.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\columnwidth]{fm/rx/figs/lpf_block.png}
+\caption{Low Pass Filter Block}
+\label{fig:lpf}
+\end{figure}
+\textbf{3. WBFM}:\\
+WBFM Receive is a block for demodulating a broadcast FM signal. The output is the demodulated audio.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\columnwidth]{fm/rx/figs/wbfm_block.png}
+\caption{WBFM Block}
+\label{fig:wbfm block}
+\end{figure}
+\textbf{4. Audio sink}:\\
+Audio Sink block provides audio output signal at the computer speakers.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\columnwidth]{fm/rx/figs/audio_sink.png}
+\caption{Audio Sink Block}
+\label{fig:audio sink block}
+\end{figure}
+Connect the RTL-SDR to the system and execute the flowgraph in \figref{fig:Block_diagram}.\\
+We can listen to the sound which we have transmitted.\\
+A default python code is generated and stored as
+\begin{lstlisting}
+fm/rx/codes/fm_receiver.py
+\end{lstlisting}
+\item How to replace LPF default code with custom code?\\
+\solution \\
+\textbf{Step-1}:
+Disable Low pass filter block and search for the python block and add it to the workspace.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\columnwidth]{fm/rx/figs/step_1.png}
+\caption{search for blocks}
+\label{fig:search for blocks}
+\end{figure}
+\textbf{Step-2}:
+Double-click the block to edit the properties as in \figref{fig:Edit properties}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\columnwidth]{fm/rx/figs/step_2.png}
+\caption{Edit properties}
+\label{fig:Edit properties}
+\end{figure}
+\textbf{Step-3}:
+Change the block name as required by editing in the code as shown in \figref{fig:changing block name}                                               
+\begin{figure}[H]
+\centering
+\includegraphics[width=\columnwidth]{fm/rx/figs/step_3.png}
+\caption{Changing block name}
+\label{fig:changing block name}
+\end{figure}
+\textbf{Step-4}:
+Change the parameter name as required by editing in the code as shown in \figref{fig:changing parameter name}                                               
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\columnwidth]{fm/rx/figs/step_4.png}
+\caption{Changing parameter name}
+\label{fig:changing parameter name}
+\end{figure}
+Replace the below code with default code
+\begin{lstlisting}
+fm/rx/codes/lpf_block.py
+\end{lstlisting} 
+\item Read the data from RTL SDR using python code and without using GNU radio.
+\\
+\solution \\
+The following code reads the data from RTL-SDR without GNU radio.
+\begin{lstlisting}
+fm/rx/codes/source_own.py
+\end{lstlisting}
+\item Design Low pass filter block without using GNU Radio
+\\
+\solution \\
+The following code works as low pass filter.
+\begin{lstlisting}
+fm/rx/codes/lpf_own.py
+\end{lstlisting}
+\end{enumerate}

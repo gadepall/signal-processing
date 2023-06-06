@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.31)  2 JUN 2023 13:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.31)  6 JUN 2023 11:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1117,28 +1117,28 @@ LaTeX Info: Redefining \cite on input line 694.
 
 Writing index file main.idx
 Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 26.
+h' as default language. on input line 25.
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1205,15 +1205,15 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \c@lstlisting=\count410
-LaTeX Info: Redefining \celsius on input line 26.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 26.
+LaTeX Info: Redefining \celsius on input line 25.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 25.
 
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 26.
-Package gensymb Info: Using \Omega for \ohm on input line 26.
+LaTeX Info: Redefining \ohm on input line 25.
+Package gensymb Info: Using \Omega for \ohm on input line 25.
 
 Package gensymb Warning: Not defining \micro.
 
@@ -1224,12 +1224,12 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 26.
+or `english'. on input line 25.
 
 (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-Package hyperref Info: Link coloring OFF on input line 26.
+Package hyperref Info: Link coloring OFF on input line 25.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -1242,9 +1242,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count411
 )
-LaTeX Info: Redefining \ref on input line 26.
-LaTeX Info: Redefining \pageref on input line 26.
-LaTeX Info: Redefining \nameref on input line 26.
+LaTeX Info: Redefining \ref on input line 25.
+LaTeX Info: Redefining \pageref on input line 25.
+LaTeX Info: Redefining \nameref on input line 25.
 
 (./main.out) (./main.out)
 \@outlinefile=\write5
@@ -1253,7 +1253,7 @@ LaTeX Info: Redefining \nameref on input line 26.
 <figs/logo.jpg, id=155, 642.4pt x 642.4pt>
 File: figs/logo.jpg Graphic file (type jpg)
 <use figs/logo.jpg>
-Package pdftex.def Info: figs/logo.jpg  used on input line 52.
+Package pdftex.def Info: figs/logo.jpg  used on input line 51.
 (pdftex.def)             Requested size: 128.47772pt x 128.47772pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1332,7 +1332,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.196 \begin{introduction}
+l.195 \begin{introduction}
                            [1]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1343,7 +1343,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.196 \begin{introduction}
+l.195 \begin{introduction}
                            [2
 
 ]
@@ -1360,7 +1360,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.iii}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.201 \mainmatter
+l.200 \mainmatter
                   [3
 
 ]
@@ -1718,7 +1718,7 @@ Overfull \hbox (1.39854pt too wide) in paragraph at lines 83--84
  us-ing the DFT de-fined in []. 
  []
 
-<fm/msg/figs/msg_psd.pdf, id=751, 462.52798pt x 346.89601pt>
+<fm/msg/figs/msg_psd.pdf, id=749, 462.52798pt x 346.89601pt>
 File: fm/msg/figs/msg_psd.pdf Graphic file (type pdf)
 <use fm/msg/figs/msg_psd.pdf>
 Package pdftex.def Info: fm/msg/figs/msg_psd.pdf  used on input line 98.
@@ -1740,34 +1740,222 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [37 <./fm/msg/figs/msg_psd.pdf>]) (./fm/tx/main.tex (./fm/tx/table_tx.tex
-\gnumericColE=\skip91
-\gnumericColF=\skip92
-)
+ [37 <./fm/msg/figs/msg_psd.pdf>]) (./fm/tx/main.tex (./fm/tx/table.tex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [38]
-<fm/tx/figs/tx_spec.pdf, id=862, 462.52798pt x 346.89601pt>
-File: fm/tx/figs/tx_spec.pdf Graphic file (type pdf)
-<use fm/tx/figs/tx_spec.pdf>
-Package pdftex.def Info: fm/tx/figs/tx_spec.pdf  used on input line 35.
-(pdftex.def)             Requested size: 433.62001pt x 325.23009pt.
-)
+
+LaTeX Warning: Reference `phi' on page 39 undefined on input line 31.
+
+
+LaTeX Warning: Reference `n-1' on page 39 undefined on input line 44.
+
+
+LaTeX Warning: Reference `n' on page 39 undefined on input line 44.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [39]
+<fm/tx/figs/tx_spec.pdf, id=869, 462.52798pt x 346.89601pt>
+File: fm/tx/figs/tx_spec.pdf Graphic file (type pdf)
+<use fm/tx/figs/tx_spec.pdf>
+Package pdftex.def Info: fm/tx/figs/tx_spec.pdf  used on input line 59.
+(pdftex.def)             Requested size: 433.62001pt x 325.23009pt.
+<fm/tx/figs/tx_psd.pdf, id=871, 462.52798pt x 346.89601pt>
+File: fm/tx/figs/tx_psd.pdf Graphic file (type pdf)
+<use fm/tx/figs/tx_psd.pdf>
+Package pdftex.def Info: fm/tx/figs/tx_psd.pdf  used on input line 74.
+(pdftex.def)             Requested size: 433.62001pt x 325.23009pt.
+
+Underfull \vbox (badness 1286) has occurred while \output is active []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [40 <./fm/tx/figs/tx_spec.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 85--92
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [41 <./fm/tx/figs/tx_psd.pdf>]) (./fm/rx/main.tex (./fm/rx/table.tex)
+
+LaTeX Warning: Reference `tab:components' on page 42 undefined on input line 13
+.
+
+
+LaTeX Warning: Reference `fig:rtl-sdr' on page 42 undefined on input line 14.
+
+<fm/rx/figs/rtl-sdr.png, id=963, 1284.8pt x 963.6pt>
+File: fm/rx/figs/rtl-sdr.png Graphic file (type png)
+<use fm/rx/figs/rtl-sdr.png>
+Package pdftex.def Info: fm/rx/figs/rtl-sdr.png  used on input line 17.
+(pdftex.def)             Requested size: 216.81pt x 162.60416pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--23
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [42 <./fm/rx/figs/rtl-sdr.png>]
+<fm/rx/figs/add.png, id=974, 1301.86375pt x 467.7475pt>
+File: fm/rx/figs/add.png Graphic file (type png)
+<use fm/rx/figs/add.png>
+Package pdftex.def Info: fm/rx/figs/add.png  used on input line 34.
+(pdftex.def)             Requested size: 433.62001pt x 155.79173pt.
+
+
+LaTeX Warning: Reference `fig:Block_diagram' on page 43 undefined on input line
+ 40.
+
+<fm/rx/figs/block_diagram.png, id=975, 1105.12875pt x 391.4625pt>
+File: fm/rx/figs/block_diagram.png Graphic file (type png)
+<use fm/rx/figs/block_diagram.png>
+Package pdftex.def Info: fm/rx/figs/block_diagram.png  used on input line 43.
+(pdftex.def)             Requested size: 433.62001pt x 153.5956pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [43 <./fm/rx/figs/add.png>]
+<fm/rx/figs/source_block.png, id=988, 255.95625pt x 249.93375pt>
+File: fm/rx/figs/source_block.png Graphic file (type png)
+<use fm/rx/figs/source_block.png>
+Package pdftex.def Info: fm/rx/figs/source_block.png  used on input line 58.
+(pdftex.def)             Requested size: 173.44534pt x 169.36539pt.
+<fm/rx/figs/lpf_block.png, id=989, 167.87718pt x 155.07938pt>
+File: fm/rx/figs/lpf_block.png Graphic file (type png)
+<use fm/rx/figs/lpf_block.png>
+Package pdftex.def Info: fm/rx/figs/lpf_block.png  used on input line 66.
+(pdftex.def)             Requested size: 130.08733pt x 120.17105pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [44 <./fm/rx/figs/block_diagram.png> <./fm/rx/figs/source_block.png>]
+<fm/rx/figs/wbfm_block.png, id=1000, 166.37157pt x 63.23625pt>
+File: fm/rx/figs/wbfm_block.png Graphic file (type png)
+<use fm/rx/figs/wbfm_block.png>
+Package pdftex.def Info: fm/rx/figs/wbfm_block.png  used on input line 74.
+(pdftex.def)             Requested size: 130.08733pt x 49.44757pt.
+<fm/rx/figs/audio_sink.png, id=1001, 128.73094pt x 60.97781pt>
+File: fm/rx/figs/audio_sink.png Graphic file (type png)
+<use fm/rx/figs/audio_sink.png>
+Package pdftex.def Info: fm/rx/figs/audio_sink.png  used on input line 82.
+(pdftex.def)             Requested size: 130.08733pt x 61.62523pt.
+
+
+LaTeX Warning: Reference `fig:Block_diagram' on page 45 undefined on input line
+ 86.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [45 <./fm/rx/figs/lpf_block.png> <./fm/rx/figs/wbfm_block.png> <./fm/rx/figs/a
+udio_sink.png>]
+<fm/rx/figs/step_1.png, id=1009, 726.715pt x 151.56625pt>
+File: fm/rx/figs/step_1.png Graphic file (type png)
+<use fm/rx/figs/step_1.png>
+Package pdftex.def Info: fm/rx/figs/step_1.png  used on input line 98.
+(pdftex.def)             Requested size: 433.62001pt x 90.43858pt.
+
+
+LaTeX Warning: Reference `fig:Edit properties' on page 46 undefined on input li
+ne 103.
+
+<fm/rx/figs/step_2.png, id=1010, 536.0025pt x 277.035pt>
+File: fm/rx/figs/step_2.png Graphic file (type png)
+<use fm/rx/figs/step_2.png>
+Package pdftex.def Info: fm/rx/figs/step_2.png  used on input line 106.
+(pdftex.def)             Requested size: 303.53267pt x 156.88014pt.
+
+LaTeX Warning: Reference `fig:changing block name' on page 46 undefined on inpu
+t line 111.
+
+<fm/rx/figs/step_3.png, id=1011, 566.115pt x 536.0025pt>
+File: fm/rx/figs/step_3.png Graphic file (type png)
+<use fm/rx/figs/step_3.png>
+Package pdftex.def Info: fm/rx/figs/step_3.png  used on input line 114.
+(pdftex.def)             Requested size: 433.62001pt x 410.56401pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [46 <./fm/rx/figs/step_1.png> <./fm/rx/figs/step_2.png>]
+
+LaTeX Warning: Reference `fig:changing parameter name' on page 47 undefined on 
+input line 119.
+
+<fm/rx/figs/step_4.png, id=1023, 479.7925pt x 619.31375pt>
+File: fm/rx/figs/step_4.png Graphic file (type png)
+<use fm/rx/figs/step_4.png>
+Package pdftex.def Info: fm/rx/figs/step_4.png  used on input line 122.
+(pdftex.def)             Requested size: 303.53267pt x 391.80457pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [47 <./fm/rx/figs/step_3.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [48 <./fm/rx/figs/step_4.png>])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [49]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [50
+
+]
 Appendix A.
 (./fft/main.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1778,21 +1966,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [41
-
-]
+ [51]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [42]
+ [52]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [43]
+ [53]
 Underfull \vbox (badness 3428) has occurred while \output is active []
 
 
@@ -1801,7 +1987,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [44]
+ [54]
 Underfull \hbox (badness 10000) in paragraph at lines 352--353
 
  []
@@ -1815,13 +2001,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [45])
+ [55])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [46]
+ [56]
 Appendix B.
 (./filtdesign/writeup/filter_design.tex
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 3
@@ -1838,7 +2024,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [47
+ [57
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1849,7 +2035,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [48]
+ [58]
 Overfull \hbox (1.52493pt too wide) in paragraph at lines 70--71
 []|   []   |   []   |   []   |   []   |   []   |   [] \OT1/cmr/m/n/10.95 The ma
 g-ni-tude squared of the Chebyschev
@@ -1861,7 +2047,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [49]
+ [59]
 
 Package hyperref Warning: Suppressing link with empty target on input line 112.
 
@@ -1875,19 +2061,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [50]
+ [60]
 Package epstopdf Info: Source file: <filtdesign/writeup/figs/fig1.eps>
-(epstopdf)                    date: 2023-06-02 13:24:15
+(epstopdf)                    date: 2023-06-06 11:33:09
 (epstopdf)                    size: 18294 bytes
 (epstopdf)             Output file: <filtdesign/writeup/figs/fig1-eps-converted
 -to.pdf>
-(epstopdf)                    date: 2023-06-02 13:24:15
+(epstopdf)                    date: 2023-06-06 11:33:09
 (epstopdf)                    size: 12466 bytes
 (epstopdf)             Command: <repstopdf --outfile=filtdesign/writeup/figs/fi
 g1-eps-converted-to.pdf filtdesign/writeup/figs/fig1.eps>
 (epstopdf)             \includegraphics on input line 138.
 Package epstopdf Info: Output file is already uptodate.
-<filtdesign/writeup/figs/fig1-eps-converted-to.pdf, id=1020, 495.8525pt x 391.4
+<filtdesign/writeup/figs/fig1-eps-converted-to.pdf, id=1163, 495.8525pt x 391.4
 625pt>
 File: filtdesign/writeup/figs/fig1-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1896,17 +2082,17 @@ Package pdftex.def Info: filtdesign/writeup/figs/fig1-eps-converted-to.pdf  use
 d on input line 138.
 (pdftex.def)             Requested size: 433.62001pt x 342.33171pt.
 Package epstopdf Info: Source file: <filtdesign/writeup/figs/fig2.eps>
-(epstopdf)                    date: 2023-06-02 13:24:15
+(epstopdf)                    date: 2023-06-06 11:33:09
 (epstopdf)                    size: 15801 bytes
 (epstopdf)             Output file: <filtdesign/writeup/figs/fig2-eps-converted
 -to.pdf>
-(epstopdf)                    date: 2023-06-02 13:24:15
+(epstopdf)                    date: 2023-06-06 11:33:09
 (epstopdf)                    size: 19789 bytes
 (epstopdf)             Command: <repstopdf --outfile=filtdesign/writeup/figs/fi
 g2-eps-converted-to.pdf filtdesign/writeup/figs/fig2.eps>
 (epstopdf)             \includegraphics on input line 145.
 Package epstopdf Info: Output file is already uptodate.
-<filtdesign/writeup/figs/fig2-eps-converted-to.pdf, id=1021, 498.86375pt x 391.
+<filtdesign/writeup/figs/fig2-eps-converted-to.pdf, id=1164, 498.86375pt x 391.
 4625pt>
 File: filtdesign/writeup/figs/fig2-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1915,17 +2101,17 @@ Package pdftex.def Info: filtdesign/writeup/figs/fig2-eps-converted-to.pdf  use
 d on input line 145.
 (pdftex.def)             Requested size: 433.62001pt x 340.27693pt.
 Package epstopdf Info: Source file: <filtdesign/writeup/figs/fig3.eps>
-(epstopdf)                    date: 2023-06-02 13:24:15
+(epstopdf)                    date: 2023-06-06 11:33:09
 (epstopdf)                    size: 10358 bytes
 (epstopdf)             Output file: <filtdesign/writeup/figs/fig3-eps-converted
 -to.pdf>
-(epstopdf)                    date: 2023-06-02 13:24:15
+(epstopdf)                    date: 2023-06-06 11:33:09
 (epstopdf)                    size: 6998 bytes
 (epstopdf)             Command: <repstopdf --outfile=filtdesign/writeup/figs/fi
 g3-eps-converted-to.pdf filtdesign/writeup/figs/fig3.eps>
 (epstopdf)             \includegraphics on input line 151.
 Package epstopdf Info: Output file is already uptodate.
-<filtdesign/writeup/figs/fig3-eps-converted-to.pdf, id=1024, 499.8675pt x 391.4
+<filtdesign/writeup/figs/fig3-eps-converted-to.pdf, id=1167, 499.8675pt x 391.4
 625pt>
 File: filtdesign/writeup/figs/fig3-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1944,37 +2130,37 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [51]
+ [61]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [52 <./filtdesign/writeup/figs/fig1-eps-converted-to.pdf>]
+ [62 <./filtdesign/writeup/figs/fig1-eps-converted-to.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [53 <./filtdesign/writeup/figs/fig2-eps-converted-to.pdf>]
+ [63 <./filtdesign/writeup/figs/fig2-eps-converted-to.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [54 <./filtdesign/writeup/figs/fig3-eps-converted-to.pdf>]
+ [64 <./filtdesign/writeup/figs/fig3-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <filtdesign/writeup/figs/fig4.eps>
-(epstopdf)                    date: 2023-06-02 13:24:15
+(epstopdf)                    date: 2023-06-06 11:33:09
 (epstopdf)                    size: 13594 bytes
 (epstopdf)             Output file: <filtdesign/writeup/figs/fig4-eps-converted
 -to.pdf>
-(epstopdf)                    date: 2023-06-02 13:24:15
+(epstopdf)                    date: 2023-06-06 11:33:09
 (epstopdf)                    size: 9528 bytes
 (epstopdf)             Command: <repstopdf --outfile=filtdesign/writeup/figs/fi
 g4-eps-converted-to.pdf filtdesign/writeup/figs/fig4.eps>
 (epstopdf)             \includegraphics on input line 183.
 Package epstopdf Info: Output file is already uptodate.
-<filtdesign/writeup/figs/fig4-eps-converted-to.pdf, id=1078, 499.8675pt x 392.4
+<filtdesign/writeup/figs/fig4-eps-converted-to.pdf, id=1223, 499.8675pt x 392.4
 6625pt>
 File: filtdesign/writeup/figs/fig4-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1988,13 +2174,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [55]
+ [65]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [56 <./filtdesign/writeup/figs/fig4-eps-converted-to.pdf>]
+ [66 <./filtdesign/writeup/figs/fig4-eps-converted-to.pdf>]
 
 Package hyperref Warning: Suppressing link with empty target on input line 236.
 
@@ -2005,7 +2191,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [57]
+ [67]
 
 Package hyperref Warning: Suppressing link with empty target on input line 238.
 
@@ -2023,17 +2209,17 @@ Package hyperref Warning: Suppressing link with empty target on input line 253.
 
 
 Package epstopdf Info: Source file: <filtdesign/writeup/figs/fig5.eps>
-(epstopdf)                    date: 2023-06-02 13:24:15
+(epstopdf)                    date: 2023-06-06 11:33:09
 (epstopdf)                    size: 11198 bytes
 (epstopdf)             Output file: <filtdesign/writeup/figs/fig5-eps-converted
 -to.pdf>
-(epstopdf)                    date: 2023-06-02 13:24:15
+(epstopdf)                    date: 2023-06-06 11:33:09
 (epstopdf)                    size: 7435 bytes
 (epstopdf)             Command: <repstopdf --outfile=filtdesign/writeup/figs/fi
 g5-eps-converted-to.pdf filtdesign/writeup/figs/fig5.eps>
 (epstopdf)             \includegraphics on input line 256.
 Package epstopdf Info: Output file is already uptodate.
-<filtdesign/writeup/figs/fig5-eps-converted-to.pdf, id=1107, 499.8675pt x 392.4
+<filtdesign/writeup/figs/fig5-eps-converted-to.pdf, id=1253, 499.8675pt x 392.4
 6625pt>
 File: filtdesign/writeup/figs/fig5-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2046,17 +2232,17 @@ Package hyperref Warning: Suppressing link with empty target on input line 268.
 
 
 Package epstopdf Info: Source file: <filtdesign/writeup/figs/fig6.eps>
-(epstopdf)                    date: 2023-06-02 13:24:15
+(epstopdf)                    date: 2023-06-06 11:33:09
 (epstopdf)                    size: 11304 bytes
 (epstopdf)             Output file: <filtdesign/writeup/figs/fig6-eps-converted
 -to.pdf>
-(epstopdf)                    date: 2023-06-02 13:24:15
+(epstopdf)                    date: 2023-06-06 11:33:09
 (epstopdf)                    size: 7550 bytes
 (epstopdf)             Command: <repstopdf --outfile=filtdesign/writeup/figs/fi
 g6-eps-converted-to.pdf filtdesign/writeup/figs/fig6.eps>
 (epstopdf)             \includegraphics on input line 278.
 Package epstopdf Info: Output file is already uptodate.
-<filtdesign/writeup/figs/fig6-eps-converted-to.pdf, id=1109, 499.8675pt x 392.4
+<filtdesign/writeup/figs/fig6-eps-converted-to.pdf, id=1255, 499.8675pt x 392.4
 6625pt>
 File: filtdesign/writeup/figs/fig6-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2070,21 +2256,24 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [58]
+ [68]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [59 <./filtdesign/writeup/figs/fig5-eps-converted-to.pdf>])
+ [69 <./filtdesign/writeup/figs/fig5-eps-converted-to.pdf>])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [60 <./filtdesign/writeup/figs/fig6-eps-converted-to.pdf>]
+ [70 <./filtdesign/writeup/figs/fig6-eps-converted-to.pdf>]
 No file main.ind.
 (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
@@ -2094,42 +2283,66 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: CC535B8AE9BD43F14EF3564FCEB6BF9E;2363
-(rerunfilecheck)             After:  281DA40234706F699D1175172CA01596;5430.
+(rerunfilecheck)             Before: 281DA40234706F699D1175172CA01596;5430
+(rerunfilecheck)             After:  E1C7F32D9201D7EBC545ADD1F98E99FF;5525.
  ) 
 Here is how much of TeX's memory you used:
- 47764 strings out of 478287
- 1091877 string characters out of 5849289
- 1666939 words of memory out of 5000000
- 64793 multiletter control sequences out of 15000+600000
+ 47930 strings out of 478287
+ 1095077 string characters out of 5849289
+ 1667188 words of memory out of 5000000
+ 64885 multiletter control sequences out of 15000+600000
  491552 words of font info for 115 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  109i,16n,108p,761b,1194s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.
-pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on main.pdf (67 pages, 812087 bytes).
+pdfTeX warning (dest): name{figure.94.2} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.89.4} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{equation.89.2} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.89.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{equation.88.5} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{equation.88.1} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.89.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{equation.88.4} has been referenced but does not exi
+st, replaced by a fixed one
+
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pf
+b></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on main.pdf (77 pages, 1377143 bytes).
 PDF statistics:
- 1329 PDF objects out of 1440 (max. 8388607)
- 1042 compressed objects within 11 object streams
- 430 named destinations out of 1000 (max. 500000)
- 399 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1490 PDF objects out of 1728 (max. 8388607)
+ 1140 compressed objects within 12 object streams
+ 487 named destinations out of 1000 (max. 500000)
+ 459 words of extra memory for PDF output out of 10000 (max. 10000000)
 
