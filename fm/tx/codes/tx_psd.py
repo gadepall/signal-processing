@@ -32,16 +32,18 @@ fm_fft = np.fft.fft(fm)
 fm_psd = np.abs(fm_fft)**2
 fm_freqs = np.fft.fftfreq(len(fm_psd), 1/sample_rate)
 
-# Find frequency range with significant power of FM signal
 threshold = 0.1*np.max(fm_psd)
 fm_mask = fm_psd > threshold
 fm_freq_range = fm_freqs[fm_mask]
 fmax = max(fm_freq_range)
 fmin = min(fm_freq_range)
 
-print("Threshold is:",threshold)
-print("fm_f_max is:",fmax)
-print("fm_f_min is:",fmin)
+plt.plot(fm_freqs,fm_psd)
+plt.xlabel('Frequency (Hz)')
+plt.ylabel('Magnitude')
+plt.title('psd of the transmitted signal')
+plt.axhline(y=threshold,color='red', ls='--')      #threshold limit
+plt.vlines(ymin=0, ymax=threshold, x=[fmin,fmax], color='red', ls='--')   #range of frequencies which gives bandwidth of msg signal
+plt.savefig("fm/tx/figs/tx_psd.pdf")
+plt.show()
 
-fm_bandwidth = fmax - fmin
-print('Bandwidth of tx signal:', fm_bandwidth, 'Hz')

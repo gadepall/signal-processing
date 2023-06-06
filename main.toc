@@ -20,19 +20,20 @@
 \contentsline {chapter}{\numberline {4}Frequency Modulation}{33}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Message}{33}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Transmitter}{38}{section.4.2}%
-\contentsline {chapter}{\numberline {A} Discrete Fourier Transform}{41}{appendix.A}%
-\contentsline {section}{\numberline {A.1}FFT}{41}{section.A.1}%
-\contentsline {section}{\numberline {A.2}FFT}{42}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Power Spectral Density(PSD)}{46}{section.A.3}%
-\contentsline {chapter}{\numberline {B} Filter Design}{47}{appendix.B}%
-\contentsline {section}{\numberline {B.1}Introduction}{47}{section.B.1}%
-\contentsline {section}{\numberline {B.2}Filter Specifications}{47}{section.B.2}%
-\contentsline {subsection}{\numberline {B.2.1}The Digital Filter}{47}{subsection.B.2.1}%
-\contentsline {subsection}{\numberline {B.2.2}The Analog filter}{48}{subsection.B.2.2}%
-\contentsline {section}{\numberline {B.3}The IIR Filter Design}{48}{section.B.3}%
-\contentsline {subsection}{\numberline {B.3.1}The Analog Filter}{49}{subsection.B.3.1}%
-\contentsline {subsection}{\numberline {B.3.2}The Digital Filter}{51}{subsection.B.3.2}%
-\contentsline {section}{\numberline {B.4}The FIR Filter}{55}{section.B.4}%
-\contentsline {subsection}{\numberline {B.4.1}The Equivalent Lowpass Filter}{55}{subsection.B.4.1}%
-\contentsline {subsection}{\numberline {B.4.2}The Kaiser Window}{57}{subsection.B.4.2}%
-\contentsline {subsection}{\numberline {B.4.3}The FIR Bandpass Filter}{58}{subsection.B.4.3}%
+\contentsline {section}{\numberline {4.3}Receiver}{42}{section.4.3}%
+\contentsline {chapter}{\numberline {A} Discrete Fourier Transform}{51}{appendix.A}%
+\contentsline {section}{\numberline {A.1}FFT}{51}{section.A.1}%
+\contentsline {section}{\numberline {A.2}FFT}{52}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Power Spectral Density(PSD)}{56}{section.A.3}%
+\contentsline {chapter}{\numberline {B} Filter Design}{57}{appendix.B}%
+\contentsline {section}{\numberline {B.1}Introduction}{57}{section.B.1}%
+\contentsline {section}{\numberline {B.2}Filter Specifications}{57}{section.B.2}%
+\contentsline {subsection}{\numberline {B.2.1}The Digital Filter}{57}{subsection.B.2.1}%
+\contentsline {subsection}{\numberline {B.2.2}The Analog filter}{58}{subsection.B.2.2}%
+\contentsline {section}{\numberline {B.3}The IIR Filter Design}{58}{section.B.3}%
+\contentsline {subsection}{\numberline {B.3.1}The Analog Filter}{59}{subsection.B.3.1}%
+\contentsline {subsection}{\numberline {B.3.2}The Digital Filter}{61}{subsection.B.3.2}%
+\contentsline {section}{\numberline {B.4}The FIR Filter}{65}{section.B.4}%
+\contentsline {subsection}{\numberline {B.4.1}The Equivalent Lowpass Filter}{65}{subsection.B.4.1}%
+\contentsline {subsection}{\numberline {B.4.2}The Kaiser Window}{67}{subsection.B.4.2}%
+\contentsline {subsection}{\numberline {B.4.3}The FIR Bandpass Filter}{68}{subsection.B.4.3}%
