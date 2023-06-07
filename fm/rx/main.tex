@@ -8,9 +8,9 @@
   \centering
   \input{fm/rx/table.tex}
   \caption{Components Required}
-  \label{tab:components}
+  \label{tab:rxcomponents}
 \end{table}
-Components are listed in the table \tabref{tab:components}\\
+Components are listed in the table \tabref{tab:rxcomponents}\\
 The picture of RTL-SDR and Antenna is given in \figref{fig:rtl-sdr}.This set is used to receive the Fm signals.
 \begin{figure}[H]
 \centering
@@ -28,20 +28,25 @@ gnuradio-companion
 \item How to construct the block diagram in GNU radio? \\
 	\solution  \\
 \textbf{Step-1}:\\
-Search for Low pass filter block and add drag it to the work space.
+Search for Low pass filter block and add it to the work space.
 \begin{figure}[H]
 \centering
 \includegraphics[width=\columnwidth]{fm/rx/figs/add.png}
 \caption{Adding blocks}
 \label{fig:add blocks}
 \end{figure}
-Similarly do for RTL-Source block,WBFM and Audio sink blocks.
 \textbf{Step-2}:
+Similarly do for RTL-Source block,WBFM and Audio sink block.
+\\
+\textbf{Step-3}:
+Change the parameters in each block according your values by double clicking on it.
+\\
+\textbf{Step-4}:
 Connect them according to the flowgraph shown in \figref{fig:Block_diagram}.
 \begin{figure}[H]
 \centering
 \includegraphics[width=\columnwidth]{fm/rx/figs/block_diagram.png}
-\caption{Block diagram of GNU Radio}
+\caption{Block diagram of Receiver in GNU Radio}
 \label{fig:Block_diagram}
 \end{figure}
 \textbf{Note}:
@@ -49,7 +54,7 @@ Refer the following website for any queries.
 \begin{lstlisting}
 https://wiki.gnuradio.org/index.php?title=Creating_Your_First_Block
 \end{lstlisting}
-\item Explain each block in block diagram \\
+\item Explain each block in block diagram of Receiver.\\
 	\solution \\
 \textbf{1. RTL-SDR Source}:\\
 The RTL-SDR Source block is used to stream samples from RTL-SDR device.

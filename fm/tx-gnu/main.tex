@@ -1,0 +1,106 @@
+\begin{enumerate}[label=\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\item List the various components used to implement transmitter.
+\\
+\solution
+\\
+\begin{table}[!ht]
+  \centering
+  \input{fm/tx-gnu/table.tex}
+  \caption{Components Required}
+  \label{tab:txcomponents}
+\end{table}
+Components are listed in the table \tabref{tab:txcomponents}\\
+The picture of USRP and Antenna is given in \figref{fig:USRP}.This set is used to transmit the FM signals.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\columnwidth]{fm/tx-gnu/figs/USRP.png}
+\caption{USRP}
+\label{fig:USRP}
+\end{figure}
+\item Install and open GNU Radio using the following commands
+\\
+\begin{lstlisting}
+sudo apt update
+sudo apt install gnuradio
+gnuradio-companion
+\end{lstlisting}
+\item How to construct the block diagram in GNU radio? \\
+	\solution  \\
+\textbf{Step-1}:\\
+Search for Wav file source block and drag it to the work space.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\columnwidth]{fm/tx-gnu/figs/wav_file.png}
+\caption{Adding blocks}
+\label{fig:add blocks}
+\end{figure}
+\textbf{Step-2}:
+Similarly do for WBFM transmit,Rational resampler and UHD:USRP sink block.
+\\
+\textbf{Step-3}:
+Change the parameters in each block according to your values by double cliking on it.
+\\
+\textbf{Step-4}:
+Connect them according to the flowgraph shown in \figref{fig:Tx_Block_diagram}.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\columnwidth]{fm/tx-gnu/figs/tx-blockdiagram.png}
+\caption{Block diagram of Transmitter in GNU Radio}
+\label{fig:Tx_Block_diagram}
+\end{figure}
+\item Explain each block in block diagram of Transmitter. \\
+	\solution \\
+\textbf{1. Wav file source block}:\\
+The "WAV File Source" block in GNU Radio is used to read audio data from a WAV file and provide it as a continuous stream of samples with specified sample rate in GNU Radio.
+\\
+It allows you to use pre-recorded audio files as a source of input for your GNU Radio flowgraph.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\columnwidth]{fm/tx-gnu/figs/wavfile.jpg}
+\caption{Wav file Source Block}
+\label{fig:Wav file source block}
+\end{figure}
+\textbf{2.WBFM Transmitter}:\\
+The "WBFM Transmit" block in GNU Radio is used to transmit a wideband FM (WBFM) signal over a specified frequency range.
+\\
+It takes an audio stream as input and modulates it onto an RF carrier frequency using WBFM modulation techniques. 
+\\
+This block allows you to create and transmit FM 
+signals in GNU Radio
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\columnwidth]{fm/tx-gnu/figs/wbfm-tx.jpg}
+\caption{WBFM Transmit Block}
+\label{fig:wbfm_tx}
+\end{figure}
+\textbf{3.Rational Resampler}:\\
+The "Rational Resampler" block in GNU Radio is used for resampling a signal by a rational factor.
+\\
+Resampling is the process of changing the sample rate of a signal while preserving its content and characteristics.
+\\
+The main function of the "Rational Resampler" block is to change the sample rate of the input signal according to the specified rational 
+resampling factor.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\columnwidth]{fm/tx-gnu/figs/resampler.jpg}
+\caption{Rational resampler Block}
+\label{fig:Rational resampler block}
+\end{figure}
+\textbf{4.USRP Sink}:\\
+The "UHD: USRP Sink" block in GNU Radio is used to send data from a GNU Radio flowgraph to a Universal Software Radio Peripheral (USRP) device for transmission.
+\\
+It acts as an interface between the GNU Radio software and the USRP hardware
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\columnwidth]{fm/tx-gnu/figs/usrp-sink.jpg}
+\caption{USRP Sink Block}
+\label{fig:audio sink block}
+\end{figure}
+Connect USRP to the system and execute the flowgraph in \figref{fig:Tx_Block_diagram}.\\
+Now we can transmit the FM signal through USRP.\\
+A default python code is generated and stored as
+\begin{lstlisting}
+fm/tx-gnu/codes/fm_transmitter.py
+\end{lstlisting}
+\end{enumerate}
