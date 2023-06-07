@@ -33,8 +33,12 @@ Search for Wav file source block and drag it to the work space.
 \centering
 \includegraphics[width=\columnwidth]{fm/tx-gnu/figs/wav_file.png}
 \caption{Adding blocks}
-\label{fig:add blocks}
+\label{fig:add_blocks}
 \end{figure}
+Change the address of the audio file in wav file source block by double clicking on it.
+\begin{lstlisting}
+fm\tx-gnu\Naatu-Naatu.wav
+\end{lstlisting}
 \textbf{Step-2}:
 Similarly do for WBFM transmit,Rational resampler and UHD:USRP sink block.
 \\
@@ -95,7 +99,7 @@ It acts as an interface between the GNU Radio software and the USRP hardware
 \centering
 \includegraphics[width=0.3\columnwidth]{fm/tx-gnu/figs/usrp-sink.jpg}
 \caption{USRP Sink Block}
-\label{fig:audio sink block}
+\label{fig:usrp sink block}
 \end{figure}
 Connect USRP to the system and execute the flowgraph in \figref{fig:Tx_Block_diagram}.\\
 Now we can transmit the FM signal through USRP.\\

@@ -9,6 +9,14 @@
   \caption{FM Transmitter Circuit diagram}
   \label{ckt:circuit_2}
 \end{figure}
+\item List the components in the transmitter circuit diagram.\\
+\solution \\
+\begin{table}[!ht]
+  \centering
+  \input{fm/tx/components_tx.tex}
+  \caption{Transmitter components}
+  \label{tab:tab_2}
+\end{table}
 \item The modulated signal is given by 
 \begin{align}
 	s(t) = \cos\brak{2\pi f_c t + \phi(t)}
@@ -16,18 +24,18 @@
 where
 \begin{align}
 	\phi(t) = 2\pi k_f \int_{0}^{t}m(\tau)\,d\tau
-	\label{4.2.1.2}
+	\label{4.2.2.2}
 \end{align}
 List the various parameters in a table.
 \\
 \solution
-Parameters are in the table \tabref{tab:tab_2}
+Parameters are in the table \tabref{tab:tab_1}
 \vspace{10mm}
 \begin{table}[!ht]
   \centering
   \input{fm/tx/table.tex}
   \caption{Parameters of signal}
-  \label{tab:tab_2}
+  \label{tab:tab_1}
 \end{table}
 
 \item Obtain a difference equation for computing $\phi(t)$.  Suggest a sampling rate.
@@ -38,7 +46,7 @@ Let us divide the interval $[t_0, t]$ into $N$ equal subintervals of width $\Del
 \begin{align*}
 m(\tau_n) \approx m(n\Delta t)
 \end{align*}
-we can approximate the integral in the equation \ref{4.2.1.2}
+we can approximate the integral in the equation \ref{4.2.2.2}
 \\
 \begin{align*}
 \phi(t) \approx 2\pi kf_c \Delta t \sum_{n=0}^{N-1} m(n\Delta t)
