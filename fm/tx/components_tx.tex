@@ -145,7 +145,7 @@
 %%                                                                  %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{103pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{110pt*\gnumericScale}@{}}x\end{tabular}}
 \ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{85pt*\gnumericScale}@{}}x\end{tabular}}
 \ifthenelse{\isundefined{\gnumericColC}}{\newlength{\gnumericColC}}{}\settowidth{\gnumericColC}{\begin{tabular}{@{}p{90pt*\gnumericScale}@{}}x\end{tabular}}
 
@@ -217,16 +217,17 @@
 	&\multicolumn{1}{p{\gnumericColB}|}%
 	{\gnumericPB{\raggedleft}\gnumbox[r]{1}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedleft}\gnumbox[r]{1M$\Omega$}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{1M$\Omega$}}
 \\
 %\hhline{|---|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
 	{}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\raggedleft}\gnumbox[r]{1}}
+	{\gnumericPB{\raggedleft}\gnumbox[r]{2}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedleft}\gnumbox[r]{470$\Omega$}}
-\\
+	{\gnumericPB{\raggedright}\gnumbox[l]{470$\Omega$}}
+	
+	\\
 %\hhline{|---|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
 	{}
@@ -290,6 +291,14 @@
 	{\gnumericPB{\raggedleft}\gnumbox[r]{1}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
 	{}
+\\
+\hhline{|---|}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\gnumericPB{\raggedright}\gnumbox[l]{Battery/power supply}}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\raggedleft}\gnumbox[r]{1}}
+	&\multicolumn{1}{p{\gnumericColC}|}%
+	{12V}
 \\
 \hhline{|-|-|-|}
 \end{longtable}

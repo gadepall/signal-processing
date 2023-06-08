@@ -35,10 +35,8 @@
 \draw(11,1.5)--(11,2.5) node[antenna] {antenna};
 \draw(9,5)--(12.5,5)to[C=$C_8$] node[pos=0.05,below left=1.5ex]{\SI{0.1}{\mu F}}(12.5,-4);
 \draw(12.5,5)--(14.5,5);
-\draw (14.5, -4) to [battery,l=12V](14.5, 5);
-%\draw(14.5,-4)--(14.5,5)tobattery,l=\SI{12}{\V};
+\draw (14.5, -4) to [battery](14.5, 5);
 \draw(0,-4)--(14.5,-4);
 \end{circuitikz}
-%\captionof{figure}{FM Transmitter Circuit}
 \label{fig:tx_cir}
 \end{figure}
