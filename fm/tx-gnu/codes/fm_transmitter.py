@@ -147,7 +147,7 @@ class FM_block1(gr.top_block, Qt.QWidget):
 
         self._qtgui_freq_sink_x_0_win = sip.wrapinstance(self.qtgui_freq_sink_x_0.qwidget(), Qt.QWidget)
         self.top_layout.addWidget(self._qtgui_freq_sink_x_0_win)
-        self.blocks_wavfile_source_0 = blocks.wavfile_source('/home/shreyashbantu/Music/Mixxx/Recordings/Naatu Naatu HD Karaoke - RRR - S A KARAOKES.wav', True)
+        self.blocks_wavfile_source_0 = blocks.wavfile_source('fm/tx-gnu/Naatu-Naatu.wav', True)
         self.analog_wfm_tx_0 = analog.wfm_tx(
         	audio_rate=int(48E3),
         	quad_rate=int(480E3),
