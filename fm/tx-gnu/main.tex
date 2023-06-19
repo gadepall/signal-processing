@@ -11,6 +11,46 @@
   \label{tab:txcomponents}
 \end{table}
 Components are listed in the table \tabref{tab:txcomponents}\\
+\item Installations required to detect and work with USRP.\\
+\\
+\textbf{Setting up the dependencies on ubuntu:-}\\
+Run the following command in the terminal.\\
+\\
+\\
+\begin{lstlisting}
+sudo apt-get install autoconf automake build-essential ccache cmake cpufrequtils doxygen ethtool \
+g++ git inetutils-tools libboost-all-dev libncurses5 libncurses5-dev libusb-1.0-0 libusb-1.0-0-dev \
+libusb-dev python3-dev python3-mako python3-numpy python3-requests python3-scipy python3-setuptools \
+python3-ruamel.yaml
+\end{lstlisting}
+\textbf{Getting the source code}\\
+The UHD source is stored in a git repository. To download it, run the following command.
+\begin{lstlisting}
+git clone https://github.com/EttusResearch/uhd.git
+\end{lstlisting}
+\textbf{Generate Makefiles with CMake}
+\begin{lstlisting}
+cd <uhd-repo-path>/host
+mkdir build
+cd build
+cmake ../
+\end{lstlisting}
+\textbf{Build and install}
+\begin{lstlisting}
+make
+make test # This step is optional
+sudo make install
+\end{lstlisting}
+\newpage
+\textbf{Setup the library path }
+\begin{lstlisting}
+sudo ldconfig
+\end{lstlisting}
+\textbf{Note}:
+Refer the following website for any queries.
+\begin{lstlisting}
+https://files.ettus.com/manual/page_build_guide.html
+\end{lstlisting}
 The picture of USRP and Antenna is given in \figref{fig:USRP}.This set is used to transmit the FM signals.
 \begin{figure}[H]
 \centering
@@ -101,7 +141,12 @@ It acts as an interface between the GNU Radio software and the USRP hardware
 \caption{USRP Sink Block}
 \label{fig:usrp sink block}
 \end{figure}
-Connect USRP to the system and execute the flowgraph in \figref{fig:Tx_Block_diagram}.\\
+Connect USRP to the system and run the below command to know it's serial number or address.\\
+\begin{lstlisting}
+sudo uhd_find_devices
+\end{lstlisting}
+Double click on USRP sink block in GNU radio and enter the address at device address to work with that respective USRP.\\ 
+ Execute the flowgraph in \figref{fig:Tx_Block_diagram}.\\
 Now we can transmit the FM signal through USRP.\\
 A default python code is generated and stored as
 \begin{lstlisting}

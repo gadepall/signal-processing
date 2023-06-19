@@ -11,6 +11,14 @@
   \label{tab:rxcomponents}
 \end{table}
 Components are listed in the table \tabref{tab:rxcomponents}\\
+Installation required.\\
+\begin{lstlisting}
+sudo apt install rtl-sdr
+\end{lstlisting}
+Command to detect rtlsdr.\\
+\begin{lstlisting}
+rtl_test -t
+\end{lstlisting}
 The picture of RTL-SDR and Antenna is given in \figref{fig:rtl-sdr}.This set is used to receive the Fm signals.
 \begin{figure}[H]
 \centering
@@ -39,7 +47,7 @@ Search for Low pass filter block and add it to the work space.
 Similarly do for RTL-Source block,WBFM and Audio sink block.
 \\
 \textbf{Step-3}:
-Change the parameters in each block according your values by double clicking on it.
+Change the parameters in each block according to your values by double clicking on it.
 \\
 \textbf{Step-4}:
 Connect them according to the flowgraph shown in \figref{fig:Rx_Block_diagram}.
@@ -54,6 +62,9 @@ Refer the following website for any queries.
 \begin{lstlisting}
 https://wiki.gnuradio.org/index.php?title=Creating_Your_First_Block
 \end{lstlisting}
+
+Can check graphical output of each block in both time domain and frequency domain using GUI time sink and GUI frequency sink blocks respectively.
+
 \item Explain each block in block diagram of Receiver.\\
 	\solution \\
 \textbf{1. RTL-SDR Source}:\\
@@ -90,18 +101,19 @@ Audio Sink block provides audio output signal at the computer speakers.
 \end{figure}
 Connect the RTL-SDR to the system and execute the flowgraph in \figref{fig:Rx_Block_diagram}.\\
 We can listen to the sound which we have transmitted.\\
-A default python code is generated and stored as
+A python code for entire grc file is generated and saved with the name that you give as ID in options block which can be seen in block diagram.
 \begin{lstlisting}
 fm/rx/codes/fm_receiver.py
 \end{lstlisting}
-\item How to replace LPF default code with custom code?\\
+\item How to replace default block with own block in gnuradio?\\
 \solution \\
+Let us consider we need to replace default lowpass filter block with own lowpass filter block.\\
 \textbf{Step-1}:
 Disable Low pass filter block and search for the python block and add it to the workspace.
 \begin{figure}[H]
 \centering
 \includegraphics[width=\columnwidth]{fm/rx/figs/step_1.png}
-\caption{search for blocks}
+\caption{python block}
 \label{fig:search for blocks}
 \end{figure}
 \textbf{Step-2}:
@@ -112,6 +124,7 @@ Double-click the block to edit the properties as in \figref{fig:Edit properties}
 \caption{Edit properties}
 \label{fig:Edit properties}
 \end{figure}
+Click on open in editor and use the default editor to which own code can be added where you can change the name of the block by following below step.\\
 \textbf{Step-3}:
 Change the block name as required by editing in the code as shown in \figref{fig:changing block name}                                               
 \begin{figure}[H]
@@ -128,22 +141,28 @@ Change the parameter name as required by editing in the code as shown in \figref
 \caption{Changing parameter name}
 \label{fig:changing parameter name}
 \end{figure}
-Replace the below code with default code
+Below path provides custom code for the lowpass filter.
 \begin{lstlisting}
 fm/rx/codes/lpf_block.py
 \end{lstlisting} 
 \item Read the data from RTL SDR using python code and without using GNU radio.
 \\
 \solution \\
+Run the below command to install rtlsdr into the python environment.\\
+\begin{lstlisting}
+pip install pyrtlsdr
+\end{lstlisting}
 The following code reads the data from RTL-SDR without GNU radio.
 \begin{lstlisting}
 fm/rx/codes/source_own.py
 \end{lstlisting}
+Above code generates samples which are read into samples.iq file.\\
 \item Design Low pass filter block without using GNU Radio
 \\
 \solution \\
-The following code works as low pass filter.
+The following code works as low pass filter. The .iq file from above code which has samples from rtlsdr is given as input to the below code on which low pass filter is applied.\\
 \begin{lstlisting}
 fm/rx/codes/lpf_own.py
 \end{lstlisting}
+The output of above code is read into filtered$\_$output.iq file which can be further processed by reading as input file into other codes. 
 \end{enumerate}
