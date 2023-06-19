@@ -34,7 +34,7 @@ class LowPassFilter:
         return output_signal
 
 # Read the complex IQ data from the .iq file
-filename = 'output.iq'  # Replace with your .iq file path
+filename = 'samples.iq'  # Replace with your .iq file path
 iq_data = np.fromfile(filename, dtype=np.complex64)
 
 #real_data = np.real(iq_data)
@@ -55,6 +55,9 @@ lpf = LowPassFilter()
 
 # Apply the filter to the IQ data
 filtered_data = lpf.filter(iq_data)
+filtered_file = 'filtered_output.iq' 
+# Replace with the desired output file path
+filtered_data.tofile(filtered_file)
 
 # Plot the real and imaginary parts of the filtered data
 plt.figure()

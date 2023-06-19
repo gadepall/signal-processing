@@ -20,7 +20,7 @@ num_samples = 1024  # Set the number of samples to read
 samples = sdr.read_samples(num_samples)
 
 # Save samples to an output file
-output_file = 'output1.iq'
+output_file = 'samples.iq'
 samples.astype(np.complex64).tofile(output_file)
 
 # Plot the samples
