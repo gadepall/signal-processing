@@ -41,7 +41,7 @@ Search for Low pass filter block and add it to the work space.
 \centering
 \includegraphics[width=\columnwidth]{fm/rx/figs/add.png}
 \caption{Adding blocks}
-\label{fig:add blocks}
+\label{fig:addblocks}
 \end{figure}
 \textbf{Step-2}:
 Similarly do for RTL-Source block,WBFM and Audio sink block.
@@ -81,7 +81,7 @@ Low Pass Filter removes frequencies that are higher than the cutoff.
 \centering
 \includegraphics[width=0.3\columnwidth]{fm/rx/figs/lpf_block.png}
 \caption{Low Pass Filter Block}
-\label{fig:lpf}
+\label{fig:rxlpf}
 \end{figure}
 \textbf{3. WBFM}:\\
 WBFM Receive is a block for demodulating a broadcast FM signal. The output is the demodulated audio.
@@ -89,7 +89,7 @@ WBFM Receive is a block for demodulating a broadcast FM signal. The output is th
 \centering
 \includegraphics[width=0.3\columnwidth]{fm/rx/figs/wbfm_block.png}
 \caption{WBFM Block}
-\label{fig:wbfm block}
+\label{fig:wbfmblock}
 \end{figure}
 \textbf{4. Audio sink}:\\
 Audio Sink block provides audio output signal at the computer speakers.
@@ -97,7 +97,7 @@ Audio Sink block provides audio output signal at the computer speakers.
 \centering
 \includegraphics[width=0.3\columnwidth]{fm/rx/figs/audio_sink.png}
 \caption{Audio Sink Block}
-\label{fig:audio sink block}
+\label{fig:audiosinkblock}
 \end{figure}
 Connect the RTL-SDR to the system and execute the flowgraph in \figref{fig:Rx_Block_diagram}.\\
 We can listen to the sound which we have transmitted.\\
@@ -114,32 +114,32 @@ Disable Low pass filter block and search for the python block and add it to the 
 \centering
 \includegraphics[width=\columnwidth]{fm/rx/figs/step_1.png}
 \caption{python block}
-\label{fig:search for blocks}
+\label{fig:searchforblocks}
 \end{figure}
 \textbf{Step-2}:
-Double-click the block to edit the properties as in \figref{fig:Edit properties}
+Double-click the block to edit the properties as in \figref{fig:Editproperties}
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\columnwidth]{fm/rx/figs/step_2.png}
 \caption{Edit properties}
-\label{fig:Edit properties}
+\label{fig:Editproperties}
 \end{figure}
 Click on open in editor and use the default editor to which own code can be added where you can change the name of the block by following below step.\\
 \textbf{Step-3}:
-Change the block name as required by editing in the code as shown in \figref{fig:changing block name}                                               
+Change the block name as required by editing in the code as shown in \figref{fig:changingblockname}                                               
 \begin{figure}[H]
 \centering
 \includegraphics[width=\columnwidth]{fm/rx/figs/step_3.png}
 \caption{Changing block name}
-\label{fig:changing block name}
+\label{fig:changingblockname}
 \end{figure}
 \textbf{Step-4}:
-Change the parameter name as required by editing in the code as shown in \figref{fig:changing parameter name}                                               
+Change the parameter name as required by editing in the code as shown in \figref{fig:changingparametername}                                               
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\columnwidth]{fm/rx/figs/step_4.png}
 \caption{Changing parameter name}
-\label{fig:changing parameter name}
+\label{fig:changingparametername}
 \end{figure}
 Below path provides custom code for the lowpass filter.
 \begin{lstlisting}
