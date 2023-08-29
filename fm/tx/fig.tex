@@ -1,0 +1,42 @@
+\begin{figure}[H]
+\begin{circuitikz} [scale=.73,font=\footnotesize]
+
+%\draw (5,5) -- (6.5,5) to[R=$R_4:47k\Omega$, label=$\mathrm{R_4}$, left] (6.5,2);
+
+\draw (0,0) node[circ] {} to[C=$C_1$] node[pos=0.07,below left=1.5ex]{\SI{0.1}{\mu F}} ++(3.7,0) node[npn, anchor=B] (Q1) {$Q_1$};
+\draw(4.85,-0.5)--(4.85,-4);
+%\draw (0,0) -- (0,5) toR=$R_3 47k\Omega$;
+\draw (0,0)--(0,5) to[R=$R_3$]  node[pos=0.05,below left=1.5ex]{\SI{47}{k\Omega}}(5,5);
+\draw (3,0)--(3,2) to[R=$R_1$]  node[pos=0.05,below left=1.5ex]{\SI{1}{M\Omega}}(4.85,2)--(4.85,.5);
+\draw (4.8,2)--(5,2) to[C=$C_2$]node[pos=1.8,below left=1.2ex]{\SI{0.1}{\mu F}} (6.5,2);
+%\draw(4.85,2)--(4.85,2.5) toR=$R_2:10k\Omega$;
+\draw (4.85,2)--(4.85,2.5) to[R=$R_2$]  node[pos=0.15,below left=1ex]{\SI{10}{k\Omega}}(4.85,5);
+\draw (5,5) -- (6.5,5) to[ R]node[pos=-1.5,above left]{$R_4$} node[pos=-0.8,above left=1ex]{\SI{47}{k\Omega}} (6.5,2);
+%\draw (5,5) -- (6.5,5) to[R=$R_4$]node[pos=0.1,above right=1ex]{\SI{47}{k\Omega}}(6.5,2);
+\draw (6.5,2)--(6.5,-2) to[C=$C_3$] node[pos=-0.01,above left=1.5ex]{\SI{1}{ nF}} (6.5,-4);
+\draw (0,0)--(0,-2) to [mic]node[pos=0.08,above right=2ex]{mic}(0,-4);
+\draw(6.5,5)--(9,5);
+\draw (9,5)--(9,4.5);
+
+\draw(9,4.5)--(7.5,4.5)to[C=$C_6$]node[pos=0.01,above right=1.5ex]{\SI{33}{pF}} (7.5,2.5);
+ %\draw(9,4.5)--(7.75,4.5)to[C]node[pos=-1.2,above left]{$C_6$} node[pos=-0.5,above left=1ex]{\SI{33}{pF}} (7.75,2.5);
+\draw(9,4.5)to[C=$C_5$]node[pos=0.01,above right=1.5ex]{\SI{33}{pF}} (9,2.5);
+\draw(7.5,4.5)--(10.5,4.5)to[L=$L_1$] node[pos=1.2,above right=2.5ex]{\SI{1}{\mu H}} (10.5,2.5);
+\draw (7.5,2.5)--(10.5,2.5);
+\draw(9,2.5)to[C=$C_4$] node[pos=0.01,below right=1.5ex]{\SI{10}{pF}} (9,-1.5);
+\draw(9,-1.5)--(7.75,-1.5);
+\draw(6.5,0)--(6.6,0);
+\draw(0,0) ++(6.6,0) node[npn, anchor=B] (Q2){$Q_2$};
+\draw(7.74,.5)--(7.74,1.5)--(9,1.5);
+\draw(7.74,-0.5)--(7.74,-1.5);
+\draw(7.74,-1.5)to[R=$R_5\ 470\Omega$] (7.74,-4);
+\draw(9,1.5)--(9.75,1.5)to[C=$C_7$]node[pos=0.01,below right=1.5ex]{\SI{10}{pF}}  (10,1.5);
+\draw(10,1.5)--(11,1.5);
+\draw(11,1.5)--(11,2.5) node[antenna] {antenna};
+\draw(9,5)--(12.5,5)to[C=$C_8$] node[pos=0.05,below left=1.5ex]{\SI{0.1}{\mu F}}(12.5,-4);
+\draw(12.5,5)--(14.5,5);
+\draw (14.5, -4) to [battery](14.5, 5);
+\draw(0,-4)--(14.5,-4);
+\end{circuitikz}
+\label{fig:tx_cir}
+\end{figure}
