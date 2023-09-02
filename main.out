@@ -21,19 +21,34 @@
 \BOOKMARK [1][-]{section.4.2}{Transmitter}{chapter.4}% 21
 \BOOKMARK [1][-]{section.4.3}{Transmitter using USRP}{chapter.4}% 22
 \BOOKMARK [1][-]{section.4.4}{Receiver}{chapter.4}% 23
-\BOOKMARK [0][-]{appendix.A}{ Discrete Fourier Transform}{}% 24
-\BOOKMARK [1][-]{section.A.1}{FFT}{appendix.A}% 25
-\BOOKMARK [1][-]{section.A.2}{FFT}{appendix.A}% 26
-\BOOKMARK [1][-]{section.A.3}{Power Spectral Density\(PSD\)}{appendix.A}% 27
-\BOOKMARK [0][-]{appendix.B}{ Filter Design}{}% 28
-\BOOKMARK [1][-]{section.B.1}{Introduction}{appendix.B}% 29
-\BOOKMARK [1][-]{section.B.2}{Filter Specifications}{appendix.B}% 30
-\BOOKMARK [2][-]{subsection.B.2.1}{The Digital Filter}{section.B.2}% 31
-\BOOKMARK [2][-]{subsection.B.2.2}{The Analog filter}{section.B.2}% 32
-\BOOKMARK [1][-]{section.B.3}{The IIR Filter Design}{appendix.B}% 33
-\BOOKMARK [2][-]{subsection.B.3.1}{The Analog Filter}{section.B.3}% 34
-\BOOKMARK [2][-]{subsection.B.3.2}{The Digital Filter}{section.B.3}% 35
-\BOOKMARK [1][-]{section.B.4}{The FIR Filter}{appendix.B}% 36
-\BOOKMARK [2][-]{subsection.B.4.1}{The Equivalent Lowpass Filter}{section.B.4}% 37
-\BOOKMARK [2][-]{subsection.B.4.2}{The Kaiser Window}{section.B.4}% 38
-\BOOKMARK [2][-]{subsection.B.4.3}{The FIR Bandpass Filter}{section.B.4}% 39
+\BOOKMARK [0][-]{chapter.5}{Digital Signal Processing}{}% 24
+\BOOKMARK [1][-]{section.5.1}{Signal Generation}{chapter.5}% 25
+\BOOKMARK [1][-]{section.5.2}{Frequency Analysis}{chapter.5}% 26
+\BOOKMARK [1][-]{section.5.3}{Filtering}{chapter.5}% 27
+\BOOKMARK [2][-]{subsection.5.3.1}{Types of Digital Filters}{section.5.3}% 28
+\BOOKMARK [2][-]{subsection.5.3.2}{Window Method for FIR Filter Design}{section.5.3}% 29
+\BOOKMARK [2][-]{subsection.5.3.3}{Commonly Used Window Functions}{section.5.3}% 30
+\BOOKMARK [2][-]{subsection.5.3.4}{Low-Pass Filter }{section.5.3}% 31
+\BOOKMARK [2][-]{subsection.5.3.5}{Band-Pass Filter \(BPF\)}{section.5.3}% 32
+\BOOKMARK [2][-]{subsection.5.3.6}{Half Band Filter \(HBF\)}{section.5.3}% 33
+\BOOKMARK [2][-]{subsection.5.3.7}{M Band Filter}{section.5.3}% 34
+\BOOKMARK [1][-]{section.5.4}{Downsampling}{chapter.5}% 35
+\BOOKMARK [1][-]{section.5.5}{Decimation }{chapter.5}% 36
+\BOOKMARK [2][-]{subsection.5.5.1}{Upsampler \(Expander\)}{section.5.5}% 37
+\BOOKMARK [1][-]{section.5.6}{Interpolation}{chapter.5}% 38
+\BOOKMARK [0][-]{appendix.A}{ Discrete Fourier Transform}{}% 39
+\BOOKMARK [1][-]{section.A.1}{FFT}{appendix.A}% 40
+\BOOKMARK [1][-]{section.A.2}{FFT}{appendix.A}% 41
+\BOOKMARK [1][-]{section.A.3}{Power Spectral Density\(PSD\)}{appendix.A}% 42
+\BOOKMARK [0][-]{appendix.B}{ Filter Design}{}% 43
+\BOOKMARK [1][-]{section.B.1}{Introduction}{appendix.B}% 44
+\BOOKMARK [1][-]{section.B.2}{Filter Specifications}{appendix.B}% 45
+\BOOKMARK [2][-]{subsection.B.2.1}{The Digital Filter}{section.B.2}% 46
+\BOOKMARK [2][-]{subsection.B.2.2}{The Analog filter}{section.B.2}% 47
+\BOOKMARK [1][-]{section.B.3}{The IIR Filter Design}{appendix.B}% 48
+\BOOKMARK [2][-]{subsection.B.3.1}{The Analog Filter}{section.B.3}% 49
+\BOOKMARK [2][-]{subsection.B.3.2}{The Digital Filter}{section.B.3}% 50
+\BOOKMARK [1][-]{section.B.4}{The FIR Filter}{appendix.B}% 51
+\BOOKMARK [2][-]{subsection.B.4.1}{The Equivalent Lowpass Filter}{section.B.4}% 52
+\BOOKMARK [2][-]{subsection.B.4.2}{The Kaiser Window}{section.B.4}% 53
+\BOOKMARK [2][-]{subsection.B.4.3}{The FIR Bandpass Filter}{section.B.4}% 54
